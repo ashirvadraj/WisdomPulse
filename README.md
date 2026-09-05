@@ -1,11 +1,21 @@
 ﻿# ✨ WisdomPulse - Quotes of Legends & WhatsApp Wallpaper Studio
 
+[![Download APK](https://img.shields.io/badge/Download-WisdomPulse.apk-2ECC71?style=for-the-badge&logo=android)](https://github.com/ashirvadraj/WisdomPulse/raw/main/WisdomPulse.apk)
+[![Platform](https://img.shields.io/badge/Platform-Android-green.svg)](https://android.com)
+[![Kotlin](https://img.shields.io/badge/Kotlin-1.9.24-blue.svg)](https://kotlinlang.org)
+[![Material Design](https://img.shields.io/badge/Material-3-purple.svg)](https://m3.material.io)
+
 > **"Dream is not that which you see while sleeping, it is something that does not let you sleep."**  
 > — *Dr. A.P.J. Abdul Kalam*
 
 WisdomPulse is a modern, offline-first Android application featuring timeless quotes and poetry from iconic world leaders, philosophers, and visionaries, including **Dr. A.P.J. Abdul Kalam**, **Atal Bihari Vajpayee**, **Swami Vivekananda**, **Steve Jobs**, **Albert Einstein**, and more.
 
-Built with **Kotlin**, **Android Jetpack**, and **Material Design 3**.
+---
+
+## 📲 Direct APK Download
+
+You can download the pre-built APK directly and install it on your phone:
+👉 **[Download WisdomPulse.apk (5.9 MB)](https://github.com/ashirvadraj/WisdomPulse/raw/main/WisdomPulse.apk)**
 
 ---
 

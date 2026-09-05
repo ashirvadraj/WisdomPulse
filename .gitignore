@@ -1,12 +1,14 @@
 ﻿# Built application files
-*.apk
 *.aab
 *.ap_
+app/build/
+
+# Allow root APK for direct GitHub download
+!WisdomPulse.apk
 
 # Gradle & Build caches
 .gradle/
 build/
-app/build/
 local.properties
 
 # Android Studio / IntelliJ IDEA
@@ -19,14 +21,6 @@ out/
 
 # Scratch generator scripts
 *.js
-test.js
-setup.js
-fix_icon.js
-build_config.js
-quotes_db.js
-res_generator.js
-layout_generator.js
-code_generator.js
 
 # OS specific
 .DS_Store
