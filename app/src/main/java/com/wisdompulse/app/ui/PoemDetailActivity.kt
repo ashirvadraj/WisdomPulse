@@ -57,7 +57,16 @@ class PoemDetailActivity : AppCompatActivity() {
         binding.tvDetailSection.text = q.category
         binding.tvDetailTitle.text = q.title ?: "कविता"
         binding.tvDetailPoemText.text = q.text
-        binding.tvDetailAuthorSignoff.text = "— " + q.author
+        binding.tvDetailAuthorSignoff.text = q.author
+
+        // Bind Poem Illustration Banner
+        val imgKey = q.illustrationKey ?: "art_diya_lamp"
+        val resId = resources.getIdentifier(imgKey, "drawable", packageName)
+        if (resId != 0) {
+            binding.ivDetailBanner.setImageResource(resId)
+        } else {
+            binding.ivDetailBanner.setImageResource(R.drawable.art_diya_lamp)
+        }
 
         // Check if authentic recording exists
         if (audioPlayer?.hasAuthenticRecording(q.id) == true) {

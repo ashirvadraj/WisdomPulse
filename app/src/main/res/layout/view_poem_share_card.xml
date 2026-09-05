@@ -69,7 +69,7 @@
             android:id="@+id/ivCardAvatar"
             android:layout_width="38dp"
             android:layout_height="38dp"
-            android:src="@drawable/avatar_vajpayee"
+            android:src="@drawable/img_atal_vajpayee"
             android:contentDescription="अटल बिहारी वाजपेयी" />
 
         <LinearLayout

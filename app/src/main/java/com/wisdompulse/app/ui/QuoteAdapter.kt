@@ -43,6 +43,15 @@ class QuoteAdapter(
             binding.tvCategory.text = quote.category
             binding.tvQuoteText.text = quote.text
 
+            // Bind Poem Illustration
+            val imgKey = quote.illustrationKey ?: "art_diya_lamp"
+            val resId = context.resources.getIdentifier(imgKey, "drawable", context.packageName)
+            if (resId != 0) {
+                binding.ivPoemBanner.setImageResource(resId)
+            } else {
+                binding.ivPoemBanner.setImageResource(R.drawable.art_diya_lamp)
+            }
+
             // Read badge
             binding.tvReadBadge.visibility = if (isRead(quote)) View.VISIBLE else View.GONE
 

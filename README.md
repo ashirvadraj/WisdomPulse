@@ -1,7 +1,7 @@
 # 🇮🇳 मेरी इक्यावन कविताएँ (Meri Ekyavan Kavitayen) — अटल बिहारी वाजपेयी
-### 🎙️ अटल जी के मूल स्वर एवं वाग्मिता शैली में समर्पित डिजिटल काव्य ग्रंथ (Original Voice & Oratorical Audio Edition)
+### 🎨 सचित्र एवं सस्वर डिजिटल काव्य ग्रंथ (Illustrated & Voiced Poetry Edition)
 
-[![Download APK](https://img.shields.io/badge/Download-APK_(21.3_MB)-2ECC71?style=for-the-badge&logo=android)](https://github.com/ashirvadraj/WisdomPulse/raw/main/WisdomPulse.apk)
+[![Download APK](https://img.shields.io/badge/Download-APK_(28.0_MB)-2ECC71?style=for-the-badge&logo=android)](https://github.com/ashirvadraj/WisdomPulse/raw/main/WisdomPulse.apk)
 [![Platform](https://img.shields.io/badge/Platform-Android-green.svg)](https://android.com)
 [![Kotlin](https://img.shields.io/badge/Kotlin-1.9.24-blue.svg)](https://kotlinlang.org)
 [![Material Design](https://img.shields.io/badge/Material-3-purple.svg)](https://m3.material.io)
@@ -12,51 +12,44 @@
 > क़दम मिलाकर चलना होगा।"**  
 > — *अटल बिहारी वाजपेयी*
 
-भारत रत्न पूर्व प्रधानमंत्री श्रद्धेय **अटल बिहारी वाजपेयी** जी के कालजयी काव्य संकलन **"मेरी इक्यावन कविताएँ"** का पूर्णतः समर्पित, निष्कलंक एवं सुरुचिपूर्ण डिजिटल काव्य ग्रंथ। इस संस्करण में अटल जी की कविताओं को उनके **वास्तविक मूल स्वर** तथा उनकी सुप्रसिद्ध **नाटकीय विराम व गंभीर वाग्मिता शैली** में सुनने की अनूठी सुविधा जोड़ी गई है।
+भारत रत्न पूर्व प्रधानमंत्री श्रद्धेय **अटल बिहारी वाजपेयी** जी के कालजयी काव्य संकलन **"मेरी इक्यावन कविताएँ"** का पूर्णतः समर्पित, निष्कलंक एवं सुरुचिपूर्ण डिजिटल काव्य ग्रंथ। इस नवीन संस्करण में **श्रद्धेय अटल जी का प्रामाणिक चित्र**, सभी ५१ कविताओं हेतु **सजीव साहित्यिक कलाकृतियाँ (Fine Art Illustrations)** तथा **अटल जी का वास्तविक मूल स्वर** सम्मिलित किया गया है।
 
 ---
 
 ## 📲 Direct APK Download
 
 Download and install directly on your Android phone:  
-👉 **[Download WisdomPulse.apk (Original Atal Voice Edition - 21.3 MB)](https://github.com/ashirvadraj/WisdomPulse/raw/main/WisdomPulse.apk)**
+👉 **[Download WisdomPulse.apk (Illustrated & Voiced Edition - 28.0 MB)](https://github.com/ashirvadraj/WisdomPulse/raw/main/WisdomPulse.apk)**
 
 ---
 
-## 🎙️ अटल स्वर एवं काव्य पाठ प्रणाली (Hybrid Audio Experience)
+## 🎨 १. सचित्र काव्य दीर्घा (Fine Art Poetic Illustrations)
 
-### 🌟 १. अटल जी का प्रामाणिक मूल स्वर (Authentic Historic Audio)
-ऍप में अटल जी के स्वयं के सस्वर काव्य पाठ की ऐतिहासिक रिकॉर्डिंग्स अंतर्निहित हैं:
+प्रत्येक कविता कार्ड और पठन पृष्ठ पर मनमोहक साहित्यिक चित्र जोड़े गए हैं:
+- 🪔 **माटी का दिया व गेंदे के पुष्प (`art_diya_lamp`)**: *आओ फिर से दिया जलाएँ*, *पहचान*, *दीप जलता रहे* आदि अनुभूति कविताओं हेतु।
+- 🌄 **स्वर्णिम सूर्योदय व पर्वत शिखर (`art_rising_sun`)**: *गीत नया गाता हूँ*, *पुनः चमकेगा दिनकर*, *ऊँचाई* हेतु।
+- 🌿 **हरी दूब पर चमकती ओस की बूंदें (`art_dew_grass`)**: *हरी हरी दूब पर*, *सपना टूट गया* आदि प्रकृति कविताओं हेतु।
+- 🇮🇳 **हिमालय के शिखरों पर लहराता तिरंगा (`art_national_flag`)**: *स्वतंत्रता दिवस की पुकार*, *अमर आग है*, *अमर है गणतंत्र* आदि राष्ट्रगीतों हेतु।
+- 🏔️ **धुंध व तूफ़ान चीरता साहसी पथ (`art_marching_forward`)**: *कदम मिलाकर चलना होगा*, *मौत से ठन गई* आदि चुनौती कविताओं हेतु।
+- 🌲 **मनाली की बर्फीली घाटी व काष्ठ कुटीर (`art_manali_valley`)**: *बुलाती तुम्हें मनाली*, *मनाली मत जइयो* आदि हेतु।
+- 🕊️ **शांति की श्वेत कपोत (`art_peace_dove`)**: *हम जंग न होने देंगे* आदि विश्व शांति कविताओं हेतु।
+- 📸 **श्रद्धेय अटल जी का प्रामाणिक चित्र (`img_atal_vajpayee`)**: ऍप बार, प्रत्येक काव्य पठन पृष्ठ के हस्ताक्षर तथा शेयर कार्ड पर अटल जी का वास्तविक चित्र।
+
+---
+
+## 🎙️ २. अटल स्वर एवं काव्य पाठ प्रणाली (Hybrid Audio Experience)
+
+### 🌟 अटल जी का प्रामाणिक मूल स्वर (Authentic Historic Audio)
 - 🎵 **१. आओ फिर से दिया जलाएँ** (Offline Bundled MP3)
 - 🎵 **३. पहचान** (Offline Bundled MP3)
 - 🎵 **६. गीत नया गाता हूँ** (Offline Bundled MP3)
 - 🌐 **२०. आओ, मन की गांठें खोलें** (Streaming Audio)
 - 🌐 **४९. जंग न होने देंगे** (Streaming Audio)
-- **सुविधाएँ**: सीकबार (Seekbar), समय सूचक (`00:15 / 03:45`), विराम (Pause/Resume) एवं *"🎙️ अटल जी का मूल स्वर उपलब्ध"* बैज।
 
-### 🏛️ २. अटल वाग्मिता शैली काव्य पाठ (Atal Oratorical Prosody Engine for All 51 Poems)
-जिन कविताओं की ऐतिहासिक रिकॉर्डिंग उपलब्ध नहीं है, उनके लिए एक विशेष **अटल वाग्मिता सिंथेसाइज़र** तैयार किया गया है:
-- **गंभीर मन्द्र स्वर (Deep Baritone Pitch - 0.72x)**: अटल जी के भारी और ओजस्वी स्वर के अनुरूप।
-- **विचारमग्न वाचन गति (Deliberate Tempo - 0.70x)**: शब्दों को चबा-चबाकर, ठहराव के साथ बोलने की शैली।
-- **नाटकीय विराम (Dramatic Breath Pauses)**: प्रत्येक पंक्ति के अंत में संक्षिप्त विराम (`...`) तथा अंतरा (stanza) बदलने पर चिंतनशील मौन (`... । ...`)।
-- **पुरुष हिंदी स्वर (Male Hindi Voice Selection)**: मानक रोबोटिक या महिला स्वर के स्थान पर ओजस्वी पुरुष देवनागरी स्वर।
-
----
-
-## ✨ पठन सुविधाएँ (Reading Sanctuary Features)
-
-- **३ सुरुचिपूर्ण पठन थीम्स (3 Reading Themes)**:
-  - **पाण्डुलिपि (Antique Parchment)**: कोमल क्रीम पृष्ठभूमि (`#FAF6EE`), गहरी स्याही पाठ (`#201E1B`), स्वर्णिम आभा।
-  - **निशांत (AMOLED Midnight)**: रात्रि पठन हेतु गहरा कृष्ण वर्ण (`#0A0A0C`), म्यूटेड श्वेत पाठ (`#EDEDED`)।
-  - **शिला (Classic Slate)**: ग्रेफाइट स्लेट पृष्ठभूमि (`#15171C`), मुक्ता वर्ण पाठ (`#D9DBE2`)।
-- **देवनागरी सुलेख व फॉन्ट आकार नियंत्रण**:
-  - `A-` और `A+` बटन से 14sp से 28sp तक फॉन्ट आकार बदलने की स्वतंत्रता।
-  - 1.6x लाइन-हाइट और प्रामाणिक अलंकरण (`✦ ── ✤ ── ✦`)।
-- **🎨 १-टैप "काव्य कार्ड साझा करें" (Aesthetic Card Share)**:
-  - किसी भी कविता का सुरुचिपूर्ण, मिनिमल काव्य कार्ड बनाकर सीधे व्हाट्सएप स्टेटस या इंस्टाग्राम पर साझा करें।
-- **📚 ग्रंथ अनुक्रमणिका एवं वाचन प्रगति (Reading Progress Tracker)**:
-  - प्रगति बार जो दर्शाता है कि आपने ५१ में से कितनी कविताएँ पढ़ ली हैं।
-  - पढ़ी हुई कविताओं पर स्वतः **"✓ पढ़ी गई"** बैज।
+### 🏛️ अटल वाग्मिता शैली काव्य पाठ (Atal Oratorical Prosody for All 51 Poems)
+- **गंभीर मन्द्र स्वर (Deep Baritone Pitch - 0.72x)**
+- **विचारमग्न वाचन गति (Deliberate Tempo - 0.70x)**
+- **नाटकीय विराम (Dramatic Breath Pauses)**: पंक्तियों व अंतराओं के मध्य अटल जी की शैली में विराम।
 
 ---
 
@@ -125,12 +118,11 @@ Download and install directly on your Android phone:
 
 ## 🛠️ तकनीकी ढाँचा (Tech Stack)
 
-- **भाषा (Language):** Kotlin 1.9.24
-- **वास्तुकला (Architecture):** Android Jetpack & ViewBinding
-- **यूआई (UI):** Google Material Components 3 (`Theme.Material3.Dark.NoActionBar`)
-- **ऑडियो इंजन:** Android `MediaPlayer` (AssetFileDescriptor & AudioAttributes) + `TextToSpeech` Custom Prosody Engine
-- **कार्ड रेंडरर:** Android Native Canvas & `FileProvider` High-Res PNG Generator
-- **डेटा भंडारण:** Bundled JSON (`assets/quotes.json`) + Bundled Audio Assets + Android `SharedPreferences`
+- **भाषा:** Kotlin 1.9.24
+- **वास्तुकला:** Android Jetpack & ViewBinding
+- **यूआई:** Material Design 3 (`Theme.Material3.Dark.NoActionBar`)
+- **ऑडियो इंजन:** Android `MediaPlayer` + `TextToSpeech` Custom Prosody Engine
+- **चित्र दीर्घा:** 7 उच्च-गुणवत्ता साहित्यिक कलाकृतियाँ + अटल जी का प्रामाणिक चित्र
 
 ---
 

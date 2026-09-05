@@ -143,6 +143,24 @@
             android:paddingTop="16dp"
             android:paddingBottom="90dp">
 
+            <!-- Poem Illustration Banner -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvDetailBanner"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="3dp"
+                android:layout_marginBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/ivDetailBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/art_diya_lamp"
+                    android:contentDescription="Poem Illustration" />
+            </androidx.cardview.widget.CardView>
+
             <!-- Section Pill Badge -->
             <TextView
                 android:id="@+id/tvDetailSection"
@@ -217,16 +235,52 @@
                 android:textSize="16sp"
                 android:layout_marginBottom="20dp" />
 
-            <!-- Author Signoff -->
-            <TextView
-                android:id="@+id/tvDetailAuthorSignoff"
+            <!-- Author Signoff with Authentic Photo -->
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="— अटल बिहारी वाजपेयी"
-                android:textColor="@color/parchment_text_sec"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="40dp" />
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="40dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    app:cardCornerRadius="23dp"
+                    app:cardElevation="2dp"
+                    android:layout_marginEnd="12dp">
+
+                    <ImageView
+                        android:id="@+id/ivDetailAtalPortrait"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_atal_vajpayee"
+                        android:contentDescription="अटल बिहारी वाजपेयी" />
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvDetailAuthorSignoff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="अटल बिहारी वाजपेयी"
+                        android:textColor="@color/parchment_text"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="मेरी इक्यावन कविताएँ"
+                        android:textColor="@color/parchment_text_sec"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
 
         </LinearLayout>
 
