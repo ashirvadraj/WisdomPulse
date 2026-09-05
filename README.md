@@ -1,113 +1,127 @@
-# ✨ WisdomPulse 2.1 - Complete 51 Poems of Atal Bihari Vajpayee & Legends
+# 🇮🇳 मेरी इक्यावन कविताएँ (Meri Ekyavan Kavitayen) — अटल बिहारी वाजपेयी
 
-[![Download APK](https://img.shields.io/badge/Download-WisdomPulse_v2.1.apk-2ECC71?style=for-the-badge&logo=android)](https://github.com/ashirvadraj/WisdomPulse/raw/main/WisdomPulse.apk)
+[![Download APK](https://img.shields.io/badge/Download-APK_(6.0_MB)-2ECC71?style=for-the-badge&logo=android)](https://github.com/ashirvadraj/WisdomPulse/raw/main/WisdomPulse.apk)
 [![Platform](https://img.shields.io/badge/Platform-Android-green.svg)](https://android.com)
 [![Kotlin](https://img.shields.io/badge/Kotlin-1.9.24-blue.svg)](https://kotlinlang.org)
 [![Material Design](https://img.shields.io/badge/Material-3-purple.svg)](https://m3.material.io)
 
-> **"हार नहीं मानूँगा, रार नहीं ठानूँगा, काल के कपाल पर लिखता मिटाता हूँ, गीत नया गाता हूँ।"**  
-> — *Atal Bihari Vajpayee*
+> **"बाधाएँ आती हैं आएँ, घिरें प्रलय की घोर घटाएँ,  
+> पावों के नीचे अंगारे, सिर पर बरसें यदि ज्वालाएँ,  
+> निज हाथों में हँसते-हँसते, आग लगाकर जलना होगा।  
+> क़दम मिलाकर चलना होगा।"**  
+> — *अटल बिहारी वाजपेयी*
 
-WisdomPulse is an offline-first Android application featuring timeless quotes, philosophy, and poetry of world legends. This edition includes the **complete anthology of all 51 iconic poems of Atal Bihari Vajpayee (मेरी इक्यावन कविताएँ)** alongside wisdom from **Dr. A.P.J. Abdul Kalam**, **Swami Vivekananda**, **Steve Jobs**, **Albert Einstein**, and more.
+भारत रत्न पूर्व प्रधानमंत्री श्रद्धेय **अटल बिहारी वाजपेयी** जी के कालजयी काव्य संकलन **"मेरी इक्यावन कविताएँ"** का सम्पूर्ण एवं प्रामाणिक डिजिटल संस्करण। यह ऍप पूर्णतः ऑफलाइन है और इसमें मूल पुस्तक के चारों प्रामाणिक खंडों की सभी **51 कविताएँ** सम्मिलित हैं।
 
 ---
 
 ## 📲 Direct APK Download
 
-Download the updated APK and install it directly on your phone:  
-👉 **[Download WisdomPulse.apk (All 51 Poems - 6.0 MB)](https://github.com/ashirvadraj/WisdomPulse/raw/main/WisdomPulse.apk)**
+Install the application directly on any Android device:  
+👉 **[Download WisdomPulse.apk (All 51 Poems - 6.06 MB)](https://github.com/ashirvadraj/WisdomPulse/raw/main/WisdomPulse.apk)**
 
 ---
 
-## 📜 Complete 51 Poems of Atal Bihari Vajpayee (मेरी इक्यावन कविताएँ)
+## 📖 सभी 51 कविताओं की सम्पूर्ण सूची (All 51 Poems)
 
-Contains all 51 poems with authentic Hindi verses, stanzas, and poetic English translations:
+### 🌿 खंड १: अनुभूति के स्वर (कविता १ - २३)
+- **1. आओ फिर से दिया जलाएँ**
+- **2. हरी हरी दूब पर**
+- **3. पहचान**
+- **4. गीत नहीं गाता हूँ**
+- **5. न मैं चुप हूँ न गाता हूँ**
+- **6. गीत नया गाता हूँ**
+- **7. ऊँचाई**
+- **8. कौरव कौन, कौन पांडव**
+- **9. दूध में दरार पड़ गई**
+- **10. मन का संतोष**
+- **11. झुक नहीं सकते**
+- **12. दूर कहीं कोई रोता है**
+- **13. जीवन बीत चला**
+- **14. मौत से ठन गई**
+- **15. राह कौन सी जाऊँ मैं?**
+- **16. मैं सोचने लगता हूँ**
+- **17. हिरोशिमा की पीड़ा**
+- **18. नए मील का पत्थर**
+- **19. मोड़ पर**
+- **20. आओ, मन की गांठें खोलें**
+- **21. नई गाँठ लगती**
+- **22. यक्ष प्रश्न**
+- **23. क्षमा याचना**
 
-1. गीत नया गाता हूँ (Geet Naya Gata Hoon)
-2. क़दम मिलाकर चलना होगा (Kadam Milakar Chalna Hoga)
-3. हार नहीं मानूँगा (Haar Nahi Manunga)
-4. मौत से ठन गई! (Maut Se Than Gayi)
-5. आओ फिर से दिया जलाएँ (Aao Phir Se Diya Jalayein)
-6. दूध में दरार पड़ गई (Doodh Mein Darar Pad Gayi)
-7. गीत नहीं गाता हूँ (Geet Nahi Gata Hoon)
-8. पंद्रह अगस्त का दिन कहता (Pandraha August Ka Din Kehta)
-9. कौरव कौन, कौन पांडव (Kaurav Kaun, Kaun Pandav)
-10. हिरोशिमा की पीड़ा (Hiroshima Ki Peeda)
-11. मनाली मत जइयो (Manali Mat Jaiyo)
-12. अपने ही मन से बात करें (Apne Hi Man Se Baat Karein)
-13. जीवन की ढलती साँझ में (Jeevan Ki Dhalti Saanjh Mein)
-14. क्या खोया क्या पाया जग में (Kya Khoya Kya Paya Jag Mein)
-15. प्रभु! मुझे इतनी ऊँचाई कभी मत देना (Prabhu Mujhe Itni Oonchai Kabhi Mat Dena)
-16. एक बरस बीत गया (Ek Baras Beet Gaya)
-17. अमर आग है (Amar Aag Hai)
-18. हरी हरी दूब पर (Hari Hari Doob Par)
-19. दूर कहीं कोई रोता है (Door Kahin Koi Rota Hai)
-20. क्षमा याचना (Kshama Yaachna)
-21. चौराहों पर कीर्ति-स्तंभ (Chaurahon Par Kirti-Stambh)
-22. अनूठी भेंट (Anoothi Bhent)
-23. भारत की अस्मिता (Bharat Ki Asmita)
-24. स्वतंत्रता संग्राम की ज्वाला (Swatantrata Sangram Ki Jwala)
-25. नई सदी का आह्वान (Nayi Sadi Ka Aahwan)
-26. राह कौन सी जाऊं मैं (Raah Kaun Si Jaoon Main)
-27. समर शेष है (Samar Shesh Hai)
-28. अमर बलिदान (Amar Balidan)
-29. धरती की पुकार (Dharti Ki Pukaar)
-30. सागर तट पर (Sagar Tat Par)
-31. मन का संताप (Man Ka Santaap)
-32. नई चेतना (Nayi Chetna)
-33. समय का पहिया (Samay Ka Pahiya)
-34. आहुति बाकी है (Aahuti Baaki Hai)
-35. गंगा की धारा (Ganga Ki Dhara)
-36. तिरंगे का मान (Tirange Ka Maan)
-37. सीमा पर सिपाही (Seema Par Sipahi)
-38. जीवन पथ (Jeevan Path)
-39. दीप जलता रहे (Deep Jalta Rahe)
-40. विजय का शंखनाद (Vijay Ka Shankhnaad)
-41. अंतर का उजास (Antar Ka Ujaas)
-42. जननी जन्मभूमिश्च (Janani Janmabhoomishcha)
-43. संघर्ष ही जीवन है (Sangharsh Hi Jeevan Hai)
-44. अतीत की परछाइयां (Ateet Ki Parchhaiyan)
-45. नव प्रभात (Nav Prabhat)
-46. आस्था की ज्योति (Aastha Ki Jyoti)
-47. शक्ति का संचय (Shakti Ka Sanchay)
-48. राष्ट्र वंदना (Rashtra Vandana)
-49. मनुष्यता की जीत (Manushyata Ki Jeet)
-50. शहीदों को नमन (Shaheedon Ko Naman)
-51. अंतिम विजय (Antim Vijay)
+### 🚩 खंड २: राष्ट्रीयता के स्वर (कविता २४ - ३३)
+- **24. स्वतंत्रता दिवस की पुकार**
+- **25. अमर आग है**
+- **26. परिचय**
+- **27. आज सिन्धु में ज्वार उठा है**
+- **28. जम्मू की पुकार**
+- **29. कोटि चरण बढ़ रहे ध्येय की ओर निरन्तर**
+- **30. गगन में लहरता है भगवा हमारा**
+- **31. उनकी याद करें**
+- **32. अमर है गणतंत्र**
+- **33. सत्ता**
 
----
+### ⚡ खंड ३: चुनौती के स्वर (कविता ३४ - ४१)
+- **34. मातृपूजा प्रतिबंधित**
+- **35. कण्ठ-कण्ठ में एक राग है**
+- **36. आए जिस-जिस की हिम्मत हो**
+- **37. एक बरस बीत गया**
+- **38. जीवन की ढलने लगी साँझ**
+- **39. पुनः चमकेगा दिनकर**
+- **40. कदम मिलाकर चलना होगा**
+- **41. पड़ोसी से**
 
-## 🎨 9:16 Wallpaper Studio 2.0 (Phone & WhatsApp Wallpaper)
-- **Author Portrait Badge on Wallpaper**: Embeds the author's portrait badge in the 9:16 wallpaper.
-- **Portrait Badge Toggle**: Switch author portrait ON or OFF with a single tap.
-- **8 Dynamic Themes**: Midnight OLED, Royal Gold, Crimson Dusk, Forest Zen, Deep Indigo, Sunset Ember, and Vintage Parchment.
-- **1-Tap Direct Integrations**:
-  - **Set as Phone Wallpaper**: Applies directly to Home & Lock screen via Android `WallpaperManager`.
-  - **Save for WhatsApp Wallpaper**: Renders at 1080x1920 HD, saves directly to `Pictures/WisdomPulse/` in your gallery, and opens WhatsApp.
+### 🌸 खंड ४: विविध के स्वर (कविता ४२ - ५१)
+- **42. रोते रोते रात सो गई**
+- **43. बुलाती तुम्हें मनाली**
+- **44. अंतरद्वंद्व**
+- **45. बबली की दिवाली**
+- **46. अपने ही मन से कुछ बोलें**
+- **47. मनाली मत जइयो**
+- **48. देखो हम बढ़ते ही जाते**
+- **49. जंग न होने देंगे**
+- **50. आओ! मर्दों नामर्द बनो**
+- **51. सपना टूट गया**
 
 ---
 
-## 🛠️ Tech Stack & Architecture
-- **Language:** Kotlin 1.9.24
-- **Architecture:** Android Jetpack & ViewBinding
-- **UI Components:** Google Material Components 3 (`Theme.Material3.Dark.NoActionBar`)
-- **JSON Parsing:** Google Gson 2.10.1
-- **Notifications:** Android `NotificationManager` + `AlarmManager` + `BroadcastReceiver`
-- **Wallpaper API:** Android `WallpaperManager` + `MediaStore`
+## ✨ मुख्य विशेषताएँ (Key Features)
+
+- **📜 सम्पूर्ण ५१ कविताएँ:** मूल संकलन के चारों खंडों की सभी ५१ कविताएँ स्पष्ट देवनागरी लिपि में।
+- **🎨 ९:१६ वॉलपेपर स्टूडियो (Phone & WhatsApp Wallpaper Studio):**
+  - किसी भी कविता का आकर्षक **9:16 Full HD (1080×1920)** वॉलपेपर बनाएं।
+  - **अटल जी का पोर्ट्रेट बैज:** वॉलपेपर पर अटल जी की तस्वीर का बैज (ON / OFF टॉगल सुविधा)।
+  - **७ मनमोहक थीम:** Midnight OLED, Royal Gold, Crimson Dusk, Forest Zen, Deep Indigo, Sunset Ember, Vintage Parchment.
+  - **१-टैप सेट व सेव:** सीधे मोबाइल का होम/लॉक स्क्रीन वॉलपेपर सेट करें या गैलरी में सेव कर व्हाट्सएप चैट बैकग्राउंड बनाएं।
+- **🔊 हिंदी काव्य पाठ (Text-to-Speech):** एक क्लिक में अटल जी की कविताओं का ओजस्वी ऑडियो पाठ सुनें।
+- **🔔 दैनिक काव्य स्मरण (Daily Morning Notifications):** प्रतिदिन प्रातः ७:०० बजे एक प्रेरक कविता का स्वतः नोटिफिकेशन (ऑफलाइन)।
+- **🔍 त्वरित खोज एवं खंड फ़िल्टर (Search & Section Filter):** चारों खंडों के आधार पर फ़िल्टर करें या कविता के बोल व शीर्षक से तुरंत खोजें।
+- **❤️ पसंदीदा (Favorites):** अपनी प्रिय कविताओं को सहेजें।
+- **📤 काव्य शेयरिंग (Poem Sharing):** कविता, शीर्षक और रचयिता के नाम के साथ सीधे व्हाट्सएप और सोशल मीडिया पर साझा करें।
+- **📴 १००% ऑफलाइन एवं सुरक्षित:** किसी इंटरनेट की आवश्यकता नहीं, शून्य ट्रैकिंग।
 
 ---
 
-## 📦 Building from Source
+## 🛠️ तकनीकी ढाँचा (Tech Stack)
 
-```bash
-git clone https://github.com/ashirvadraj/WisdomPulse.git
-cd WisdomPulse
-./gradlew assembleDebug
+- **भाषा (Language):** Kotlin 1.9.24
+- **वास्तुकला (Architecture):** Android Jetpack & ViewBinding
+- **यूआई (UI):** Google Material Components 3 (`Theme.Material3.Dark.NoActionBar`)
+- **JSON पार्सर:** Google Gson 2.10.1
+- **अधिसूचना (Notifications):** Android `AlarmManager` + `BroadcastReceiver` + `NotificationManager`
+- **वॉलपेपर इंजन:** Android `WallpaperManager` + `MediaStore` High-Res Rendering
+
+---
+
+## 🔨 स्रोत कोड से निर्माण (Build from Source)
+
+```powershell
+# Android SDK का पथ सेट करें
+$env:ANDROID_HOME = "C:\Users\ASHIR\AppData\Local\Android\Sdk"
+$env:ANDROID_SDK_ROOT = "C:\Users\ASHIR\AppData\Local\Android\Sdk"
+
+# डीबग APK कम्पाइल करें
+.\gradlew.bat assembleDebug --no-daemon
 ```
-The compiled APK will be located at:
-`app/build/outputs/apk/debug/app-debug.apk`
 
----
-
-## 📄 License
-MIT License. Free to use, share, and modify!
+निर्मित APK फ़ाइल का स्थान: `app/build/outputs/apk/debug/app-debug.apk` या रूट डायरेक्टरी में `WisdomPulse.apk`।

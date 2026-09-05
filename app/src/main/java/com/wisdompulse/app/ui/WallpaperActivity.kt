@@ -1,4 +1,4 @@
-﻿package com.wisdompulse.app.ui
+package com.wisdompulse.app.ui
 
 import android.graphics.Color
 import android.os.Bundle
@@ -90,6 +90,12 @@ class WallpaperActivity : AppCompatActivity() {
         binding.btnBack.setOnClickListener { finish() }
 
         quote?.let { q ->
+            if (!q.title.isNullOrEmpty()) {
+                binding.tvWpTitle.visibility = View.VISIBLE
+                binding.tvWpTitle.text = q.title
+            } else {
+                binding.tvWpTitle.visibility = View.GONE
+            }
             binding.tvWpQuote.text = if (q.isPoem) q.text else "\"" + q.text + "\""
             binding.tvWpAuthor.text = "— " + q.author
             binding.tvWpRole.text = q.authorRole
@@ -125,6 +131,7 @@ class WallpaperActivity : AppCompatActivity() {
 
     private fun applyTheme(theme: ThemePalette) {
         binding.wallpaperContainer.setBackgroundColor(theme.bgColor)
+        binding.tvWpTitle.setTextColor(theme.authorColor)
         binding.tvWpQuote.setTextColor(theme.quoteColor)
         binding.tvWpAuthor.setTextColor(theme.authorColor)
         binding.wpDivider.setBackgroundColor(theme.dividerColor)

@@ -1,4 +1,4 @@
-﻿package com.wisdompulse.app.ui
+package com.wisdompulse.app.ui
 
 import android.content.Context
 import android.content.Intent
@@ -44,6 +44,14 @@ class QuoteAdapter(
             binding.tvAuthorRole.text = quote.authorRole
             binding.tvCategory.text = quote.category
 
+            // Poem Title
+            if (!quote.title.isNullOrEmpty()) {
+                binding.tvPoemTitle.visibility = View.VISIBLE
+                binding.tvPoemTitle.text = quote.title
+            } else {
+                binding.tvPoemTitle.visibility = View.GONE
+            }
+
             // Dynamic Author Portrait Avatar
             val resId = context.resources.getIdentifier(quote.avatarKey, "drawable", context.packageName)
             if (resId != 0) {
@@ -81,13 +89,14 @@ class QuoteAdapter(
             }
 
             binding.btnShareText.setOnClickListener {
-                val shareBody = quote.text + "\n\n— " + quote.author + " (" + quote.authorRole + ")\n\nVia WisdomPulse App"
+                val header = if (!quote.title.isNullOrEmpty()) quote.title + "\n\n" else ""
+                val shareBody = header + quote.text + "\n\n— " + quote.author + " (" + quote.authorRole + ")\n\nमेरी इक्यावन कविताएँ"
                 val intent = Intent(Intent.ACTION_SEND).apply {
                     type = "text/plain"
-                    putExtra(Intent.EXTRA_SUBJECT, "Quote by " + quote.author)
+                    putExtra(Intent.EXTRA_SUBJECT, quote.title ?: ("कविता: " + quote.author))
                     putExtra(Intent.EXTRA_TEXT, shareBody)
                 }
-                context.startActivity(Intent.createChooser(intent, "Share Quote via"))
+                context.startActivity(Intent.createChooser(intent, "कविता शेयर करें"))
             }
 
             binding.btnWallpaper.setOnClickListener {

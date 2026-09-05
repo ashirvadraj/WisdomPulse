@@ -89,11 +89,10 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     private fun setupCategoryChips() {
         val chips = listOf(
             Pair(binding.chipAll, "All"),
-            Pair(binding.chipKalam, "Kalam"),
-            Pair(binding.chipVajpayee, "Vajpayee"),
-            Pair(binding.chipVivekananda, "Vivekananda"),
-            Pair(binding.chipJobs, "Jobs"),
-            Pair(binding.chipEinstein, "Einstein"),
+            Pair(binding.chipSec1, "अनुभूति के स्वर"),
+            Pair(binding.chipSec2, "राष्ट्रीयता के स्वर"),
+            Pair(binding.chipSec3, "चुनौती के स्वर"),
+            Pair(binding.chipSec4, "विविध के स्वर"),
             Pair(binding.chipFavorites, "Favorites")
         )
 
@@ -125,20 +124,15 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         val filtered = all.filter { quote ->
             val matchesCategory = when (currentCategory) {
                 "All" -> true
-                "Kalam" -> quote.author.contains("Kalam", ignoreCase = true)
-                "Vajpayee" -> quote.author.contains("Vajpayee", ignoreCase = true)
-                "Vivekananda" -> quote.author.contains("Vivekananda", ignoreCase = true)
-                "Jobs" -> quote.author.contains("Jobs", ignoreCase = true)
-                "Einstein" -> quote.author.contains("Einstein", ignoreCase = true)
                 "Favorites" -> favIds.contains(quote.id)
-                else -> true
+                else -> quote.category.equals(currentCategory, ignoreCase = true)
             }
 
             val matchesSearch = if (currentSearchQuery.isEmpty()) {
                 true
             } else {
                 quote.text.contains(currentSearchQuery, ignoreCase = true) ||
-                quote.author.contains(currentSearchQuery, ignoreCase = true) ||
+                (quote.title?.contains(currentSearchQuery, ignoreCase = true) == true) ||
                 quote.category.contains(currentSearchQuery, ignoreCase = true)
             }
 
@@ -154,27 +148,24 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
             val random = repository.getRandomQuote()
             if (random != null) {
                 NotificationHelper.showQuoteNotification(this, random)
-                Toast.makeText(this, "Notification sent! Check your notification tray ✨", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "आज की कविता भेजी गई! ✨", Toast.LENGTH_SHORT).show()
             }
         }
     }
 
     private fun speakQuote(quote: Quote) {
         if (!isTtsReady || tts == null) {
-            Toast.makeText(this, "Text-to-Speech is initializing...", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Text-to-Speech शुरू हो रहा है...", Toast.LENGTH_SHORT).show()
             return
         }
 
-        if (quote.language == "hi") {
-            val result = tts?.setLanguage(Locale("hi", "IN"))
-            if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
-                tts?.setLanguage(Locale.US)
-            }
-        } else {
+        val result = tts?.setLanguage(Locale("hi", "IN"))
+        if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
             tts?.setLanguage(Locale.US)
         }
 
-        val speechText = quote.text + ". By " + quote.author + "."
+        val title = quote.title ?: ""
+        val speechText = "$title. ${quote.text}. रचयिता अटल बिहारी वाजपेयी."
         tts?.speak(speechText, TextToSpeech.QUEUE_FLUSH, null, "WISDOM_TTS")
     }
 

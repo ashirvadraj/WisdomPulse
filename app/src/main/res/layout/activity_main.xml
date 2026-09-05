@@ -21,10 +21,17 @@
             android:paddingTop="12dp"
             android:paddingBottom="8dp">
 
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/avatar_vajpayee"
+                android:contentDescription="Atal Bihari Vajpayee" />
+
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:layout_marginStart="12dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -32,7 +39,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/app_name"
                     android:textColor="@color/primary"
-                    android:textSize="22sp"
+                    android:textSize="21sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -40,7 +47,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/app_tagline"
                     android:textColor="@color/text_secondary"
-                    android:textSize="12sp" />
+                    android:textSize="13sp" />
             </LinearLayout>
 
             <!-- Test Notification / Inspire Me button -->
@@ -50,7 +57,7 @@
                 android:layout_height="40dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:src="@drawable/ic_notifications"
-                android:contentDescription="Inspire Me Now" />
+                android:contentDescription="कविता स्मरण" />
 
         </LinearLayout>
 
@@ -121,13 +128,13 @@
                     android:paddingEnd="14dp"
                     android:paddingTop="6dp"
                     android:paddingBottom="6dp"
-                    android:text="All Legends"
+                    android:text="सभी 51 कविताएँ"
                     android:textColor="@color/black"
                     android:textSize="12sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/chipKalam"
+                    android:id="@+id/chipSec1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -136,12 +143,12 @@
                     android:paddingEnd="14dp"
                     android:paddingTop="6dp"
                     android:paddingBottom="6dp"
-                    android:text="Dr. Kalam"
+                    android:text="अनुभूति के स्वर (1-23)"
                     android:textColor="@color/text_secondary"
                     android:textSize="12sp" />
 
                 <TextView
-                    android:id="@+id/chipVajpayee"
+                    android:id="@+id/chipSec2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -150,12 +157,12 @@
                     android:paddingEnd="14dp"
                     android:paddingTop="6dp"
                     android:paddingBottom="6dp"
-                    android:text="Atal Bihari (Poetry)"
+                    android:text="राष्ट्रीयता के स्वर (24-33)"
                     android:textColor="@color/text_secondary"
                     android:textSize="12sp" />
 
                 <TextView
-                    android:id="@+id/chipVivekananda"
+                    android:id="@+id/chipSec3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -164,12 +171,12 @@
                     android:paddingEnd="14dp"
                     android:paddingTop="6dp"
                     android:paddingBottom="6dp"
-                    android:text="Swami Vivekananda"
+                    android:text="चुनौती के स्वर (34-41)"
                     android:textColor="@color/text_secondary"
                     android:textSize="12sp" />
 
                 <TextView
-                    android:id="@+id/chipJobs"
+                    android:id="@+id/chipSec4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -178,21 +185,7 @@
                     android:paddingEnd="14dp"
                     android:paddingTop="6dp"
                     android:paddingBottom="6dp"
-                    android:text="Steve Jobs"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:id="@+id/chipEinstein"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:background="@drawable/bg_chip_unselected"
-                    android:paddingStart="14dp"
-                    android:paddingEnd="14dp"
-                    android:paddingTop="6dp"
-                    android:paddingBottom="6dp"
-                    android:text="Albert Einstein"
+                    android:text="विविध के स्वर (42-51)"
                     android:textColor="@color/text_secondary"
                     android:textSize="12sp" />
 
@@ -206,7 +199,7 @@
                     android:paddingEnd="14dp"
                     android:paddingTop="6dp"
                     android:paddingBottom="6dp"
-                    android:text="Favorites"
+                    android:text="पसंदीदा (Favorites)"
                     android:textColor="@color/text_secondary"
                     android:textSize="12sp" />
 
@@ -215,7 +208,7 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <!-- Quotes List -->
+    <!-- Quotes / Poetry List -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvQuotes"
         android:layout_width="match_parent"
@@ -231,8 +224,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="No quotes found.
-Try a different search or filter!"
+        android:text="कोई कविता नहीं मिली।
+कृपया अन्य शब्द खोजें।"
         android:textAlignment="center"
         android:textColor="@color/text_secondary"
         android:textSize="16sp"

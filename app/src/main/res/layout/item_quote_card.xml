@@ -68,12 +68,23 @@
                 android:contentDescription="Quote mark" />
         </LinearLayout>
 
+        <!-- Poem Title -->
+        <TextView
+            android:id="@+id/tvPoemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/accent_gold"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
         <!-- Quote Text / Poem Body -->
         <TextView
             android:id="@+id/tvQuoteText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="8dp"
             android:layout_marginBottom="12dp"
             android:lineSpacingExtra="5dp"
             android:text="Dream is not that which you see while sleeping..."

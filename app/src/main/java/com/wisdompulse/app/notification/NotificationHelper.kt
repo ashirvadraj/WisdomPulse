@@ -1,4 +1,4 @@
-﻿package com.wisdompulse.app.notification
+package com.wisdompulse.app.notification
 
 import android.app.AlarmManager
 import android.app.NotificationChannel
@@ -19,8 +19,8 @@ object NotificationHelper {
 
     fun createNotificationChannel(context: Context) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val name = "Daily Wisdom Quotes"
-            val descriptionText = "Daily morning quotes from world legends"
+            val name = "मेरी इक्यावन कविताएँ"
+            val descriptionText = "दैनिक कविता और विचार - अटल बिहारी वाजपेयी"
             val importance = NotificationManager.IMPORTANCE_HIGH
             val channel = NotificationChannel(CHANNEL_ID, name, importance).apply {
                 description = descriptionText
@@ -54,11 +54,13 @@ object NotificationHelper {
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
 
-        val bigTextContent = quote.text + "\n\n— " + quote.author + " (" + quote.authorRole + ")"
+        val titleText = if (!quote.title.isNullOrEmpty()) "✨ " + quote.title else "✨ " + quote.author
+        val bigTextContent = (if (!quote.title.isNullOrEmpty()) quote.title + "\n\n" else "") +
+            quote.text + "\n\n— " + quote.author + " (" + quote.authorRole + ")"
 
         val notification = NotificationCompat.Builder(context, CHANNEL_ID)
             .setSmallIcon(android.R.drawable.ic_dialog_info)
-            .setContentTitle("✨ " + quote.author)
+            .setContentTitle(titleText)
             .setContentText(quote.text)
             .setStyle(NotificationCompat.BigTextStyle().bigText(bigTextContent))
             .setPriority(NotificationCompat.PRIORITY_HIGH)
