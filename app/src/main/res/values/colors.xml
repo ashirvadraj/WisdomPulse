@@ -15,4 +15,32 @@
     <color name="divider_color">#2D3248</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
+
+    <!-- Literary Reading Themes -->
+    <color name="gold_heritage">#D4AF37</color>
+    <color name="kavya_sindoor">#C0392B</color>
+
+    <!-- Parchment Theme -->
+    <color name="parchment_bg">#FAF6EE</color>
+    <color name="parchment_text">#201E1B</color>
+    <color name="parchment_text_sec">#6B6559</color>
+    <color name="parchment_accent">#9A6A1A</color>
+    <color name="parchment_card">#F2EDE1</color>
+    <color name="parchment_divider">#E2D9C5</color>
+
+    <!-- Midnight Theme -->
+    <color name="midnight_bg">#0A0A0C</color>
+    <color name="midnight_text">#EDEDED</color>
+    <color name="midnight_text_sec">#9E9EA8</color>
+    <color name="midnight_accent">#D4AF37</color>
+    <color name="midnight_card">#141418</color>
+    <color name="midnight_divider">#2A2A34</color>
+
+    <!-- Slate Theme -->
+    <color name="slate_bg">#15171C</color>
+    <color name="slate_text">#D9DBE2</color>
+    <color name="slate_text_sec">#8A90A2</color>
+    <color name="slate_accent">#E0A96D</color>
+    <color name="slate_card">#1E2028</color>
+    <color name="slate_divider">#2E3342</color>
 </resources>

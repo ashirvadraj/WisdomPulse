@@ -1,6 +1,7 @@
 # 🇮🇳 मेरी इक्यावन कविताएँ (Meri Ekyavan Kavitayen) — अटल बिहारी वाजपेयी
+### 📖 एक शांत, सुरुचिपूर्ण एवं समर्पित डिजिटल काव्य संकलन (Pure Aesthetic Poetry Reader)
 
-[![Download APK](https://img.shields.io/badge/Download-APK_(6.0_MB)-2ECC71?style=for-the-badge&logo=android)](https://github.com/ashirvadraj/WisdomPulse/raw/main/WisdomPulse.apk)
+[![Download APK](https://img.shields.io/badge/Download-APK_(6.06_MB)-2ECC71?style=for-the-badge&logo=android)](https://github.com/ashirvadraj/WisdomPulse/raw/main/WisdomPulse.apk)
 [![Platform](https://img.shields.io/badge/Platform-Android-green.svg)](https://android.com)
 [![Kotlin](https://img.shields.io/badge/Kotlin-1.9.24-blue.svg)](https://kotlinlang.org)
 [![Material Design](https://img.shields.io/badge/Material-3-purple.svg)](https://m3.material.io)
@@ -11,14 +12,39 @@
 > क़दम मिलाकर चलना होगा।"**  
 > — *अटल बिहारी वाजपेयी*
 
-भारत रत्न पूर्व प्रधानमंत्री श्रद्धेय **अटल बिहारी वाजपेयी** जी के कालजयी काव्य संकलन **"मेरी इक्यावन कविताएँ"** का सम्पूर्ण एवं प्रामाणिक डिजिटल संस्करण। यह ऍप पूर्णतः ऑफलाइन है और इसमें मूल पुस्तक के चारों प्रामाणिक खंडों की सभी **51 कविताएँ** सम्मिलित हैं।
+भारत रत्न पूर्व प्रधानमंत्री श्रद्धेय **अटल बिहारी वाजपेयी** जी के कालजयी काव्य संकलन **"मेरी इक्यावन कविताएँ"** का पूर्णतः समर्पित, निष्कलंक एवं सुरुचिपूर्ण डिजिटल काव्य ग्रंथ। इस संस्करण से सभी अनावश्यक टूल्स व वॉलपेपर फीचर्स हटाकर इसे 100% पठन, साहित्य, देवनागरी सुलेख और काव्य पाठ को समर्पित किया गया है।
 
 ---
 
 ## 📲 Direct APK Download
 
-Install the application directly on any Android device:  
-👉 **[Download WisdomPulse.apk (All 51 Poems - 6.06 MB)](https://github.com/ashirvadraj/WisdomPulse/raw/main/WisdomPulse.apk)**
+Download and install directly on your Android phone:  
+👉 **[Download WisdomPulse.apk (Pure Poetry Book - 6.06 MB)](https://github.com/ashirvadraj/WisdomPulse/raw/main/WisdomPulse.apk)**
+
+---
+
+## ✨ मुख्य विशेषताएँ (Key Highlights)
+
+### 📜 १. समर्पित काव्य पाठ कक्ष (Dedicated Reading Sanctuary)
+- **३ सुरुचिपूर्ण पठन थीम्स (3 Reading Themes)**:
+  - **पाण्डुलिपि (Antique Parchment)**: प्राचीन पाण्डुलिपि के समान कोमल क्रीम पृष्ठभूमि (`#FAF6EE`), गहरी स्याही युक्त पाठ (`#201E1B`) और स्वर्णिम आभा।
+  - **निशांत (AMOLED Midnight)**: रात्रि पठन हेतु गहरा कृष्ण वर्ण (`#0A0A0C`) और म्यूटेड श्वेत देवनागरी पाठ (`#EDEDED`)।
+  - **शिला (Classic Slate)**: ग्रेफाइट स्लेट पृष्ठभूमि (`#15171C`) और मुक्ता वर्ण पाठ (`#D9DBE2`)।
+- **देवनागरी सुलेख व फॉन्ट आकार नियंत्रण**:
+  - `A-` और `A+` बटन से 14sp से 28sp तक फॉन्ट आकार बदलने की पूर्ण स्वतंत्रता।
+  - आंखों को विश्राम देने वाला 1.6x लाइन-हाइट और प्रामाणिक अलंकरण (`✦ ── ✤ ── ✦`)।
+- **🔊 हिंदी काव्य पाठ (Audio Recital)**:
+  - टेक्स्ट-टू-स्पीच द्वारा धीमी, ओजस्वी और लयात्मक शैली (0.88x) में प्रत्येक कविता का सस्वर पाठ।
+- **🎨 १-टैप "काव्य कार्ड साझा करें" (Aesthetic Card Share)**:
+  - किसी भी कविता का सुरुचिपूर्ण, मिनिमल काव्य कार्ड बनाकर सीधे व्हाट्सएप स्टेटस या इंस्टाग्राम पर साझा करें।
+
+### 📚 २. ग्रंथ अनुक्रमणिका एवं वाचन प्रगति (Book Index & Reading Tracker)
+- **वाचन प्रगति (Reading Progress Counter)**:
+  - मुख्य स्क्रीन पर प्रगति बार जो दर्शाता है कि आपने ५१ में से कितनी कविताएँ पढ़ ली हैं (*जैसे: प्रगति: ५१ में से १२ कविताएँ पढ़ी गईं*)।
+- **पठित बैज (Read Badge)**:
+  - प्रत्येक पढ़ी हुई कविता पर स्वतः **"✓ पढ़ी गई"** बैज अंकित हो जाता है।
+- **त्वरित खोज एवं ४ प्रामाणिक खंड**:
+  - चारों खंडों के आधार पर फ़िल्टर चिप्स तथा शीर्षक या पंक्ति द्वारा त्वरित खोज।
 
 ---
 
@@ -85,31 +111,15 @@ Install the application directly on any Android device:
 
 ---
 
-## ✨ मुख्य विशेषताएँ (Key Features)
-
-- **📜 सम्पूर्ण ५१ कविताएँ:** मूल संकलन के चारों खंडों की सभी ५१ कविताएँ स्पष्ट देवनागरी लिपि में।
-- **🎨 ९:१६ वॉलपेपर स्टूडियो (Phone & WhatsApp Wallpaper Studio):**
-  - किसी भी कविता का आकर्षक **9:16 Full HD (1080×1920)** वॉलपेपर बनाएं।
-  - **अटल जी का पोर्ट्रेट बैज:** वॉलपेपर पर अटल जी की तस्वीर का बैज (ON / OFF टॉगल सुविधा)।
-  - **७ मनमोहक थीम:** Midnight OLED, Royal Gold, Crimson Dusk, Forest Zen, Deep Indigo, Sunset Ember, Vintage Parchment.
-  - **१-टैप सेट व सेव:** सीधे मोबाइल का होम/लॉक स्क्रीन वॉलपेपर सेट करें या गैलरी में सेव कर व्हाट्सएप चैट बैकग्राउंड बनाएं।
-- **🔊 हिंदी काव्य पाठ (Text-to-Speech):** एक क्लिक में अटल जी की कविताओं का ओजस्वी ऑडियो पाठ सुनें।
-- **🔔 दैनिक काव्य स्मरण (Daily Morning Notifications):** प्रतिदिन प्रातः ७:०० बजे एक प्रेरक कविता का स्वतः नोटिफिकेशन (ऑफलाइन)।
-- **🔍 त्वरित खोज एवं खंड फ़िल्टर (Search & Section Filter):** चारों खंडों के आधार पर फ़िल्टर करें या कविता के बोल व शीर्षक से तुरंत खोजें।
-- **❤️ पसंदीदा (Favorites):** अपनी प्रिय कविताओं को सहेजें।
-- **📤 काव्य शेयरिंग (Poem Sharing):** कविता, शीर्षक और रचयिता के नाम के साथ सीधे व्हाट्सएप और सोशल मीडिया पर साझा करें।
-- **📴 १००% ऑफलाइन एवं सुरक्षित:** किसी इंटरनेट की आवश्यकता नहीं, शून्य ट्रैकिंग।
-
----
-
 ## 🛠️ तकनीकी ढाँचा (Tech Stack)
 
 - **भाषा (Language):** Kotlin 1.9.24
 - **वास्तुकला (Architecture):** Android Jetpack & ViewBinding
 - **यूआई (UI):** Google Material Components 3 (`Theme.Material3.Dark.NoActionBar`)
-- **JSON पार्सर:** Google Gson 2.10.1
-- **अधिसूचना (Notifications):** Android `AlarmManager` + `BroadcastReceiver` + `NotificationManager`
-- **वॉलपेपर इंजन:** Android `WallpaperManager` + `MediaStore` High-Res Rendering
+- **ऑडियो इंजन:** Android `TextToSpeech` (Hindi locale)
+- **कार्ड रेंडरर:** Android Native Canvas & `FileProvider` High-Res PNG Generator
+- **डेटा भंडारण:** Bundled JSON (`assets/quotes.json`) + Android `SharedPreferences`
+- **अनुमतियाँ:** केवल सामान्य सूचना अनुमति (`POST_NOTIFICATIONS`), शून्य इंटरनेट अनुमति (100% Offline & Private)।
 
 ---
 

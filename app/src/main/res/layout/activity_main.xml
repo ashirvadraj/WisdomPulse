@@ -61,6 +61,36 @@
 
         </LinearLayout>
 
+        <!-- Reading Progress Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="6dp">
+
+            <TextView
+                android:id="@+id/tvReadingProgress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="प्रगति: ५१ में से ० कविताएँ पढ़ी गईं"
+                android:textColor="@color/accent_gold"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/progressReading"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="110dp"
+                android:layout_height="8dp"
+                android:max="51"
+                android:progress="0"
+                android:progressTint="@color/accent_gold" />
+        </LinearLayout>
+
         <!-- Search Bar -->
         <LinearLayout
             android:layout_width="match_parent"

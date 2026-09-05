@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/poemCardRoot"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginStart="16dp"
     android:layout_marginEnd="16dp"
-    android:layout_marginTop="8dp"
-    android:layout_marginBottom="8dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginBottom="6dp"
     app:cardBackgroundColor="@color/card_dark"
-    app:cardCornerRadius="18dp"
-    app:cardElevation="3dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
     app:strokeColor="@color/divider_color"
-    app:strokeWidth="1dp">
+    app:strokeWidth="1dp"
+    android:foreground="?attr/selectableItemBackground">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,7 +21,7 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- Top Header: Category, Poem Tag, and Quote Icon -->
+        <!-- Top Header: Section Pill, Read Badge & Favorite -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -33,26 +35,26 @@
                 android:background="@drawable/bg_chip_unselected"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
-                android:paddingTop="4dp"
-                android:paddingBottom="4dp"
-                android:text="Dreams"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:text="अनुभूति के स्वर"
                 android:textColor="@color/primary"
                 android:textSize="11sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/tvPoemBadge"
+                android:id="@+id/tvReadBadge"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:background="@drawable/bg_chip_unselected"
                 android:paddingStart="8dp"
                 android:paddingEnd="8dp"
-                android:paddingTop="4dp"
-                android:paddingBottom="4dp"
-                android:text="✨ Kavya Manch"
-                android:textColor="@color/accent_gold"
-                android:textSize="11sp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:text="✓ पढ़ी गई"
+                android:textColor="@color/accent_green"
+                android:textSize="10sp"
                 android:visibility="gone" />
 
             <View
@@ -60,12 +62,15 @@
                 android:layout_height="1dp"
                 android:layout_weight="1" />
 
-            <ImageView
-                android:layout_width="22dp"
-                android:layout_height="22dp"
-                android:src="@drawable/ic_format_quote"
-                android:alpha="0.4"
-                android:contentDescription="Quote mark" />
+            <ImageButton
+                android:id="@+id/btnFavorite"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_favorite_border"
+                android:contentDescription="Favorite"
+                app:tint="@color/primary" />
+
         </LinearLayout>
 
         <!-- Poem Title -->
@@ -73,162 +78,51 @@
             android:id="@+id/tvPoemTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="10dp"
+            android:text="१. गीत नया गाता हूँ"
             android:textColor="@color/accent_gold"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:visibility="gone" />
+            android:textStyle="bold" />
 
-        <!-- Quote Text / Poem Body -->
+        <!-- Stanza Teaser / Excerpt -->
         <TextView
             android:id="@+id/tvQuoteText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="12dp"
-            android:lineSpacingExtra="5dp"
-            android:text="Dream is not that which you see while sleeping..."
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="10dp"
+            android:lineSpacingExtra="4dp"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:text="टूटे हुए तारों से फूटे बासंती स्वर,\nपत्थर की छाती में उग आया नव अंकुर..."
             android:textColor="@color/text_primary"
-            android:textSize="16sp"
-            android:textStyle="normal" />
+            android:textSize="15sp" />
 
-        <!-- English Translation (for Poems / Hindi quotes) -->
-        <LinearLayout
-            android:id="@+id/layoutTranslation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/bg_chip_unselected"
-            android:padding="10dp"
-            android:layout_marginBottom="12dp"
-            android:visibility="gone">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Poetic English Meaning:"
-                android:textColor="@color/primary"
-                android:textSize="11sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/tvTranslation"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:textColor="@color/text_secondary"
-                android:textSize="13sp"
-                android:lineSpacingExtra="2dp" />
-        </LinearLayout>
-
-        <!-- Author Row: Portrait Avatar + Name & Role -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="14dp">
-
-            <!-- Author Portrait Avatar -->
-            <ImageView
-                android:id="@+id/ivAuthorAvatar"
-                android:layout_width="46dp"
-                android:layout_height="46dp"
-                android:src="@drawable/avatar_kalam"
-                android:contentDescription="Author Portrait" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginStart="12dp">
-
-                <TextView
-                    android:id="@+id/tvAuthor"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Dr. A.P.J. Abdul Kalam"
-                    android:textColor="@color/primary"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tvAuthorRole"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:text="Missile Man &amp; 11th President of India"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="12sp" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <!-- Divider -->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/divider_color"
-            android:layout_marginBottom="10dp" />
-
-        <!-- Bottom Actions Bar -->
+        <!-- Footer Row: Author stamp & Read Arrow -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical">
 
-            <!-- Favorite Button -->
-            <ImageButton
-                android:id="@+id/btnFavorite"
-                android:layout_width="38dp"
-                android:layout_height="38dp"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:src="@drawable/ic_favorite_border"
-                android:contentDescription="Favorite" />
-
-            <!-- TTS Audio Speak Button -->
-            <ImageButton
-                android:id="@+id/btnSpeak"
-                android:layout_width="38dp"
-                android:layout_height="38dp"
-                android:layout_marginStart="8dp"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:src="@drawable/ic_volume_up"
-                android:contentDescription="Listen" />
-
-            <!-- Share Text Button -->
-            <ImageButton
-                android:id="@+id/btnShareText"
-                android:layout_width="38dp"
-                android:layout_height="38dp"
-                android:layout_marginStart="8dp"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:src="@drawable/ic_share"
-                android:contentDescription="Share" />
-
-            <View
+            <TextView
                 android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_weight="1" />
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="— अटल बिहारी वाजपेयी"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp" />
 
-            <!-- Wallpaper Studio Button -->
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnWallpaper"
+            <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="38dp"
-                android:backgroundTint="@color/surface_dark"
-                app:strokeColor="@color/primary"
-                app:strokeWidth="1dp"
-                app:cornerRadius="19dp"
-                android:text="Wallpaper"
-                android:textAllCaps="false"
+                android:layout_height="wrap_content"
+                android:text="काव्य पढ़ें →"
                 android:textColor="@color/primary"
                 android:textSize="12sp"
-                app:icon="@drawable/ic_wallpaper"
-                app:iconTint="@color/primary"
-                app:iconSize="16dp" />
+                android:textStyle="bold" />
 
         </LinearLayout>
 
     </LinearLayout>
+
 </com.google.android.material.card.MaterialCardView>

@@ -10,7 +10,7 @@ import android.os.Build
 import androidx.core.app.NotificationCompat
 import com.wisdompulse.app.model.Quote
 import com.wisdompulse.app.ui.MainActivity
-import com.wisdompulse.app.ui.WallpaperActivity
+import com.wisdompulse.app.ui.PoemDetailActivity
 import java.util.Calendar
 
 object NotificationHelper {
@@ -44,13 +44,13 @@ object NotificationHelper {
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
 
-        val wpIntent = Intent(context, WallpaperActivity::class.java).apply {
+        val detailIntent = Intent(context, PoemDetailActivity::class.java).apply {
             putExtra("extra_quote", quote)
         }
-        val wpPendingIntent = PendingIntent.getActivity(
+        val detailPendingIntent = PendingIntent.getActivity(
             context,
             quote.id,
-            wpIntent,
+            detailIntent,
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
 
@@ -66,7 +66,7 @@ object NotificationHelper {
             .setPriority(NotificationCompat.PRIORITY_HIGH)
             .setContentIntent(mainPendingIntent)
             .setAutoCancel(true)
-            .addAction(android.R.drawable.ic_menu_gallery, "Set Wallpaper", wpPendingIntent)
+            .addAction(android.R.drawable.ic_menu_sort_by_size, "काव्य पढ़ें", detailPendingIntent)
             .build()
 
         val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager

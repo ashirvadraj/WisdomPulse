@@ -15,8 +15,8 @@ class QuoteAdapter(
     private var quotes: List<Quote>,
     private val onFavoriteToggle: (Quote) -> Boolean,
     private val isFavorite: (Quote) -> Boolean,
-    private val onSpeak: (Quote) -> Unit,
-    private val onWallpaper: (Quote) -> Unit
+    private val isRead: (Quote) -> Boolean,
+    private val onPoemClick: (Quote) -> Unit
 ) : RecyclerView.Adapter<QuoteAdapter.QuoteViewHolder>() {
 
     fun updateList(newQuotes: List<Quote>) {
@@ -39,41 +39,12 @@ class QuoteAdapter(
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(quote: Quote) {
-            binding.tvQuoteText.text = if (quote.isPoem) quote.text else "\"" + quote.text + "\""
-            binding.tvAuthor.text = quote.author
-            binding.tvAuthorRole.text = quote.authorRole
+            binding.tvPoemTitle.text = quote.title ?: "कविता"
             binding.tvCategory.text = quote.category
+            binding.tvQuoteText.text = quote.text
 
-            // Poem Title
-            if (!quote.title.isNullOrEmpty()) {
-                binding.tvPoemTitle.visibility = View.VISIBLE
-                binding.tvPoemTitle.text = quote.title
-            } else {
-                binding.tvPoemTitle.visibility = View.GONE
-            }
-
-            // Dynamic Author Portrait Avatar
-            val resId = context.resources.getIdentifier(quote.avatarKey, "drawable", context.packageName)
-            if (resId != 0) {
-                binding.ivAuthorAvatar.setImageResource(resId)
-            } else {
-                binding.ivAuthorAvatar.setImageResource(R.drawable.avatar_generic)
-            }
-
-            // Poem Badge
-            if (quote.isPoem) {
-                binding.tvPoemBadge.visibility = View.VISIBLE
-            } else {
-                binding.tvPoemBadge.visibility = View.GONE
-            }
-
-            // English Translation section (for Hindi poems/quotes)
-            if (!quote.englishTranslation.isNullOrEmpty()) {
-                binding.layoutTranslation.visibility = View.VISIBLE
-                binding.tvTranslation.text = quote.englishTranslation
-            } else {
-                binding.layoutTranslation.visibility = View.GONE
-            }
+            // Read badge
+            binding.tvReadBadge.visibility = if (isRead(quote)) View.VISIBLE else View.GONE
 
             // Favorite state
             val fav = isFavorite(quote)
@@ -84,23 +55,9 @@ class QuoteAdapter(
                 updateFavoriteIcon(newFav)
             }
 
-            binding.btnSpeak.setOnClickListener {
-                onSpeak(quote)
-            }
-
-            binding.btnShareText.setOnClickListener {
-                val header = if (!quote.title.isNullOrEmpty()) quote.title + "\n\n" else ""
-                val shareBody = header + quote.text + "\n\n— " + quote.author + " (" + quote.authorRole + ")\n\nमेरी इक्यावन कविताएँ"
-                val intent = Intent(Intent.ACTION_SEND).apply {
-                    type = "text/plain"
-                    putExtra(Intent.EXTRA_SUBJECT, quote.title ?: ("कविता: " + quote.author))
-                    putExtra(Intent.EXTRA_TEXT, shareBody)
-                }
-                context.startActivity(Intent.createChooser(intent, "कविता शेयर करें"))
-            }
-
-            binding.btnWallpaper.setOnClickListener {
-                onWallpaper(quote)
+            // Clicking card opens dedicated reading screen
+            binding.poemCardRoot.setOnClickListener {
+                onPoemClick(quote)
             }
         }
 

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <cache-path name="shared_cards" path="cards/" />
     <cache-path name="shared_wallpapers" path="wallpapers/" />
-    <external-cache-path name="external_wallpapers" path="wallpapers/" />
-    <files-path name="internal_wallpapers" path="wallpapers/" />
+    <external-cache-path name="external_cards" path="cards/" />
+    <files-path name="internal_cards" path="cards/" />
 </paths>

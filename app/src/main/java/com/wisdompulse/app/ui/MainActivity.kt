@@ -22,13 +22,11 @@ import com.wisdompulse.app.model.Quote
 import com.wisdompulse.app.notification.NotificationHelper
 import java.util.Locale
 
-class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
+class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var repository: QuoteRepository
     private lateinit var adapter: QuoteAdapter
-    private var tts: TextToSpeech? = null
-    private var isTtsReady = false
 
     private var currentCategory = "All"
     private var currentSearchQuery = ""
@@ -39,7 +37,6 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         setContentView(binding.root)
 
         repository = QuoteRepository(this)
-        tts = TextToSpeech(this, this)
 
         NotificationHelper.createNotificationChannel(this)
         requestNotificationPermission()
@@ -51,15 +48,29 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         setupNotificationButton()
     }
 
+    override fun onResume() {
+        super.onResume()
+        updateReadingProgress()
+        filterQuotes()
+    }
+
+    private fun updateReadingProgress() {
+        val total = repository.getAllQuotes().size
+        val readCount = repository.getReadPoemIds().size
+        binding.tvReadingProgress.text = "प्रगति: $total में से $readCount कविताएँ पढ़ी गईं"
+        binding.progressReading.max = if (total > 0) total else 51
+        binding.progressReading.progress = readCount
+    }
+
     private fun setupRecyclerView() {
         adapter = QuoteAdapter(
             context = this,
             quotes = repository.getAllQuotes(),
             onFavoriteToggle = { quote -> repository.toggleFavorite(quote.id) },
             isFavorite = { quote -> repository.isFavorite(quote.id) },
-            onSpeak = { quote -> speakQuote(quote) },
-            onWallpaper = { quote ->
-                val intent = Intent(this, WallpaperActivity::class.java).apply {
+            isRead = { quote -> repository.isPoemRead(quote.id) },
+            onPoemClick = { quote ->
+                val intent = Intent(this, PoemDetailActivity::class.java).apply {
                     putExtra("extra_quote", quote)
                 }
                 startActivity(intent)
@@ -153,39 +164,11 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         }
     }
 
-    private fun speakQuote(quote: Quote) {
-        if (!isTtsReady || tts == null) {
-            Toast.makeText(this, "Text-to-Speech शुरू हो रहा है...", Toast.LENGTH_SHORT).show()
-            return
-        }
-
-        val result = tts?.setLanguage(Locale("hi", "IN"))
-        if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
-            tts?.setLanguage(Locale.US)
-        }
-
-        val title = quote.title ?: ""
-        val speechText = "$title. ${quote.text}. रचयिता अटल बिहारी वाजपेयी."
-        tts?.speak(speechText, TextToSpeech.QUEUE_FLUSH, null, "WISDOM_TTS")
-    }
-
-    override fun onInit(status: Int) {
-        if (status == TextToSpeech.SUCCESS) {
-            isTtsReady = true
-        }
-    }
-
     private fun requestNotificationPermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
                 ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.POST_NOTIFICATIONS), 101)
             }
         }
-    }
-
-    override fun onDestroy() {
-        tts?.stop()
-        tts?.shutdown()
-        super.onDestroy()
     }
 }

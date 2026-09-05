@@ -5,13 +5,16 @@
     <string name="wallpaper_studio">कविता वॉलपेपर स्टूडियो</string>
     <string name="search_hint">कविता का शीर्षक या पंक्ति खोजें...</string>
     <string name="quote_of_the_day">आज की अटल कविता</string>
-    <string name="set_as_wallpaper">फोन वॉलपेपर सेट करें</string>
-    <string name="save_for_whatsapp">व्हाट्सएप वॉलपेपर के लिए सेव करें</string>
-    <string name="inspire_me_now">आज की कविता पढ़ें</string>
-    <string name="daily_reminders">दैनिक काव्य स्मरण</string>
-    <string name="whatsapp_guide_toast">सेव हो गया! व्हाट्सएप में: Settings > Chats > Wallpaper > My Photos</string>
-    <string name="wallpaper_set_success">वॉलपेपर सफलतापूर्वक सेट हो गया!</string>
-    <string name="saved_to_gallery">गैलरी (Pictures/WisdomPulse) में सेव हुआ!</string>
-    <string name="notification_channel_name">मेरी इक्यावन कविताएँ - दैनिक काव्य</string>
-    <string name="notification_channel_desc">अटल बिहारी वाजपेयी जी की कालजयी कविताएँ</string>
+    <string name="poem_reading_room">काव्य पाठ</string>
+    <string name="theme_parchment">पाण्डुलिपि</string>
+    <string name="theme_midnight">निशांत</string>
+    <string name="theme_slate">शिला</string>
+    <string name="reading_progress">प्रगति: ५१ में से %1$d कविताएँ पढ़ी गईं</string>
+    <string name="share_poetic_card">काव्य कार्ड साझा करें</string>
+    <string name="share_text_only">काव्य पंक्तियाँ साझा करें</string>
+    <string name="recite_poem">काव्य पाठ सुनें</string>
+    <string name="recite_pause">विराम</string>
+    <string name="read_status_done">पढ़ी गई</string>
+    <string name="read_status_unread">अपठित</string>
+    <string name="author_stamp">अटल बिहारी वाजपेयी • मेरी इक्यावन कविताएँ</string>
 </resources>

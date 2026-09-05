@@ -62,4 +62,39 @@ class QuoteRepository(private val context: Context) {
     fun setDailyNotificationEnabled(enabled: Boolean) {
         prefs.edit().putBoolean("daily_notifications_enabled", enabled).apply()
     }
+
+    // Reading Progress & Tracking
+    fun getReadPoemIds(): Set<Int> {
+        val readSet = prefs.getStringSet("read_poem_ids", emptySet()) ?: emptySet()
+        return readSet.mapNotNull { it.toIntOrNull() }.toSet()
+    }
+
+    fun markPoemAsRead(quoteId: Int) {
+        val currentRead = getReadPoemIds().toMutableSet()
+        if (!currentRead.contains(quoteId)) {
+            currentRead.add(quoteId)
+            prefs.edit().putStringSet("read_poem_ids", currentRead.map { it.toString() }.toSet()).apply()
+        }
+    }
+
+    fun isPoemRead(quoteId: Int): Boolean {
+        return getReadPoemIds().contains(quoteId)
+    }
+
+    // Reader Preferences
+    fun getReadingTheme(): String {
+        return prefs.getString("reader_theme", "parchment") ?: "parchment"
+    }
+
+    fun setReadingTheme(theme: String) {
+        prefs.edit().putString("reader_theme", theme).apply()
+    }
+
+    fun getFontSizeSp(): Float {
+        return prefs.getFloat("reader_font_size", 18f)
+    }
+
+    fun setFontSizeSp(sizeSp: Float) {
+        prefs.edit().putFloat("reader_font_size", sizeSp).apply()
+    }
 }

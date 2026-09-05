@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/readingRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/parchment_bg">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:elevation="0dp">
+
+        <LinearLayout
+            android:id="@+id/topBar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_arrow_back"
+                android:contentDescription="Back"
+                app:tint="@color/parchment_accent" />
+
+            <TextView
+                android:id="@+id/tvHeaderBookTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="मेरी इक्यावन कविताएँ"
+                android:textColor="@color/parchment_text"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Theme Switcher Button -->
+            <ImageButton
+                android:id="@+id/btnThemeToggle"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_sparkles"
+                android:contentDescription="Switch Theme"
+                app:tint="@color/parchment_accent" />
+
+            <!-- Favorite Toggle -->
+            <ImageButton
+                android:id="@+id/btnBookmark"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_favorite_border"
+                android:contentDescription="Bookmark"
+                app:tint="@color/parchment_accent" />
+
+            <!-- Share Card -->
+            <ImageButton
+                android:id="@+id/btnShareCard"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_share"
+                android:contentDescription="Share Poem Card"
+                app:tint="@color/parchment_accent" />
+
+        </LinearLayout>
+
+        <!-- Theme Selection Bar (Collapsible/Hidden by default, toggled via btnThemeToggle) -->
+        <LinearLayout
+            android:id="@+id/themeSelectorBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingTop="6dp"
+            android:paddingBottom="10dp"
+            android:visibility="gone">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnThemeParchment"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="पाण्डुलिपि"
+                android:textSize="12sp"
+                android:backgroundTint="#F2EDE1"
+                android:textColor="#201E1B"
+                app:cornerRadius="18dp"
+                android:layout_marginEnd="8dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnThemeMidnight"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="निशांत"
+                android:textSize="12sp"
+                android:backgroundTint="#0A0A0C"
+                android:textColor="#EDEDED"
+                app:strokeColor="#D4AF37"
+                app:strokeWidth="1dp"
+                app:cornerRadius="18dp"
+                android:layout_marginEnd="8dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnThemeSlate"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="शिला"
+                android:textSize="12sp"
+                android:backgroundTint="#1E2028"
+                android:textColor="#D9DBE2"
+                app:cornerRadius="18dp" />
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Scrollable Poem Content -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollPoem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:fillViewport="true"
+        android:paddingBottom="100dp">
+
+        <LinearLayout
+            android:id="@+id/readingContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="80dp">
+
+            <!-- Section Pill Badge -->
+            <TextView
+                android:id="@+id/tvDetailSection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="अनुभूति के स्वर"
+                android:textColor="@color/kavya_sindoor"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.06"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Poem Title -->
+            <TextView
+                android:id="@+id/tvDetailTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="१. गीत नया गाता हूँ"
+                android:textColor="@color/parchment_accent"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Ornamental Header Divider -->
+            <TextView
+                android:id="@+id/tvDetailFlourish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✦ ── ✤ ── ✦"
+                android:textColor="@color/parchment_accent"
+                android:textSize="15sp"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Full Poem Body -->
+            <TextView
+                android:id="@+id/tvDetailPoemText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="टूटे हुए तारों से फूटे बासंती स्वर,\nपत्थर की छाती में उग आया नव अंकुर,\nझरे सब पीले पात, कोयल की कुहू-कुहू,\nप्राची में अरुणिमा की रेख देख पाता हूँ।\nगीत नया गाता हूँ।"
+                android:textColor="@color/parchment_text"
+                android:textSize="18sp"
+                android:lineSpacingExtra="8dp"
+                android:textAlignment="center"
+                android:layout_marginBottom="32dp" />
+
+            <!-- Bottom Flourish -->
+            <TextView
+                android:id="@+id/tvDetailFlourishBottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="~ ❖ ~"
+                android:textColor="@color/parchment_accent"
+                android:textSize="16sp"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Author Signoff -->
+            <TextView
+                android:id="@+id/tvDetailAuthorSignoff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="— अटल बिहारी वाजपेयी"
+                android:textColor="@color/parchment_text_sec"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="40dp" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Bottom Floating Reading Bar: Audio Recital & Font Size -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bottomReadingBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="26dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="@color/parchment_card">
+
+        <LinearLayout
+            android:id="@+id/readingBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <!-- Font Size Decrease (A-) -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFontDecrease"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:minWidth="0dp"
+                android:padding="0dp"
+                android:text="A-"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/parchment_accent"
+                android:backgroundTint="@android:color/transparent"
+                app:elevation="0dp" />
+
+            <!-- Current Font Size Label -->
+            <TextView
+                android:id="@+id/tvFontSizeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18sp"
+                android:textColor="@color/parchment_text_sec"
+                android:textSize="11sp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp" />
+
+            <!-- Font Size Increase (A+) -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFontIncrease"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:minWidth="0dp"
+                android:padding="0dp"
+                android:text="A+"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/parchment_accent"
+                android:backgroundTint="@android:color/transparent"
+                app:elevation="0dp" />
+
+            <View
+                android:id="@+id/barDivider"
+                android:layout_width="1dp"
+                android:layout_height="24dp"
+                android:background="@color/parchment_divider"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="12dp" />
+
+            <!-- Play / Pause TTS Recital Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRecitePoem"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="काव्य पाठ सुनें"
+                android:textSize="13sp"
+                android:textAllCaps="false"
+                android:textColor="@color/parchment_accent"
+                android:backgroundTint="@android:color/transparent"
+                app:icon="@drawable/ic_volume_up"
+                app:iconTint="@color/parchment_accent"
+                app:iconSize="18dp"
+                app:elevation="0dp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
