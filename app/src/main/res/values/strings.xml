@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WisdomPulse</string>
+    <string name="app_tagline">Wisdom &amp; Poetry of Legends</string>
+    <string name="wallpaper_studio">Wallpaper Studio</string>
+    <string name="search_hint">Search quotes, poets, or emotions...</string>
+    <string name="quote_of_the_day">Quote of the Day</string>
+    <string name="set_as_wallpaper">Set as Phone Wallpaper</string>
+    <string name="save_for_whatsapp">Save for WhatsApp Wallpaper</string>
+    <string name="inspire_me_now">Inspire Me Now</string>
+    <string name="daily_reminders">Daily 7 AM Reminders</string>
+    <string name="whatsapp_guide_toast">Saved! In WhatsApp: Settings &gt; Chats &gt; Wallpaper &gt; My Photos</string>
+    <string name="wallpaper_set_success">Wallpaper applied successfully!</string>
+    <string name="saved_to_gallery">Saved to Pictures/WisdomPulse!</string>
+    <string name="notification_channel_name">Daily Wisdom Notifications</string>
+    <string name="notification_channel_desc">Daily morning quotes from world legends</string>
+</resources>

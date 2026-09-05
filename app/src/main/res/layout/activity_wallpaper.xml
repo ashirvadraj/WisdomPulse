@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_dark">
+
+    <!-- Top Toolbar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="16dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="Back" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="@string/wallpaper_studio"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvRatioBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_chip_unselected"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:text="9:16 HD"
+            android:textColor="@color/primary"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <!-- Scrollable Studio Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="16dp">
+
+            <!-- 9:16 Canvas Card Preview -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvWallpaperPreview"
+                android:layout_width="260dp"
+                android:layout_height="462dp"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="8dp">
+
+                <!-- Inner Wallpaper Surface -->
+                <RelativeLayout
+                    android:id="@+id/wallpaperContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#0B0C10"
+                    android:padding="24dp">
+
+                    <!-- Top Decorative Icon -->
+                    <ImageView
+                        android:id="@+id/ivQuoteDeco"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_format_quote"
+                        android:alpha="0.8" />
+
+                    <!-- Center Content: Quote & Author -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/tvWpQuote"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Dream is not that which you see while sleeping..."
+                            android:textAlignment="center"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp"
+                            android:lineSpacingExtra="5dp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:id="@+id/wpDivider"
+                            android:layout_width="40dp"
+                            android:layout_height="2dp"
+                            android:background="#E0A96D"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp" />
+
+                        <TextView
+                            android:id="@+id/tvWpAuthor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="— Dr. A.P.J. Abdul Kalam"
+                            android:textColor="#E0A96D"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvWpRole"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="Missile Man &amp; 11th President of India"
+                            android:textColor="#C0C5D0"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <!-- Bottom Watermark -->
+                    <TextView
+                        android:id="@+id/tvWpWatermark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="✨ WisdomPulse"
+                        android:textColor="#66FFFFFF"
+                        android:textSize="10sp"
+                        android:letterSpacing="0.1" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Themes / Gradients Horizontal Selector -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp"
+                android:text="Choose Wallpaper Theme:"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/themePickerContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp">
+
+                    <!-- Swatch 1: OLED Dark -->
+                    <Button
+                        android:id="@+id/themeOled"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:backgroundTint="#0B0C10"
+                        app:cornerRadius="22dp" />
+
+                    <!-- Swatch 2: Royal Gold -->
+                    <Button
+                        android:id="@+id/themeRoyalGold"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_marginStart="10dp"
+                        android:backgroundTint="#241B0F"
+                        app:cornerRadius="22dp" />
+
+                    <!-- Swatch 3: Crimson Dusk -->
+                    <Button
+                        android:id="@+id/themeCrimson"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_marginStart="10dp"
+                        android:backgroundTint="#2C0E1E"
+                        app:cornerRadius="22dp" />
+
+                    <!-- Swatch 4: Forest Zen -->
+                    <Button
+                        android:id="@+id/themeForest"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_marginStart="10dp"
+                        android:backgroundTint="#0D2818"
+                        app:cornerRadius="22dp" />
+
+                    <!-- Swatch 5: Deep Indigo -->
+                    <Button
+                        android:id="@+id/themeIndigo"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_marginStart="10dp"
+                        android:backgroundTint="#131B3A"
+                        app:cornerRadius="22dp" />
+
+                    <!-- Swatch 6: Sunset Ember -->
+                    <Button
+                        android:id="@+id/themeSunset"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_marginStart="10dp"
+                        android:backgroundTint="#3B1218"
+                        app:cornerRadius="22dp" />
+
+                    <!-- Swatch 7: Vintage Parchment -->
+                    <Button
+                        android:id="@+id/themeParchment"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_marginStart="10dp"
+                        android:backgroundTint="#F4EDE2"
+                        app:cornerRadius="22dp" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Action Buttons: Set as Wallpaper & Save for WhatsApp -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/surface_dark"
+        android:padding="16dp">
+
+        <!-- 1-Tap Set as Phone Wallpaper -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSetPhoneWallpaper"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_button_wallpaper"
+            android:text="@string/set_as_wallpaper"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:icon="@drawable/ic_wallpaper"
+            app:iconTint="@color/black"
+            app:iconGravity="textStart" />
+
+        <!-- 1-Tap Save & Set as WhatsApp Wallpaper -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSaveWhatsAppWallpaper"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_button_whatsapp"
+            android:text="@string/save_for_whatsapp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:icon="@drawable/ic_whatsapp"
+            app:iconTint="@color/white"
+            app:iconGravity="textStart" />
+
+    </LinearLayout>
+
+</LinearLayout>

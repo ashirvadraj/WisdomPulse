@@ -1,0 +1,33 @@
+﻿# Built application files
+*.apk
+*.aab
+*.ap_
+
+# Gradle & Build caches
+.gradle/
+build/
+app/build/
+local.properties
+
+# Android Studio / IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+.navigation/
+
+# Scratch generator scripts
+*.js
+test.js
+setup.js
+fix_icon.js
+build_config.js
+quotes_db.js
+res_generator.js
+layout_generator.js
+code_generator.js
+
+# OS specific
+.DS_Store
+Thumbs.db

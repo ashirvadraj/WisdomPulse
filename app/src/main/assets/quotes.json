@@ -1,0 +1,542 @@
+[
+  {
+    "id": 1,
+    "text": "You cannot change your future, but you can change your habits, and surely your habits will change your future.",
+    "author": "Dr. A.P.J. Abdul Kalam",
+    "authorRole": "Missile Man & 11th President of India",
+    "category": "Habits & Future",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 2,
+    "text": "Dream is not that which you see while sleeping, it is something that does not let you sleep.",
+    "author": "Dr. A.P.J. Abdul Kalam",
+    "authorRole": "Missile Man & 11th President of India",
+    "category": "Dreams",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 3,
+    "text": "If you want to shine like a sun, first burn like a sun.",
+    "author": "Dr. A.P.J. Abdul Kalam",
+    "authorRole": "Missile Man & 11th President of India",
+    "category": "Hard Work",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 4,
+    "text": "All birds find shelter during a rain. But Eagle avoids rain by flying above the Clouds. Problems are common, but attitude makes the difference.",
+    "author": "Dr. A.P.J. Abdul Kalam",
+    "authorRole": "Missile Man & 11th President of India",
+    "category": "Resilience",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 5,
+    "text": "Confidence and hard-work is the best medicine to kill the disease called failure. It will make you a successful person.",
+    "author": "Dr. A.P.J. Abdul Kalam",
+    "authorRole": "Missile Man & 11th President of India",
+    "category": "Success",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 6,
+    "text": "Failure will never overtake me if my determination to succeed is strong enough.",
+    "author": "Dr. A.P.J. Abdul Kalam",
+    "authorRole": "Missile Man & 11th President of India",
+    "category": "Determination",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 7,
+    "text": "Don't take rest after your first victory because if you fail in second, more lips are waiting to say that your first victory was just luck.",
+    "author": "Dr. A.P.J. Abdul Kalam",
+    "authorRole": "Missile Man & 11th President of India",
+    "category": "Consistency",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 8,
+    "text": "To succeed in your mission, you must have single-minded devotion to your goal.",
+    "author": "Dr. A.P.J. Abdul Kalam",
+    "authorRole": "Missile Man & 11th President of India",
+    "category": "Focus",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 9,
+    "text": "Let us sacrifice our today so that our children can have a better tomorrow.",
+    "author": "Dr. A.P.J. Abdul Kalam",
+    "authorRole": "Missile Man & 11th President of India",
+    "category": "Patriotism",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 10,
+    "text": "Small aim is a crime; have great aim.",
+    "author": "Dr. A.P.J. Abdul Kalam",
+    "authorRole": "Missile Man & 11th President of India",
+    "category": "Ambition",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 11,
+    "text": "Difficulty in life does not come to destroy you, but to help you realize your hidden potential and power.",
+    "author": "Dr. A.P.J. Abdul Kalam",
+    "authorRole": "Missile Man & 11th President of India",
+    "category": "Inner Strength",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 12,
+    "text": "Learning gives creativity, creativity leads to thinking, thinking provides knowledge, knowledge makes you great.",
+    "author": "Dr. A.P.J. Abdul Kalam",
+    "authorRole": "Missile Man & 11th President of India",
+    "category": "Education",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 13,
+    "text": "बाधाएं आती हैं आएं, घिरें प्रलय की घोर घटाएं,\nपावों के नीचे अंगारे, सिर पर बरसें यदि ज्वालाएं,\nनिज हाथों में हंसते-हंसते, आग लगाकर जलना होगा,\nक़दम मिलाकर चलना होगा।",
+    "author": "Atal Bihari Vajpayee",
+    "authorRole": "Former Prime Minister of India & Legendary Poet",
+    "category": "Poetry & Resilience",
+    "language": "hi",
+    "isPoem": true
+  },
+  {
+    "id": 14,
+    "text": "गीत नया गाता हूँ,\nटूटे हुए तारों से फूटे बासंती स्वर,\nपत्थर की छाती में उग आया नव अंकुर,\nझरे सब पीले पात, कोयल की कुहुक रात,\nप्राची में अरुणिम की रेख देख पाता हूँ,\nगीत नया गाता हूँ।",
+    "author": "Atal Bihari Vajpayee",
+    "authorRole": "Former Prime Minister of India & Legendary Poet",
+    "category": "Poetry & Hope",
+    "language": "hi",
+    "isPoem": true
+  },
+  {
+    "id": 15,
+    "text": "हार नहीं मानूंगा, रार नहीं ठानूंगा,\nकाल के कपाल पर लिखता मिटाता हूं,\nगीत नया गाता हूं।",
+    "author": "Atal Bihari Vajpayee",
+    "authorRole": "Former Prime Minister of India & Legendary Poet",
+    "category": "Poetry & Willpower",
+    "language": "hi",
+    "isPoem": true
+  },
+  {
+    "id": 16,
+    "text": "मौत से ठन गई!\nजूझने का मेरा इरादा न था,\nमोड़ पर मिलेंगे इसका वादा न था,\nरास्ता रोक कर वह खड़ी हो गई,\nयों लगा ज़िन्दगी से बड़ी हो गई।\nपर मैं मौत से नहीं डरता, मौत से ठन गई!",
+    "author": "Atal Bihari Vajpayee",
+    "authorRole": "Former Prime Minister of India & Legendary Poet",
+    "category": "Poetry & Courage",
+    "language": "hi",
+    "isPoem": true
+  },
+  {
+    "id": 17,
+    "text": "भारत ज़मीन का टुकड़ा नहीं, जीता-जागता राष्ट्रपुरुष है। यह वंदन की भूमि है, यह अभिनंदन की भूमि है। इसका कंकर-कंकर शंकर है, इसका बिंदु-बिंदु गंगाजल है। हम जिएंगे तो इसके लिए, मरेंगे तो इसके लिए।",
+    "author": "Atal Bihari Vajpayee",
+    "authorRole": "Former Prime Minister of India & Statesman",
+    "category": "Patriotism",
+    "language": "hi",
+    "isPoem": false
+  },
+  {
+    "id": 18,
+    "text": "You can change friends but not neighbors.",
+    "author": "Atal Bihari Vajpayee",
+    "authorRole": "Former Prime Minister of India & Statesman",
+    "category": "Diplomacy",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 19,
+    "text": "Our nuclear weapons are strictly for deterrence against force, not for aggression.",
+    "author": "Atal Bihari Vajpayee",
+    "authorRole": "Former Prime Minister of India & Statesman",
+    "category": "Leadership",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 20,
+    "text": "Victory and defeat are part of life, which are to be viewed with equanimity.",
+    "author": "Atal Bihari Vajpayee",
+    "authorRole": "Former Prime Minister of India & Statesman",
+    "category": "Equanimity",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 21,
+    "text": "छोटे मन से कोई बड़ा नहीं होता, टूटे मन से कोई खड़ा नहीं होता।",
+    "author": "Atal Bihari Vajpayee",
+    "authorRole": "Former Prime Minister of India & Legendary Poet",
+    "category": "Wisdom",
+    "language": "hi",
+    "isPoem": false
+  },
+  {
+    "id": 22,
+    "text": "My poetry is a declaration of war, not an exordium to defeat. It is not the defeated soldier's drumbeat of despair, but the fighting warrior's will to win.",
+    "author": "Atal Bihari Vajpayee",
+    "authorRole": "Former Prime Minister of India & Legendary Poet",
+    "category": "Poetry & Spirit",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 23,
+    "text": "Arise, awake, and stop not till the goal is reached.",
+    "author": "Swami Vivekananda",
+    "authorRole": "Spiritual Leader & Philosopher",
+    "category": "Awakening",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 24,
+    "text": "Take up one idea. Make that one idea your life; dream of it; think of it; live on that idea. Let the brain, the body, muscles, nerves, every part of your body be full of that idea. This is the way to success.",
+    "author": "Swami Vivekananda",
+    "authorRole": "Spiritual Leader & Philosopher",
+    "category": "Focus & Purpose",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 25,
+    "text": "You have to grow from the inside out. None can teach you, none can make you spiritual. There is no other teacher but your own soul.",
+    "author": "Swami Vivekananda",
+    "authorRole": "Spiritual Leader & Philosopher",
+    "category": "Self-Discovery",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 26,
+    "text": "In a day, when you don't come across any problems - you can be sure that you are travelling in a wrong path.",
+    "author": "Swami Vivekananda",
+    "authorRole": "Spiritual Leader & Philosopher",
+    "category": "Resilience",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 27,
+    "text": "Strength is Life, Weakness is Death. Expansion is Life, Contraction is Death. Love is Life, Hatred is Death.",
+    "author": "Swami Vivekananda",
+    "authorRole": "Spiritual Leader & Philosopher",
+    "category": "Strength",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 28,
+    "text": "All the powers in the universe are already ours. It is we who have put our hands before our eyes and cry that it is dark.",
+    "author": "Swami Vivekananda",
+    "authorRole": "Spiritual Leader & Philosopher",
+    "category": "Inner Power",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 29,
+    "text": "Talk to yourself once in a day, otherwise you may miss meeting an intelligent person in this world.",
+    "author": "Swami Vivekananda",
+    "authorRole": "Spiritual Leader & Philosopher",
+    "category": "Self-Reflection",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 30,
+    "text": "Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma - which is living with the results of other people's thinking.",
+    "author": "Steve Jobs",
+    "authorRole": "Co-Founder of Apple & Visionary",
+    "category": "Authenticity",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 31,
+    "text": "Stay hungry. Stay foolish.",
+    "author": "Steve Jobs",
+    "authorRole": "Co-Founder of Apple & Visionary",
+    "category": "Curiosity",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 32,
+    "text": "The people who are crazy enough to think they can change the world are the ones who do.",
+    "author": "Steve Jobs",
+    "authorRole": "Co-Founder of Apple & Visionary",
+    "category": "Innovation",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 33,
+    "text": "The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle.",
+    "author": "Steve Jobs",
+    "authorRole": "Co-Founder of Apple & Visionary",
+    "category": "Passion",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 34,
+    "text": "Innovation distinguishes between a leader and a follower.",
+    "author": "Steve Jobs",
+    "authorRole": "Co-Founder of Apple & Visionary",
+    "category": "Leadership",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 35,
+    "text": "Imagination is more important than knowledge. For knowledge is limited, whereas imagination embraces the entire world.",
+    "author": "Albert Einstein",
+    "authorRole": "Theoretical Physicist & Nobel Laureate",
+    "category": "Imagination",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 36,
+    "text": "Life is like riding a bicycle. To keep your balance, you must keep moving.",
+    "author": "Albert Einstein",
+    "authorRole": "Theoretical Physicist & Nobel Laureate",
+    "category": "Balance & Momentum",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 37,
+    "text": "Learn from yesterday, live for today, hope for tomorrow. The important thing is not to stop questioning.",
+    "author": "Albert Einstein",
+    "authorRole": "Theoretical Physicist & Nobel Laureate",
+    "category": "Curiosity",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 38,
+    "text": "In the middle of difficulty lies opportunity.",
+    "author": "Albert Einstein",
+    "authorRole": "Theoretical Physicist & Nobel Laureate",
+    "category": "Opportunity",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 39,
+    "text": "Try not to become a man of success, but rather try to become a man of value.",
+    "author": "Albert Einstein",
+    "authorRole": "Theoretical Physicist & Nobel Laureate",
+    "category": "Values",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 40,
+    "text": "It always seems impossible until it's done.",
+    "author": "Nelson Mandela",
+    "authorRole": "Former President of South Africa & Freedom Fighter",
+    "category": "Perseverance",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 41,
+    "text": "I learned that courage was not the absence of fear, but the triumph over it. The brave man is not he who does not feel afraid, but he who conquers that fear.",
+    "author": "Nelson Mandela",
+    "authorRole": "Former President of South Africa & Freedom Fighter",
+    "category": "Courage",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 42,
+    "text": "Education is the most powerful weapon which you can use to change the world.",
+    "author": "Nelson Mandela",
+    "authorRole": "Former President of South Africa & Freedom Fighter",
+    "category": "Education",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 43,
+    "text": "The greatest glory in living lies not in never falling, but in rising every time we fall.",
+    "author": "Nelson Mandela",
+    "authorRole": "Former President of South Africa & Freedom Fighter",
+    "category": "Resilience",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 44,
+    "text": "Where the mind is without fear and the head is held high;\nWhere knowledge is free;\nWhere the world has not been broken up into fragments\nBy narrow domestic walls;\nInto that heaven of freedom, my Father, let my country awake.",
+    "author": "Rabindranath Tagore",
+    "authorRole": "Poet, Philosopher & Nobel Laureate",
+    "category": "Poetry & Freedom",
+    "language": "en",
+    "isPoem": true
+  },
+  {
+    "id": 45,
+    "text": "You can't cross the sea merely by standing and staring at the water.",
+    "author": "Rabindranath Tagore",
+    "authorRole": "Poet, Philosopher & Nobel Laureate",
+    "category": "Action",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 46,
+    "text": "Faith is the bird that feels the light when the dawn is still dark.",
+    "author": "Rabindranath Tagore",
+    "authorRole": "Poet, Philosopher & Nobel Laureate",
+    "category": "Faith & Hope",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 47,
+    "text": "They may kill me, but they cannot kill my ideas. They can crush my body, but they will not be able to crush my spirit.",
+    "author": "Bhagat Singh",
+    "authorRole": "Revolutionary & Freedom Fighter",
+    "category": "Patriotism & Spirit",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 48,
+    "text": "Zindagi to apne dam par hi jiyi jaati hai, dusron ke kandhon par to sirf janaaze uthaye jaate hain.",
+    "author": "Bhagat Singh",
+    "authorRole": "Revolutionary & Freedom Fighter",
+    "category": "Courage & Self-Reliance",
+    "language": "hi",
+    "isPoem": false
+  },
+  {
+    "id": 49,
+    "text": "Learn from the mistakes of others. You can't live long enough to make them all yourselves.",
+    "author": "Chanakya",
+    "authorRole": "Ancient Philosopher, Strategist & Economist",
+    "category": "Wisdom",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 50,
+    "text": "A person should not be too honest. Straight trees are cut first and honest people are screwed first.",
+    "author": "Chanakya",
+    "authorRole": "Ancient Philosopher, Strategist & Economist",
+    "category": "Pragmatism",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 51,
+    "text": "Before you start some work, always ask yourself three questions: Why am I doing it, What the results might be, and Will I be successful. Only when you think deeply and find satisfactory answers, go ahead.",
+    "author": "Chanakya",
+    "authorRole": "Ancient Philosopher, Strategist & Economist",
+    "category": "Strategy",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 52,
+    "text": "Cultivation of mind should be the ultimate aim of human existence.",
+    "author": "Dr. B.R. Ambedkar",
+    "authorRole": "Father of the Indian Constitution & Visionary",
+    "category": "Intellect & Growth",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 53,
+    "text": "Educate, Agitate, Organize. Have faith in yourselves.",
+    "author": "Dr. B.R. Ambedkar",
+    "authorRole": "Father of the Indian Constitution & Visionary",
+    "category": "Empowerment",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 54,
+    "text": "Life should be great rather than long.",
+    "author": "Dr. B.R. Ambedkar",
+    "authorRole": "Father of the Indian Constitution & Visionary",
+    "category": "Purpose",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 55,
+    "text": "You have power over your mind - not outside events. Realize this, and you will find strength.",
+    "author": "Marcus Aurelius",
+    "authorRole": "Roman Emperor & Stoic Philosopher",
+    "category": "Stoicism & Peace",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 56,
+    "text": "The happiness of your life depends upon the quality of your thoughts.",
+    "author": "Marcus Aurelius",
+    "authorRole": "Roman Emperor & Stoic Philosopher",
+    "category": "Mindset",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 57,
+    "text": "Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that.",
+    "author": "Martin Luther King Jr.",
+    "authorRole": "Civil Rights Leader & Nobel Peace Laureate",
+    "category": "Love & Harmony",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 58,
+    "text": "If you can't fly then run, if you can't run then walk, if you can't walk then crawl, but whatever you do you have to keep moving forward.",
+    "author": "Martin Luther King Jr.",
+    "authorRole": "Civil Rights Leader & Nobel Peace Laureate",
+    "category": "Perseverance",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 59,
+    "text": "Live as if you were to die tomorrow. Learn as if you were to live forever.",
+    "author": "Mahatma Gandhi",
+    "authorRole": "Father of the Nation (India)",
+    "category": "Lifelong Learning",
+    "language": "en",
+    "isPoem": false
+  },
+  {
+    "id": 60,
+    "text": "Be the change that you wish to see in the world.",
+    "author": "Mahatma Gandhi",
+    "authorRole": "Father of the Nation (India)",
+    "category": "Leadership & Action",
+    "language": "en",
+    "isPoem": false
+  }
+]
