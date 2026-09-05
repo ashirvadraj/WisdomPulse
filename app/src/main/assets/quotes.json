@@ -1,12 +1,169 @@
 [
   {
+    "id": 101,
+    "title": "गीत नया गाता हूँ",
+    "text": "टूटे हुए तारों से फूटे बासंती स्वर,\nपत्थर की छाती में उग आया नव अंकुर,\nझरे सब पीले पात, कोयल की कुहुक रात,\nप्राची में अरुणिम की रेख देख पाता हूँ,\nगीत नया गाता हूँ।\n\nटूटे हुए सपनों की सुने कौन सिसकी?\nअंतर को चीर व्यथा पलकों पर ठिठकी,\nहार नहीं मानूँगा, रार नहीं ठानूँगा,\nकाल के कपाल पर लिखता मिटाता हूँ,\nगीत नया गाता हूँ।",
+    "author": "Atal Bihari Vajpayee",
+    "authorRole": "Former Prime Minister & Legendary Poet",
+    "category": "Poetry & Dawn",
+    "language": "hi",
+    "isPoem": true,
+    "avatarKey": "avatar_vajpayee",
+    "englishTranslation": "Spring melodies burst from broken strings,\nA fresh sprout emerges from stone's hard chest,\nYellow leaves have fallen, the night sings with the cuckoo,\nI see the crimson streak of dawn in the east,\nI sing a new song."
+  },
+  {
+    "id": 102,
+    "title": "क़दम मिलाकर चलना होगा",
+    "text": "बाधाएं आती हैं आएं, घिरें प्रलय की घोर घटाएं,\nपावों के नीचे अंगारे, सिर पर बरसें यदि ज्वालाएं,\nनिज हाथों में हंसते-हंसते, आग लगाकर जलना होगा,\nक़दम मिलाकर चलना होगा।\n\nहास्य-रुदन में, तूफ़ानों में, अमर प्रलय की चरम अवस्था,\nफूलों में, अंगारों में, अपमानों में, सम्मानों में,\nउन्नत मस्तक, उभरा सीना, पीड़ाओं में पलना होगा,\nक़दम मिलाकर चलना होगा।\n\nउजियारे में, अंधकार में, कल कछार में, बीच धार में,\nघोर घृणा में, पूत प्यार में, क्षणिक जीत में, दीर्घ हार में,\nजीवन के शत-शत आकर्षक अरमानों को दलना होगा,\nक़दम मिलाकर चलना होगा।",
+    "author": "Atal Bihari Vajpayee",
+    "authorRole": "Former Prime Minister & Legendary Poet",
+    "category": "Poetry & Unity",
+    "language": "hi",
+    "isPoem": true,
+    "avatarKey": "avatar_vajpayee",
+    "englishTranslation": "Let obstacles come, let catastrophic clouds gather,\nCinders beneath our feet, let flames rain on our heads,\nSmiling with our own hands, burning in the fire,\nWe must walk shoulder to shoulder, in rhythm together."
+  },
+  {
+    "id": 103,
+    "title": "हार नहीं मानूँगा",
+    "text": "हार नहीं मानूँगा, रार नहीं ठानूँगा,\nकाल के कपाल पर लिखता मिटाता हूँ,\nगीत नया गाता हूँ।\n\nटूटे हुए तारों से फूटे बासंती स्वर,\nपत्थर की छाती में उग आया नव अंकुर,\nगीत नया गाता हूँ।",
+    "author": "Atal Bihari Vajpayee",
+    "authorRole": "Former Prime Minister & Legendary Poet",
+    "category": "Poetry & Willpower",
+    "language": "hi",
+    "isPoem": true,
+    "avatarKey": "avatar_vajpayee",
+    "englishTranslation": "I shall not accept defeat, nor will I strike a bitter feud,\nUpon the forehead of Time itself, I write and erase,\nI sing a new song."
+  },
+  {
+    "id": 104,
+    "title": "मौत से ठन गई!",
+    "text": "ठन गई!\nमौत से ठन गई!\nजूझने का मेरा इरादा न था,\nमोड़ पर मिलेंगे इसका वादा न था,\nरास्ता रोक कर वह खड़ी हो गई,\nयों लगा ज़िन्दगी से बड़ी हो गई।\n\nमौत की उमर क्या है? दो पल भी नहीं,\nज़िन्दगी सिलसिला, आज कल की नहीं।\nमैं जी भर जिया, मैं मन से मरूँ,\nलौटकर आऊँगा, कूच से क्यों डरूँ?\nतू दबे पाँव, चोरी-छिपे न आ,\nसामने वार कर फिर मुझे आज़मा!\nमौत से बेख़बर, ज़िन्दगी का सफ़र,\nशाम हर सुरमई, रात बंसी का स्वर।\nबात बेबात ही बात बन गई,\nठन गई! मौत से ठन गई!",
+    "author": "Atal Bihari Vajpayee",
+    "authorRole": "Former Prime Minister & Legendary Poet",
+    "category": "Poetry & Fearlessness",
+    "language": "hi",
+    "isPoem": true,
+    "avatarKey": "avatar_vajpayee",
+    "englishTranslation": "A duel is declared! With death, the battle is joined!\nI had no intent to struggle with it;\nIt blocked my path, seeming larger than life itself.\nWhat is the age of death? Not even two fleeting moments.\nLife is an eternal stream, not of yesterday or today.\nI lived to the fullest, I shall die with dignity;\nI will return again, why fear departing?"
+  },
+  {
+    "id": 105,
+    "title": "आओ फिर से दिया जलाएँ",
+    "text": "भरी दुपहरी में अंधियारा,\nसूरज परछाइयों से हारा,\nअंतरतम का नेह निचोड़ें,\nबुझी हुई बाती सुलगाएँ,\nआओ फिर से दिया जलाएँ।\n\nहम पड़ाव को समझे मंज़िल,\nलक्ष्य हुआ आंखों से ओझल,\nवर्तमान के मोहजाल में,\nआने वाला कल न भुलाएँ,\nआओ फिर से दिया जलाएँ।\n\nआहुति बाकी यज्ञ अधूरा,\nअपनों के विघ्नों ने घेरा,\nअंतिम जय का वज़्र बनाने,\nनव दधीचि हड्डियां गलाएँ,\nआओ फिर से दिया जलाएँ।",
+    "author": "Atal Bihari Vajpayee",
+    "authorRole": "Former Prime Minister & Legendary Poet",
+    "category": "Poetry & Hope",
+    "language": "hi",
+    "isPoem": true,
+    "avatarKey": "avatar_vajpayee",
+    "englishTranslation": "Darkness in the peak of noon,\nThe sun has surrendered to shadows,\nLet us squeeze love from our deepest inner being,\nAnd reignite the extinguished wick,\nCome, let us light the lamp once again."
+  },
+  {
+    "id": 106,
+    "title": "दूध में दरार पड़ गई",
+    "text": "खून क्यों सफेद हो गया?\nभेद में अभेद खो गया।\nबंट गए शहीद, गीत कट गए,\nकलेजे में कटार गड़ गई।\nदूध में दरार पड़ गई।\n\nखेतों में बारूद की गंध,\nटूट गए भाईचारे के बंध।\nस्वार्थ की अंधी दौड़ में,\nअपनों से ही तकरार बढ़ गई।\nदूध में दरार पड़ गई।",
+    "author": "Atal Bihari Vajpayee",
+    "authorRole": "Former Prime Minister & Legendary Poet",
+    "category": "Poetry & Conscience",
+    "language": "hi",
+    "isPoem": true,
+    "avatarKey": "avatar_vajpayee",
+    "englishTranslation": "Why has blood turned white?\nUnity lost in divisions,\nMartyrs divided, songs fragmented,\nA dagger struck the heart — fissures appeared in pure milk."
+  },
+  {
+    "id": 107,
+    "title": "गीत नहीं गाता हूँ",
+    "text": "बेनकाब चेहरे हैं, दाग बड़े गहरे हैं,\nटूटता तिलिस्म आज सच से भय खाता हूँ,\nगीत नहीं गाता हूँ।\n\nलगी कुछ ऐसी नज़र, बिखर गया सब नगर,\nप्यास नहीं बुझती है, सागर जल पीता हूँ,\nगीत नहीं गाता हूँ।",
+    "author": "Atal Bihari Vajpayee",
+    "authorRole": "Former Prime Minister & Legendary Poet",
+    "category": "Poetry & Introspection",
+    "language": "hi",
+    "isPoem": true,
+    "avatarKey": "avatar_vajpayee",
+    "englishTranslation": "Masks have fallen off faces, deep scars remain;\nThe illusion shatters today, I am frightened by the truth;\nI do not sing songs."
+  },
+  {
+    "id": 108,
+    "title": "पंद्रह अगस्त का दिन कहता",
+    "text": "पंद्रह अगस्त का दिन कहता - आज़ादी अभी अधूरी है।\nसपने सच होने बाकी हैं, रावी की शपथ न पूरी है।\nजिनकी लाशों पर पग धर कर आज़ादी भारत में आई,\nवे अब तक गुमनाम पड़े हैं, उनकी याद नहीं आई।\nगंगा की कसम, जमुना की कसम, यह ताना-बाना टूटेगा नहीं,\nभारत की अखंडता का यह स्वप्न कभी छूटेगा नहीं।",
+    "author": "Atal Bihari Vajpayee",
+    "authorRole": "Former Prime Minister & Legendary Poet",
+    "category": "Poetry & Patriotism",
+    "language": "hi",
+    "isPoem": true,
+    "avatarKey": "avatar_vajpayee",
+    "englishTranslation": "Fifteen August proclaims — Freedom is yet incomplete;\nDreams are still to be realized; the oath of the Ravi river remains unfulfilled."
+  },
+  {
+    "id": 109,
+    "title": "कौरव कौन, कौन पांडव",
+    "text": "कौरव कौन, कौन पांडव,\nटेढ़ा सवाल है।\nदोनों ओर महाभारत,\nदोनों ओर कपाल है।\nसत्य कहां और झूठ कहां,\nसब उलझा जाल है,\nधर्मराज की आंखों में भी,\nसंदेह का सवाल है।",
+    "author": "Atal Bihari Vajpayee",
+    "authorRole": "Former Prime Minister & Legendary Poet",
+    "category": "Poetry & Philosophy",
+    "language": "hi",
+    "isPoem": true,
+    "avatarKey": "avatar_vajpayee",
+    "englishTranslation": "Who is the Kaurava, who is the Pandava?\nA crooked question;\nKurukshetra on both sides, mortality on both flanks."
+  },
+  {
+    "id": 110,
+    "title": "हिरोशिमा की पीड़ा",
+    "text": "किसी रात को मेरी नींद उचट जाती है,\nसहसा हिरोशिमा की याद आ जाती है।\nवह अणुबम का विस्फोट,\nमानवता पर भयानक चोट!\nक्या विज्ञान विनाश के लिए ही जन्मा था?\nया मनुष्य अपनी ही कब्र खोदने को उद्यत था?",
+    "author": "Atal Bihari Vajpayee",
+    "authorRole": "Former Prime Minister & Legendary Poet",
+    "category": "Poetry & Peace",
+    "language": "hi",
+    "isPoem": true,
+    "avatarKey": "avatar_vajpayee",
+    "englishTranslation": "On certain nights my sleep is broken,\nSuddenly the memory of Hiroshima rushes back.\nThat atomic blast, a terrible wound upon humanity!"
+  },
+  {
+    "id": 111,
+    "title": "मनाली मत जइयो",
+    "text": "मनाली मत जइयो, गोरी मनाली मत जइयो!\nवहां बर्फ की चादर है, पर धूप बड़ी तीखी है।\nदेवदार के जंगलों में, मन भटक न जाए कहीं,\nपर्वतों की गोद में, सब खो न जाए कहीं।",
+    "author": "Atal Bihari Vajpayee",
+    "authorRole": "Former Prime Minister & Legendary Poet",
+    "category": "Poetry & Nature",
+    "language": "hi",
+    "isPoem": true,
+    "avatarKey": "avatar_vajpayee",
+    "englishTranslation": "Do not wander to Manali, my fair one!\nA sheet of snow awaits, but the mountain sun is fierce;\nLest your heart lose itself in deodar forests."
+  },
+  {
+    "id": 112,
+    "title": "अपने ही मन से बात करें",
+    "text": "टूटे हुए सपनों की कौन सुनेगा?\nबिखरे हुए मोतियों को कौन चुनेगा?\nभीड़ भरी दुनिया में कोई नहीं अपना,\nआओ थोड़ी देर अपने ही मन से बात करें।",
+    "author": "Atal Bihari Vajpayee",
+    "authorRole": "Former Prime Minister & Legendary Poet",
+    "category": "Poetry & Solitude",
+    "language": "hi",
+    "isPoem": true,
+    "avatarKey": "avatar_vajpayee",
+    "englishTranslation": "Who will listen to shattered dreams?\nWho will gather dispersed pearls?\nIn this crowded world, come, let us converse with our own soul for a while."
+  },
+  {
+    "id": 113,
+    "title": "जीवन की ढलती साँझ में",
+    "text": "जीवन की ढलती साँझ में,\nपहचान खो न जाए।\nकर्म का दीपक जला रहे,\nजब तक साँस समाए।",
+    "author": "Atal Bihari Vajpayee",
+    "authorRole": "Former Prime Minister & Legendary Poet",
+    "category": "Poetry & Wisdom",
+    "language": "hi",
+    "isPoem": true,
+    "avatarKey": "avatar_vajpayee",
+    "englishTranslation": "In the descending dusk of life,\nMay the identity never be lost;\nMay the lamp of righteous action burn bright\nAs long as breath remains."
+  },
+  {
     "id": 1,
     "text": "You cannot change your future, but you can change your habits, and surely your habits will change your future.",
     "author": "Dr. A.P.J. Abdul Kalam",
     "authorRole": "Missile Man & 11th President of India",
     "category": "Habits & Future",
     "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_kalam"
   },
   {
     "id": 2,
@@ -15,7 +172,8 @@
     "authorRole": "Missile Man & 11th President of India",
     "category": "Dreams",
     "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_kalam"
   },
   {
     "id": 3,
@@ -24,7 +182,8 @@
     "authorRole": "Missile Man & 11th President of India",
     "category": "Hard Work",
     "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_kalam"
   },
   {
     "id": 4,
@@ -33,7 +192,8 @@
     "authorRole": "Missile Man & 11th President of India",
     "category": "Resilience",
     "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_kalam"
   },
   {
     "id": 5,
@@ -42,7 +202,8 @@
     "authorRole": "Missile Man & 11th President of India",
     "category": "Success",
     "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_kalam"
   },
   {
     "id": 6,
@@ -51,7 +212,8 @@
     "authorRole": "Missile Man & 11th President of India",
     "category": "Determination",
     "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_kalam"
   },
   {
     "id": 7,
@@ -60,7 +222,8 @@
     "authorRole": "Missile Man & 11th President of India",
     "category": "Consistency",
     "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_kalam"
   },
   {
     "id": 8,
@@ -69,7 +232,8 @@
     "authorRole": "Missile Man & 11th President of India",
     "category": "Focus",
     "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_kalam"
   },
   {
     "id": 9,
@@ -78,7 +242,8 @@
     "authorRole": "Missile Man & 11th President of India",
     "category": "Patriotism",
     "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_kalam"
   },
   {
     "id": 10,
@@ -87,7 +252,8 @@
     "authorRole": "Missile Man & 11th President of India",
     "category": "Ambition",
     "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_kalam"
   },
   {
     "id": 11,
@@ -96,7 +262,8 @@
     "authorRole": "Missile Man & 11th President of India",
     "category": "Inner Strength",
     "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_kalam"
   },
   {
     "id": 12,
@@ -105,97 +272,8 @@
     "authorRole": "Missile Man & 11th President of India",
     "category": "Education",
     "language": "en",
-    "isPoem": false
-  },
-  {
-    "id": 13,
-    "text": "बाधाएं आती हैं आएं, घिरें प्रलय की घोर घटाएं,\nपावों के नीचे अंगारे, सिर पर बरसें यदि ज्वालाएं,\nनिज हाथों में हंसते-हंसते, आग लगाकर जलना होगा,\nक़दम मिलाकर चलना होगा।",
-    "author": "Atal Bihari Vajpayee",
-    "authorRole": "Former Prime Minister of India & Legendary Poet",
-    "category": "Poetry & Resilience",
-    "language": "hi",
-    "isPoem": true
-  },
-  {
-    "id": 14,
-    "text": "गीत नया गाता हूँ,\nटूटे हुए तारों से फूटे बासंती स्वर,\nपत्थर की छाती में उग आया नव अंकुर,\nझरे सब पीले पात, कोयल की कुहुक रात,\nप्राची में अरुणिम की रेख देख पाता हूँ,\nगीत नया गाता हूँ।",
-    "author": "Atal Bihari Vajpayee",
-    "authorRole": "Former Prime Minister of India & Legendary Poet",
-    "category": "Poetry & Hope",
-    "language": "hi",
-    "isPoem": true
-  },
-  {
-    "id": 15,
-    "text": "हार नहीं मानूंगा, रार नहीं ठानूंगा,\nकाल के कपाल पर लिखता मिटाता हूं,\nगीत नया गाता हूं।",
-    "author": "Atal Bihari Vajpayee",
-    "authorRole": "Former Prime Minister of India & Legendary Poet",
-    "category": "Poetry & Willpower",
-    "language": "hi",
-    "isPoem": true
-  },
-  {
-    "id": 16,
-    "text": "मौत से ठन गई!\nजूझने का मेरा इरादा न था,\nमोड़ पर मिलेंगे इसका वादा न था,\nरास्ता रोक कर वह खड़ी हो गई,\nयों लगा ज़िन्दगी से बड़ी हो गई।\nपर मैं मौत से नहीं डरता, मौत से ठन गई!",
-    "author": "Atal Bihari Vajpayee",
-    "authorRole": "Former Prime Minister of India & Legendary Poet",
-    "category": "Poetry & Courage",
-    "language": "hi",
-    "isPoem": true
-  },
-  {
-    "id": 17,
-    "text": "भारत ज़मीन का टुकड़ा नहीं, जीता-जागता राष्ट्रपुरुष है। यह वंदन की भूमि है, यह अभिनंदन की भूमि है। इसका कंकर-कंकर शंकर है, इसका बिंदु-बिंदु गंगाजल है। हम जिएंगे तो इसके लिए, मरेंगे तो इसके लिए।",
-    "author": "Atal Bihari Vajpayee",
-    "authorRole": "Former Prime Minister of India & Statesman",
-    "category": "Patriotism",
-    "language": "hi",
-    "isPoem": false
-  },
-  {
-    "id": 18,
-    "text": "You can change friends but not neighbors.",
-    "author": "Atal Bihari Vajpayee",
-    "authorRole": "Former Prime Minister of India & Statesman",
-    "category": "Diplomacy",
-    "language": "en",
-    "isPoem": false
-  },
-  {
-    "id": 19,
-    "text": "Our nuclear weapons are strictly for deterrence against force, not for aggression.",
-    "author": "Atal Bihari Vajpayee",
-    "authorRole": "Former Prime Minister of India & Statesman",
-    "category": "Leadership",
-    "language": "en",
-    "isPoem": false
-  },
-  {
-    "id": 20,
-    "text": "Victory and defeat are part of life, which are to be viewed with equanimity.",
-    "author": "Atal Bihari Vajpayee",
-    "authorRole": "Former Prime Minister of India & Statesman",
-    "category": "Equanimity",
-    "language": "en",
-    "isPoem": false
-  },
-  {
-    "id": 21,
-    "text": "छोटे मन से कोई बड़ा नहीं होता, टूटे मन से कोई खड़ा नहीं होता।",
-    "author": "Atal Bihari Vajpayee",
-    "authorRole": "Former Prime Minister of India & Legendary Poet",
-    "category": "Wisdom",
-    "language": "hi",
-    "isPoem": false
-  },
-  {
-    "id": 22,
-    "text": "My poetry is a declaration of war, not an exordium to defeat. It is not the defeated soldier's drumbeat of despair, but the fighting warrior's will to win.",
-    "author": "Atal Bihari Vajpayee",
-    "authorRole": "Former Prime Minister of India & Legendary Poet",
-    "category": "Poetry & Spirit",
-    "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_kalam"
   },
   {
     "id": 23,
@@ -204,7 +282,8 @@
     "authorRole": "Spiritual Leader & Philosopher",
     "category": "Awakening",
     "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_vivekananda"
   },
   {
     "id": 24,
@@ -213,7 +292,8 @@
     "authorRole": "Spiritual Leader & Philosopher",
     "category": "Focus & Purpose",
     "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_vivekananda"
   },
   {
     "id": 25,
@@ -222,7 +302,8 @@
     "authorRole": "Spiritual Leader & Philosopher",
     "category": "Self-Discovery",
     "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_vivekananda"
   },
   {
     "id": 26,
@@ -231,7 +312,8 @@
     "authorRole": "Spiritual Leader & Philosopher",
     "category": "Resilience",
     "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_vivekananda"
   },
   {
     "id": 27,
@@ -240,7 +322,8 @@
     "authorRole": "Spiritual Leader & Philosopher",
     "category": "Strength",
     "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_vivekananda"
   },
   {
     "id": 28,
@@ -249,7 +332,8 @@
     "authorRole": "Spiritual Leader & Philosopher",
     "category": "Inner Power",
     "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_vivekananda"
   },
   {
     "id": 29,
@@ -258,7 +342,8 @@
     "authorRole": "Spiritual Leader & Philosopher",
     "category": "Self-Reflection",
     "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_vivekananda"
   },
   {
     "id": 30,
@@ -267,7 +352,8 @@
     "authorRole": "Co-Founder of Apple & Visionary",
     "category": "Authenticity",
     "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_jobs"
   },
   {
     "id": 31,
@@ -276,7 +362,8 @@
     "authorRole": "Co-Founder of Apple & Visionary",
     "category": "Curiosity",
     "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_jobs"
   },
   {
     "id": 32,
@@ -285,7 +372,8 @@
     "authorRole": "Co-Founder of Apple & Visionary",
     "category": "Innovation",
     "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_jobs"
   },
   {
     "id": 33,
@@ -294,7 +382,8 @@
     "authorRole": "Co-Founder of Apple & Visionary",
     "category": "Passion",
     "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_jobs"
   },
   {
     "id": 34,
@@ -303,7 +392,8 @@
     "authorRole": "Co-Founder of Apple & Visionary",
     "category": "Leadership",
     "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_jobs"
   },
   {
     "id": 35,
@@ -312,7 +402,8 @@
     "authorRole": "Theoretical Physicist & Nobel Laureate",
     "category": "Imagination",
     "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_einstein"
   },
   {
     "id": 36,
@@ -321,7 +412,8 @@
     "authorRole": "Theoretical Physicist & Nobel Laureate",
     "category": "Balance & Momentum",
     "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_einstein"
   },
   {
     "id": 37,
@@ -330,7 +422,8 @@
     "authorRole": "Theoretical Physicist & Nobel Laureate",
     "category": "Curiosity",
     "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_einstein"
   },
   {
     "id": 38,
@@ -339,7 +432,8 @@
     "authorRole": "Theoretical Physicist & Nobel Laureate",
     "category": "Opportunity",
     "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_einstein"
   },
   {
     "id": 39,
@@ -348,7 +442,8 @@
     "authorRole": "Theoretical Physicist & Nobel Laureate",
     "category": "Values",
     "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_einstein"
   },
   {
     "id": 40,
@@ -357,7 +452,8 @@
     "authorRole": "Former President of South Africa & Freedom Fighter",
     "category": "Perseverance",
     "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_mandela"
   },
   {
     "id": 41,
@@ -366,7 +462,8 @@
     "authorRole": "Former President of South Africa & Freedom Fighter",
     "category": "Courage",
     "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_mandela"
   },
   {
     "id": 42,
@@ -375,16 +472,8 @@
     "authorRole": "Former President of South Africa & Freedom Fighter",
     "category": "Education",
     "language": "en",
-    "isPoem": false
-  },
-  {
-    "id": 43,
-    "text": "The greatest glory in living lies not in never falling, but in rising every time we fall.",
-    "author": "Nelson Mandela",
-    "authorRole": "Former President of South Africa & Freedom Fighter",
-    "category": "Resilience",
-    "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_mandela"
   },
   {
     "id": 44,
@@ -393,7 +482,8 @@
     "authorRole": "Poet, Philosopher & Nobel Laureate",
     "category": "Poetry & Freedom",
     "language": "en",
-    "isPoem": true
+    "isPoem": true,
+    "avatarKey": "avatar_tagore"
   },
   {
     "id": 45,
@@ -402,16 +492,8 @@
     "authorRole": "Poet, Philosopher & Nobel Laureate",
     "category": "Action",
     "language": "en",
-    "isPoem": false
-  },
-  {
-    "id": 46,
-    "text": "Faith is the bird that feels the light when the dawn is still dark.",
-    "author": "Rabindranath Tagore",
-    "authorRole": "Poet, Philosopher & Nobel Laureate",
-    "category": "Faith & Hope",
-    "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_tagore"
   },
   {
     "id": 47,
@@ -420,43 +502,19 @@
     "authorRole": "Revolutionary & Freedom Fighter",
     "category": "Patriotism & Spirit",
     "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_bhagat"
   },
   {
     "id": 48,
-    "text": "Zindagi to apne dam par hi jiyi jaati hai, dusron ke kandhon par to sirf janaaze uthaye jaate hain.",
+    "text": "ज़िन्दगी तो अपने दम पर ही जीयी जाती है, दूसरों के कंधों पर तो सिर्फ जनाज़े उठाये जाते हैं।",
     "author": "Bhagat Singh",
     "authorRole": "Revolutionary & Freedom Fighter",
     "category": "Courage & Self-Reliance",
     "language": "hi",
-    "isPoem": false
-  },
-  {
-    "id": 49,
-    "text": "Learn from the mistakes of others. You can't live long enough to make them all yourselves.",
-    "author": "Chanakya",
-    "authorRole": "Ancient Philosopher, Strategist & Economist",
-    "category": "Wisdom",
-    "language": "en",
-    "isPoem": false
-  },
-  {
-    "id": 50,
-    "text": "A person should not be too honest. Straight trees are cut first and honest people are screwed first.",
-    "author": "Chanakya",
-    "authorRole": "Ancient Philosopher, Strategist & Economist",
-    "category": "Pragmatism",
-    "language": "en",
-    "isPoem": false
-  },
-  {
-    "id": 51,
-    "text": "Before you start some work, always ask yourself three questions: Why am I doing it, What the results might be, and Will I be successful. Only when you think deeply and find satisfactory answers, go ahead.",
-    "author": "Chanakya",
-    "authorRole": "Ancient Philosopher, Strategist & Economist",
-    "category": "Strategy",
-    "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_bhagat",
+    "englishTranslation": "Life is lived on one's own courage; shoulders of others are only leaned on for funerals."
   },
   {
     "id": 52,
@@ -465,7 +523,8 @@
     "authorRole": "Father of the Indian Constitution & Visionary",
     "category": "Intellect & Growth",
     "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_ambedkar"
   },
   {
     "id": 53,
@@ -474,7 +533,8 @@
     "authorRole": "Father of the Indian Constitution & Visionary",
     "category": "Empowerment",
     "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_ambedkar"
   },
   {
     "id": 54,
@@ -483,43 +543,8 @@
     "authorRole": "Father of the Indian Constitution & Visionary",
     "category": "Purpose",
     "language": "en",
-    "isPoem": false
-  },
-  {
-    "id": 55,
-    "text": "You have power over your mind - not outside events. Realize this, and you will find strength.",
-    "author": "Marcus Aurelius",
-    "authorRole": "Roman Emperor & Stoic Philosopher",
-    "category": "Stoicism & Peace",
-    "language": "en",
-    "isPoem": false
-  },
-  {
-    "id": 56,
-    "text": "The happiness of your life depends upon the quality of your thoughts.",
-    "author": "Marcus Aurelius",
-    "authorRole": "Roman Emperor & Stoic Philosopher",
-    "category": "Mindset",
-    "language": "en",
-    "isPoem": false
-  },
-  {
-    "id": 57,
-    "text": "Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that.",
-    "author": "Martin Luther King Jr.",
-    "authorRole": "Civil Rights Leader & Nobel Peace Laureate",
-    "category": "Love & Harmony",
-    "language": "en",
-    "isPoem": false
-  },
-  {
-    "id": 58,
-    "text": "If you can't fly then run, if you can't run then walk, if you can't walk then crawl, but whatever you do you have to keep moving forward.",
-    "author": "Martin Luther King Jr.",
-    "authorRole": "Civil Rights Leader & Nobel Peace Laureate",
-    "category": "Perseverance",
-    "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_ambedkar"
   },
   {
     "id": 59,
@@ -528,7 +553,8 @@
     "authorRole": "Father of the Nation (India)",
     "category": "Lifelong Learning",
     "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_gandhi"
   },
   {
     "id": 60,
@@ -537,6 +563,7 @@
     "authorRole": "Father of the Nation (India)",
     "category": "Leadership & Action",
     "language": "en",
-    "isPoem": false
+    "isPoem": false,
+    "avatarKey": "avatar_gandhi"
   }
 ]

@@ -1,61 +1,69 @@
-﻿# ✨ WisdomPulse - Quotes of Legends & WhatsApp Wallpaper Studio
+# ✨ WisdomPulse 2.0 - Legends & Kavya Manch
 
-[![Download APK](https://img.shields.io/badge/Download-WisdomPulse.apk-2ECC71?style=for-the-badge&logo=android)](https://github.com/ashirvadraj/WisdomPulse/raw/main/WisdomPulse.apk)
+[![Download APK](https://img.shields.io/badge/Download-WisdomPulse_v2.0.apk-2ECC71?style=for-the-badge&logo=android)](https://github.com/ashirvadraj/WisdomPulse/raw/main/WisdomPulse.apk)
 [![Platform](https://img.shields.io/badge/Platform-Android-green.svg)](https://android.com)
 [![Kotlin](https://img.shields.io/badge/Kotlin-1.9.24-blue.svg)](https://kotlinlang.org)
 [![Material Design](https://img.shields.io/badge/Material-3-purple.svg)](https://m3.material.io)
 
-> **"Dream is not that which you see while sleeping, it is something that does not let you sleep."**  
-> — *Dr. A.P.J. Abdul Kalam*
+> **"हार नहीं मानूँगा, रार नहीं ठानूँगा, काल के कपाल पर लिखता मिटाता हूँ, गीत नया गाता हूँ।"**  
+> — *Atal Bihari Vajpayee*
 
-WisdomPulse is a modern, offline-first Android application featuring timeless quotes and poetry from iconic world leaders, philosophers, and visionaries, including **Dr. A.P.J. Abdul Kalam**, **Atal Bihari Vajpayee**, **Swami Vivekananda**, **Steve Jobs**, **Albert Einstein**, and more.
+WisdomPulse 2.0 is a modern, offline-first Android application dedicated to the timeless quotes, philosophy, and poetry of world legends. Now upgraded with the **complete iconic poetic works of Atal Bihari Vajpayee**, **artistic author portraits for all legends**, and a **9:16 Wallpaper Studio 2.0 with author portrait badges**.
 
 ---
 
 ## 📲 Direct APK Download
 
-You can download the pre-built APK directly and install it on your phone:
-👉 **[Download WisdomPulse.apk (5.9 MB)](https://github.com/ashirvadraj/WisdomPulse/raw/main/WisdomPulse.apk)**
+Download and install the updated APK directly on your phone:
+👉 **[Download WisdomPulse.apk (v2.0 - 6.0 MB)](https://github.com/ashirvadraj/WisdomPulse/raw/main/WisdomPulse.apk)**
 
 ---
 
-## 🚀 Key Features
+## 🌟 What's New in Version 2.0
 
-### 1. 📖 Curated Legends & Poetry Database
-- **Dr. A.P.J. Abdul Kalam**: Vision, youth empowerment, perseverance, and handling failure.
-- **Atal Bihari Vajpayee**: Dedicated bilingual corner featuring iconic poems:
-  - *गीत नया गाता हूँ* (Geet Naya Gata Hoon)
-  - *कदम मिलाकर चलना होगा* (Kadam Milakar Chalna Hoga)
-  - *हार नहीं मानूँगा, रार नहीं ठानूँगा* (Haar Nahi Manunga)
-  - *मौत से ठन गई!* (Maut Se Than Gayi)
-- **Swami Vivekananda**: Fearlessness, inner strength, and purpose.
-- **Global Visionaries**: Albert Einstein, Steve Jobs, Nelson Mandela, Mahatma Gandhi, Dr. B.R. Ambedkar, Chanakya, Bhagat Singh, Marcus Aurelius.
-- **Smart Filters & Instant Search**: Filter by author chip or search through quote text, category, or emotions in real-time.
+### 1. 📜 Complete Atal Bihari Vajpayee Poetry (काव्य मंच)
+Featuring full multi-stanza texts, Hindi Devnagari script, and poetic English translations:
+- **गीत नया गाता हूँ** (Geet Naya Gata Hoon)
+- **क़दम मिलाकर चलना होगा** (Kadam Milakar Chalna Hoga)
+- **हार नहीं मानूँगा, रार नहीं ठानूँगा** (Haar Nahi Manunga)
+- **मौत से ठन गई!** (Maut Se Than Gayi)
+- **आओ फिर से दिया जलाएँ** (Aao Phir Se Diya Jalayein)
+- **दूध में दरार पड़ गई** (Doodh Mein Darar Pad Gayi)
+- **गीत नहीं गाता हूँ** (Geet Nahi Gata Hoon)
+- **पंद्रह अगस्त का दिन कहता** (Pandraha August Ka Din Kehta)
+- **कौरव कौन, कौन पांडव** (Kaurav Kaun, Kaun Pandav)
+- **हिरोशिमा की पीड़ा** (Hiroshima Ki Peeda)
+- **मनाली मत जइyo** (Manali Mat Jaiyo)
+- **अपने ही मन से बात करें** (Apne Hi Man Se Baat Karein)
+- **जीवन की ढलती साँझ में** (Jeevan Ki Dhalti Saanjh Mein)
 
-### 2. 🎨 9:16 Wallpaper Studio (Phone & WhatsApp Wallpaper)
-- **9:16 Aspect Ratio Canvas**: Perfectly proportioned for smartphone screens and WhatsApp chat backgrounds.
-- **8 Dynamic Aesthetic Themes**:
-  - `Midnight OLED` (Pure AMOLED black `#0B0C10` with golden typography)
-  - `Royal Gold` (Warm luxury palette)
-  - `Crimson Dusk` (Deep burgundy elegance)
-  - `Forest Zen` (Calming deep emerald)
-  - `Deep Indigo` (Midnight blue)
-  - `Sunset Ember` (Warm radiant gradient)
-  - `Vintage Parchment` (Classic reading paper aesthetic)
+### 2. 🎨 Artistic Author Portraits for All Icons
+Custom circular vector portraits with subtle golden glowing borders:
+- **Dr. A.P.J. Abdul Kalam** (Silver hair wings & missile visionary badge)
+- **Atal Bihari Vajpayee** (Statesman & poet quill badge)
+- **Swami Vivekananda** (Iconic saffron turban)
+- **Steve Jobs** (Minimalist glasses & turtleneck)
+- **Albert Einstein** (Contemplative scientific icon)
+- **Mahatma Gandhi** (Wire spectacles & shawl)
+- **Bhagat Singh** (Iconic revolutionary hat)
+- **Dr. B.R. Ambedkar** (Blue scholar aura)
+- **Nelson Mandela** (Dignified freedom fighter)
+- **Rabindranath Tagore** (Flowing beard of the Nobel poet)
+
+### 3. 🖼️ 9:16 Wallpaper Studio 2.0 (Phone & WhatsApp Wallpaper)
+- **Author Portrait Badge on Wallpaper**: The 9:16 wallpaper now includes the author's portrait badge in the center!
+- **Portrait Toggle**: Switch author portrait ON or OFF with a single tap.
+- **8 Themes**: Midnight OLED, Royal Gold, Crimson Dusk, Forest Zen, Deep Indigo, Sunset Ember, and Vintage Parchment.
 - **1-Tap System Integrations**:
-  - **Set as Phone Wallpaper**: Uses native `WallpaperManager` to apply directly to device Home and Lock screen.
-  - **Save for WhatsApp Wallpaper**: Renders high-res 1080x1920 PNG to gallery (`Pictures/WisdomPulse`) and opens WhatsApp's wallpaper picker.
+  - **Set as Phone Wallpaper**: Uses native `WallpaperManager` to apply to Home & Lock screen directly.
+  - **Save for WhatsApp Wallpaper**: Renders high-res 1080x1920 PNG to gallery (`Pictures/WisdomPulse/`) and opens WhatsApp's wallpaper picker.
 
-### 3. ⏰ Offline Daily Notification Engine
-- **Scheduled Morning Reminder**: Fires daily at 7:00 AM using Android `AlarmManager` without requiring any cloud server or internet.
-- **"Inspire Me Now" Button**: Instant on-demand inspiration notification with 1-tap "Set Wallpaper" action.
+### 4. ⏰ Smart Offline Daily Notifications
+- Daily 7:00 AM inspirational reminder with quick action to open Wallpaper Studio.
+- "Inspire Me Now" button on the home bar for instant testing.
 
-### 4. 🔊 Text-to-Speech (TTS) Voiceover
-- Native `android.speech.tts.TextToSpeech` integration.
-- Reads English quotes and Hindi poems with accurate regional accent.
-
-### 5. ❤️ Offline Bookmarks
-- Tap the heart icon to save favorite quotes locally with zero network latency.
+### 5. 🔊 Text-to-Speech (TTS) Voiceover
+- Native `android.speech.tts.TextToSpeech` reads English quotes and Hindi poems aloud.
 
 ---
 
@@ -70,14 +78,11 @@ You can download the pre-built APK directly and install it on your phone:
 
 ---
 
-## 📦 Building the APK from Source
+## 📦 Building from Source
 
 ```bash
-# Clone the repository
 git clone https://github.com/ashirvadraj/WisdomPulse.git
 cd WisdomPulse
-
-# Build Debug APK
 ./gradlew assembleDebug
 ```
 The compiled APK will be located at:

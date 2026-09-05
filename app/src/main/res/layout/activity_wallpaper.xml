@@ -42,7 +42,7 @@
             android:paddingEnd="8dp"
             android:paddingTop="3dp"
             android:paddingBottom="3dp"
-            android:text="9:16 HD"
+            android:text="9:16 Ultra HD"
             android:textColor="@color/primary"
             android:textSize="11sp" />
     </LinearLayout>
@@ -67,7 +67,7 @@
                 android:layout_width="260dp"
                 android:layout_height="462dp"
                 app:cardCornerRadius="18dp"
-                app:cardElevation="8dp">
+                app:cardElevation="10dp">
 
                 <!-- Inner Wallpaper Surface -->
                 <RelativeLayout
@@ -75,25 +75,34 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#0B0C10"
-                    android:padding="24dp">
+                    android:padding="20dp">
 
                     <!-- Top Decorative Icon -->
                     <ImageView
                         android:id="@+id/ivQuoteDeco"
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
                         android:layout_alignParentTop="true"
                         android:layout_centerHorizontal="true"
                         android:src="@drawable/ic_format_quote"
-                        android:alpha="0.8" />
+                        android:alpha="0.75" />
 
-                    <!-- Center Content: Quote & Author -->
+                    <!-- Center Content: Portrait, Quote & Author -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
                         android:orientation="vertical"
                         android:gravity="center">
+
+                        <!-- Author Portrait Avatar Badge on Wallpaper -->
+                        <ImageView
+                            android:id="@+id/ivWpAvatar"
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:layout_marginBottom="14dp"
+                            android:src="@drawable/avatar_kalam"
+                            android:contentDescription="Author Portrait Badge" />
 
                         <TextView
                             android:id="@+id/tvWpQuote"
@@ -102,8 +111,8 @@
                             android:text="Dream is not that which you see while sleeping..."
                             android:textAlignment="center"
                             android:textColor="#FFFFFF"
-                            android:textSize="18sp"
-                            android:lineSpacingExtra="5dp"
+                            android:textSize="16sp"
+                            android:lineSpacingExtra="4dp"
                             android:textStyle="bold" />
 
                         <View
@@ -111,8 +120,8 @@
                             android:layout_width="40dp"
                             android:layout_height="2dp"
                             android:background="#E0A96D"
-                            android:layout_marginTop="16dp"
-                            android:layout_marginBottom="16dp" />
+                            android:layout_marginTop="14dp"
+                            android:layout_marginBottom="12dp" />
 
                         <TextView
                             android:id="@+id/tvWpAuthor"
@@ -120,7 +129,7 @@
                             android:layout_height="wrap_content"
                             android:text="— Dr. A.P.J. Abdul Kalam"
                             android:textColor="#E0A96D"
-                            android:textSize="14sp"
+                            android:textSize="13sp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -130,7 +139,7 @@
                             android:layout_marginTop="2dp"
                             android:text="Missile Man &amp; 11th President of India"
                             android:textColor="#C0C5D0"
-                            android:textSize="11sp" />
+                            android:textSize="10sp" />
                     </LinearLayout>
 
                     <!-- Bottom Watermark -->
@@ -148,11 +157,26 @@
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
+            <!-- Toggle Author Portrait Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTogglePortrait"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginTop="14dp"
+                android:backgroundTint="@color/surface_dark"
+                app:strokeColor="@color/primary"
+                app:strokeWidth="1dp"
+                app:cornerRadius="18dp"
+                android:text="Portrait Badge: ON"
+                android:textAllCaps="false"
+                android:textColor="@color/primary"
+                android:textSize="12sp" />
+
             <!-- Themes / Gradients Horizontal Selector -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginBottom="8dp"
                 android:text="Choose Wallpaper Theme:"
                 android:textColor="@color/text_primary"

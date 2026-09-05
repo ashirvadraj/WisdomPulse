@@ -1,4 +1,4 @@
-package com.wisdompulse.app.model
+﻿package com.wisdompulse.app.model
 
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable
@@ -10,5 +10,7 @@ data class Quote(
     @SerializedName("authorRole") val authorRole: String,
     @SerializedName("category") val category: String,
     @SerializedName("language") val language: String = "en",
-    @SerializedName("isPoem") val isPoem: Boolean = false
+    @SerializedName("isPoem") val isPoem: Boolean = false,
+    @SerializedName("avatarKey") val avatarKey: String = "avatar_generic",
+    @SerializedName("englishTranslation") val englishTranslation: String? = null
 ) : Serializable

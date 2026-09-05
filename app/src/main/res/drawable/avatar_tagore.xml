@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="72dp"
+    android:height="72dp"
+    android:viewportWidth="72"
+    android:viewportHeight="72">
+    <!-- Circular Background -->
+    <path
+        android:fillColor="#201A18"
+        android:pathData="M36,36m-36,0a36,36 0 1,1 72,0a36,36 0 1,1 -72,0"/>
+    <!-- Outer Glow / Ring -->
+    <path
+        android:strokeColor="#A1887F"
+        android:strokeWidth="2"
+        android:pathData="M36,36m-34,0a34,34 0 1,1 68,0a34,34 0 1,1 -68,0"/>
+    <!-- Body Silhouette -->
+    <path
+        android:fillColor="#F5EBE6"
+        android:pathData="M36,44c-11,0 -20,6.5 -22,16c2.5,4 12,8 22,8s19.5,-4 22,-8c-2,-9.5 -11,-16 -22,-16z"/>
+    <!-- Head / Face -->
+    <path
+        android:fillColor="#F5EBE6"
+        android:pathData="M36,16c-6.6,0 -12,5.4 -12,12s5.4,12 12,12s12,-5.4 12,-12s-5.4,-12 -12,-12z"/>
+    <!-- Distinguishing Feature -->
+    
+    <!-- Flowing Beard -->
+    <path
+        android:fillColor="#EEEEEE"
+        android:pathData="M28,34c2,7 5,14 8,17c3,-3 6,-10 8,-17c-4,3 -12,3 -16,0z"/>
+
+</vector>

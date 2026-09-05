@@ -44,12 +44,30 @@ class QuoteAdapter(
             binding.tvAuthorRole.text = quote.authorRole
             binding.tvCategory.text = quote.category
 
+            // Dynamic Author Portrait Avatar
+            val resId = context.resources.getIdentifier(quote.avatarKey, "drawable", context.packageName)
+            if (resId != 0) {
+                binding.ivAuthorAvatar.setImageResource(resId)
+            } else {
+                binding.ivAuthorAvatar.setImageResource(R.drawable.avatar_generic)
+            }
+
+            // Poem Badge
             if (quote.isPoem) {
                 binding.tvPoemBadge.visibility = View.VISIBLE
             } else {
                 binding.tvPoemBadge.visibility = View.GONE
             }
 
+            // English Translation section (for Hindi poems/quotes)
+            if (!quote.englishTranslation.isNullOrEmpty()) {
+                binding.layoutTranslation.visibility = View.VISIBLE
+                binding.tvTranslation.text = quote.englishTranslation
+            } else {
+                binding.layoutTranslation.visibility = View.GONE
+            }
+
+            // Favorite state
             val fav = isFavorite(quote)
             updateFavoriteIcon(fav)
 

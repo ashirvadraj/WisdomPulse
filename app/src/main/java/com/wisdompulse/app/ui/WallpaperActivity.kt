@@ -2,8 +2,10 @@
 
 import android.graphics.Color
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.wisdompulse.app.R
 import com.wisdompulse.app.databinding.ActivityWallpaperBinding
 import com.wisdompulse.app.model.Quote
 import com.wisdompulse.app.util.WallpaperHelper
@@ -12,6 +14,7 @@ class WallpaperActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityWallpaperBinding
     private var quote: Quote? = null
+    private var isPortraitVisible = true
 
     private val themeOled = ThemePalette(
         bgColor = Color.parseColor("#0B0C10"),
@@ -90,6 +93,21 @@ class WallpaperActivity : AppCompatActivity() {
             binding.tvWpQuote.text = if (q.isPoem) q.text else "\"" + q.text + "\""
             binding.tvWpAuthor.text = "— " + q.author
             binding.tvWpRole.text = q.authorRole
+
+            // Load Author Avatar into Wallpaper Badge
+            val resId = resources.getIdentifier(q.avatarKey, "drawable", packageName)
+            if (resId != 0) {
+                binding.ivWpAvatar.setImageResource(resId)
+            } else {
+                binding.ivWpAvatar.setImageResource(R.drawable.avatar_generic)
+            }
+        }
+
+        // Portrait Toggle
+        binding.btnTogglePortrait.setOnClickListener {
+            isPortraitVisible = !isPortraitVisible
+            binding.ivWpAvatar.visibility = if (isPortraitVisible) View.VISIBLE else View.GONE
+            binding.btnTogglePortrait.text = if (isPortraitVisible) "Portrait Badge: ON" else "Portrait Badge: OFF"
         }
 
         applyTheme(themeOled)
