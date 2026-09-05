@@ -1,11 +1,9 @@
 package com.wisdompulse.app.ui
 
 import android.content.res.ColorStateList
-import android.graphics.Color
 import android.os.Bundle
-import android.speech.tts.TextToSpeech
-import android.speech.tts.UtteranceProgressListener
 import android.view.View
+import android.widget.SeekBar
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -13,19 +11,16 @@ import com.wisdompulse.app.R
 import com.wisdompulse.app.data.QuoteRepository
 import com.wisdompulse.app.databinding.ActivityPoemDetailBinding
 import com.wisdompulse.app.model.Quote
+import com.wisdompulse.app.util.AtalAudioPlayer
 import com.wisdompulse.app.util.PoemCardShareHelper
-import java.util.Locale
 
-class PoemDetailActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
+class PoemDetailActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityPoemDetailBinding
     private lateinit var repository: QuoteRepository
     private var quote: Quote? = null
 
-    private var tts: TextToSpeech? = null
-    private var isTtsReady = false
-    private var isSpeaking = false
-
+    private var audioPlayer: AtalAudioPlayer? = null
     private var currentFontSizeSp = 18f
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,13 +40,11 @@ class PoemDetailActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         // Mark as read
         quote?.let { repository.markPoemAsRead(it.id) }
 
-        tts = TextToSpeech(this, this)
-
+        setupAudioPlayer()
         setupPoemContent()
         setupToolbarActions()
         setupThemeControls()
         setupFontControls()
-        setupAudioRecital()
 
         // Apply saved theme & font size
         applyTheme(repository.getReadingTheme())
@@ -65,6 +58,85 @@ class PoemDetailActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         binding.tvDetailTitle.text = q.title ?: "कविता"
         binding.tvDetailPoemText.text = q.text
         binding.tvDetailAuthorSignoff.text = "— " + q.author
+
+        // Check if authentic recording exists
+        if (audioPlayer?.hasAuthenticRecording(q.id) == true) {
+            binding.tvOriginalVoiceBadge.visibility = View.VISIBLE
+            binding.btnRecitePoem.text = "अटल जी के स्वर में सुनें"
+        } else {
+            binding.tvOriginalVoiceBadge.visibility = View.GONE
+            binding.btnRecitePoem.text = "अटल शैली काव्य पाठ"
+        }
+    }
+
+    private fun setupAudioPlayer() {
+        audioPlayer = AtalAudioPlayer(
+            context = this,
+            onStateChanged = { isPlaying, mode ->
+                runOnUiThread {
+                    if (isPlaying) {
+                        binding.btnRecitePoem.text = "विराम"
+                        binding.btnRecitePoem.setIconResource(android.R.drawable.ic_media_pause)
+                        binding.audioProgressRow.visibility = View.VISIBLE
+                        if (mode == AtalAudioPlayer.AudioMode.ORIGINAL_VOICE) {
+                            binding.tvAudioModeBadge.text = "🎙️ अटल जी का मूल स्वर"
+                            binding.seekBarAudio.visibility = View.VISIBLE
+                        } else {
+                            binding.tvAudioModeBadge.text = "🎙️ अटल वाग्मिता शैली (गंभीर स्वर व विराम)"
+                            binding.seekBarAudio.visibility = View.GONE
+                            binding.tvAudioTime.text = "काव्य पाठ जारी..."
+                        }
+                    } else {
+                        val q = quote
+                        if (q != null && audioPlayer?.hasAuthenticRecording(q.id) == true) {
+                            binding.btnRecitePoem.text = "अटल जी के स्वर में सुनें"
+                        } else {
+                            binding.btnRecitePoem.text = "अटल शैली काव्य पाठ"
+                        }
+                        binding.btnRecitePoem.setIconResource(R.drawable.ic_volume_up)
+                        binding.audioProgressRow.visibility = View.GONE
+                        binding.seekBarAudio.visibility = View.GONE
+                    }
+                }
+            },
+            onProgress = { currentMs, totalMs ->
+                runOnUiThread {
+                    if (totalMs > 0) {
+                        binding.seekBarAudio.max = totalMs
+                        binding.seekBarAudio.progress = currentMs
+                        val curSec = (currentMs / 1000) % 60
+                        val curMin = (currentMs / 1000) / 60
+                        val totSec = (totalMs / 1000) % 60
+                        val totMin = (totalMs / 1000) / 60
+                        binding.tvAudioTime.text = String.format("%02d:%02d / %02d:%02d", curMin, curSec, totMin, totSec)
+                    }
+                }
+            },
+            onError = { msg ->
+                runOnUiThread {
+                    Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
+                }
+            }
+        )
+
+        binding.seekBarAudio.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                if (fromUser) {
+                    audioPlayer?.seekTo(progress)
+                }
+            }
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {}
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {}
+        })
+
+        binding.btnRecitePoem.setOnClickListener {
+            val q = quote ?: return@setOnClickListener
+            if (audioPlayer?.isPlaying() == true) {
+                audioPlayer?.stop()
+            } else {
+                audioPlayer?.start(q)
+            }
+        }
     }
 
     private fun setupToolbarActions() {
@@ -143,6 +215,8 @@ class PoemDetailActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
                 binding.tvFontSizeLabel.setTextColor(textSec)
                 binding.btnRecitePoem.setTextColor(accent)
                 binding.btnRecitePoem.iconTint = ColorStateList.valueOf(accent)
+                binding.seekBarAudio.progressTintList = ColorStateList.valueOf(accent)
+                binding.seekBarAudio.thumbTintList = ColorStateList.valueOf(accent)
             }
             "slate" -> {
                 val bg = ContextCompat.getColor(this, R.color.slate_bg)
@@ -172,6 +246,8 @@ class PoemDetailActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
                 binding.tvFontSizeLabel.setTextColor(textSec)
                 binding.btnRecitePoem.setTextColor(accent)
                 binding.btnRecitePoem.iconTint = ColorStateList.valueOf(accent)
+                binding.seekBarAudio.progressTintList = ColorStateList.valueOf(accent)
+                binding.seekBarAudio.thumbTintList = ColorStateList.valueOf(accent)
             }
             else -> { // parchment
                 val bg = ContextCompat.getColor(this, R.color.parchment_bg)
@@ -201,6 +277,8 @@ class PoemDetailActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
                 binding.tvFontSizeLabel.setTextColor(textSec)
                 binding.btnRecitePoem.setTextColor(accent)
                 binding.btnRecitePoem.iconTint = ColorStateList.valueOf(accent)
+                binding.seekBarAudio.progressTintList = ColorStateList.valueOf(accent)
+                binding.seekBarAudio.thumbTintList = ColorStateList.valueOf(accent)
             }
         }
     }
@@ -228,57 +306,13 @@ class PoemDetailActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         binding.tvFontSizeLabel.text = "${sizeSp.toInt()}sp"
     }
 
-    private fun setupAudioRecital() {
-        binding.btnRecitePoem.setOnClickListener {
-            val q = quote ?: return@setOnClickListener
-            if (isSpeaking) {
-                stopRecital()
-            } else {
-                startRecital(q)
-            }
-        }
-    }
-
-    private fun startRecital(q: Quote) {
-        if (!isTtsReady || tts == null) {
-            Toast.makeText(this, "काव्य पाठ प्रारंभ हो रहा है...", Toast.LENGTH_SHORT).show()
-            return
-        }
-
-        val speechText = "${q.title ?: ""}. ${q.text}. रचयिता अटल बिहारी वाजपेयी."
-        tts?.setSpeechRate(0.88f)
-        tts?.speak(speechText, TextToSpeech.QUEUE_FLUSH, null, "POEM_RECITAL")
-        isSpeaking = true
-        binding.btnRecitePoem.text = "विराम"
-        binding.btnRecitePoem.setIconResource(android.R.drawable.ic_media_pause)
-    }
-
-    private fun stopRecital() {
-        tts?.stop()
-        isSpeaking = false
-        binding.btnRecitePoem.text = "काव्य पाठ सुनें"
-        binding.btnRecitePoem.setIconResource(R.drawable.ic_volume_up)
-    }
-
-    override fun onInit(status: Int) {
-        if (status == TextToSpeech.SUCCESS) {
-            isTtsReady = true
-            tts?.setLanguage(Locale("hi", "IN"))
-            tts?.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
-                override fun onStart(utteranceId: String?) {}
-                override fun onDone(utteranceId: String?) {
-                    runOnUiThread { stopRecital() }
-                }
-                override fun onError(utteranceId: String?) {
-                    runOnUiThread { stopRecital() }
-                }
-            })
-        }
+    override fun onPause() {
+        super.onPause()
+        audioPlayer?.pause()
     }
 
     override fun onDestroy() {
-        stopRecital()
-        tts?.shutdown()
+        audioPlayer?.release()
         super.onDestroy()
     }
 }

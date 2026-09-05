@@ -1,7 +1,7 @@
 # 🇮🇳 मेरी इक्यावन कविताएँ (Meri Ekyavan Kavitayen) — अटल बिहारी वाजपेयी
-### 📖 एक शांत, सुरुचिपूर्ण एवं समर्पित डिजिटल काव्य संकलन (Pure Aesthetic Poetry Reader)
+### 🎙️ अटल जी के मूल स्वर एवं वाग्मिता शैली में समर्पित डिजिटल काव्य ग्रंथ (Original Voice & Oratorical Audio Edition)
 
-[![Download APK](https://img.shields.io/badge/Download-APK_(6.06_MB)-2ECC71?style=for-the-badge&logo=android)](https://github.com/ashirvadraj/WisdomPulse/raw/main/WisdomPulse.apk)
+[![Download APK](https://img.shields.io/badge/Download-APK_(21.3_MB)-2ECC71?style=for-the-badge&logo=android)](https://github.com/ashirvadraj/WisdomPulse/raw/main/WisdomPulse.apk)
 [![Platform](https://img.shields.io/badge/Platform-Android-green.svg)](https://android.com)
 [![Kotlin](https://img.shields.io/badge/Kotlin-1.9.24-blue.svg)](https://kotlinlang.org)
 [![Material Design](https://img.shields.io/badge/Material-3-purple.svg)](https://m3.material.io)
@@ -12,39 +12,51 @@
 > क़दम मिलाकर चलना होगा।"**  
 > — *अटल बिहारी वाजपेयी*
 
-भारत रत्न पूर्व प्रधानमंत्री श्रद्धेय **अटल बिहारी वाजपेयी** जी के कालजयी काव्य संकलन **"मेरी इक्यावन कविताएँ"** का पूर्णतः समर्पित, निष्कलंक एवं सुरुचिपूर्ण डिजिटल काव्य ग्रंथ। इस संस्करण से सभी अनावश्यक टूल्स व वॉलपेपर फीचर्स हटाकर इसे 100% पठन, साहित्य, देवनागरी सुलेख और काव्य पाठ को समर्पित किया गया है।
+भारत रत्न पूर्व प्रधानमंत्री श्रद्धेय **अटल बिहारी वाजपेयी** जी के कालजयी काव्य संकलन **"मेरी इक्यावन कविताएँ"** का पूर्णतः समर्पित, निष्कलंक एवं सुरुचिपूर्ण डिजिटल काव्य ग्रंथ। इस संस्करण में अटल जी की कविताओं को उनके **वास्तविक मूल स्वर** तथा उनकी सुप्रसिद्ध **नाटकीय विराम व गंभीर वाग्मिता शैली** में सुनने की अनूठी सुविधा जोड़ी गई है।
 
 ---
 
 ## 📲 Direct APK Download
 
 Download and install directly on your Android phone:  
-👉 **[Download WisdomPulse.apk (Pure Poetry Book - 6.06 MB)](https://github.com/ashirvadraj/WisdomPulse/raw/main/WisdomPulse.apk)**
+👉 **[Download WisdomPulse.apk (Original Atal Voice Edition - 21.3 MB)](https://github.com/ashirvadraj/WisdomPulse/raw/main/WisdomPulse.apk)**
 
 ---
 
-## ✨ मुख्य विशेषताएँ (Key Highlights)
+## 🎙️ अटल स्वर एवं काव्य पाठ प्रणाली (Hybrid Audio Experience)
 
-### 📜 १. समर्पित काव्य पाठ कक्ष (Dedicated Reading Sanctuary)
+### 🌟 १. अटल जी का प्रामाणिक मूल स्वर (Authentic Historic Audio)
+ऍप में अटल जी के स्वयं के सस्वर काव्य पाठ की ऐतिहासिक रिकॉर्डिंग्स अंतर्निहित हैं:
+- 🎵 **१. आओ फिर से दिया जलाएँ** (Offline Bundled MP3)
+- 🎵 **३. पहचान** (Offline Bundled MP3)
+- 🎵 **६. गीत नया गाता हूँ** (Offline Bundled MP3)
+- 🌐 **२०. आओ, मन की गांठें खोलें** (Streaming Audio)
+- 🌐 **४९. जंग न होने देंगे** (Streaming Audio)
+- **सुविधाएँ**: सीकबार (Seekbar), समय सूचक (`00:15 / 03:45`), विराम (Pause/Resume) एवं *"🎙️ अटल जी का मूल स्वर उपलब्ध"* बैज।
+
+### 🏛️ २. अटल वाग्मिता शैली काव्य पाठ (Atal Oratorical Prosody Engine for All 51 Poems)
+जिन कविताओं की ऐतिहासिक रिकॉर्डिंग उपलब्ध नहीं है, उनके लिए एक विशेष **अटल वाग्मिता सिंथेसाइज़र** तैयार किया गया है:
+- **गंभीर मन्द्र स्वर (Deep Baritone Pitch - 0.72x)**: अटल जी के भारी और ओजस्वी स्वर के अनुरूप।
+- **विचारमग्न वाचन गति (Deliberate Tempo - 0.70x)**: शब्दों को चबा-चबाकर, ठहराव के साथ बोलने की शैली।
+- **नाटकीय विराम (Dramatic Breath Pauses)**: प्रत्येक पंक्ति के अंत में संक्षिप्त विराम (`...`) तथा अंतरा (stanza) बदलने पर चिंतनशील मौन (`... । ...`)।
+- **पुरुष हिंदी स्वर (Male Hindi Voice Selection)**: मानक रोबोटिक या महिला स्वर के स्थान पर ओजस्वी पुरुष देवनागरी स्वर।
+
+---
+
+## ✨ पठन सुविधाएँ (Reading Sanctuary Features)
+
 - **३ सुरुचिपूर्ण पठन थीम्स (3 Reading Themes)**:
-  - **पाण्डुलिपि (Antique Parchment)**: प्राचीन पाण्डुलिपि के समान कोमल क्रीम पृष्ठभूमि (`#FAF6EE`), गहरी स्याही युक्त पाठ (`#201E1B`) और स्वर्णिम आभा।
-  - **निशांत (AMOLED Midnight)**: रात्रि पठन हेतु गहरा कृष्ण वर्ण (`#0A0A0C`) और म्यूटेड श्वेत देवनागरी पाठ (`#EDEDED`)।
-  - **शिला (Classic Slate)**: ग्रेफाइट स्लेट पृष्ठभूमि (`#15171C`) और मुक्ता वर्ण पाठ (`#D9DBE2`)।
+  - **पाण्डुलिपि (Antique Parchment)**: कोमल क्रीम पृष्ठभूमि (`#FAF6EE`), गहरी स्याही पाठ (`#201E1B`), स्वर्णिम आभा।
+  - **निशांत (AMOLED Midnight)**: रात्रि पठन हेतु गहरा कृष्ण वर्ण (`#0A0A0C`), म्यूटेड श्वेत पाठ (`#EDEDED`)।
+  - **शिला (Classic Slate)**: ग्रेफाइट स्लेट पृष्ठभूमि (`#15171C`), मुक्ता वर्ण पाठ (`#D9DBE2`)।
 - **देवनागरी सुलेख व फॉन्ट आकार नियंत्रण**:
-  - `A-` और `A+` बटन से 14sp से 28sp तक फॉन्ट आकार बदलने की पूर्ण स्वतंत्रता।
-  - आंखों को विश्राम देने वाला 1.6x लाइन-हाइट और प्रामाणिक अलंकरण (`✦ ── ✤ ── ✦`)।
-- **🔊 हिंदी काव्य पाठ (Audio Recital)**:
-  - टेक्स्ट-टू-स्पीच द्वारा धीमी, ओजस्वी और लयात्मक शैली (0.88x) में प्रत्येक कविता का सस्वर पाठ।
+  - `A-` और `A+` बटन से 14sp से 28sp तक फॉन्ट आकार बदलने की स्वतंत्रता।
+  - 1.6x लाइन-हाइट और प्रामाणिक अलंकरण (`✦ ── ✤ ── ✦`)।
 - **🎨 १-टैप "काव्य कार्ड साझा करें" (Aesthetic Card Share)**:
   - किसी भी कविता का सुरुचिपूर्ण, मिनिमल काव्य कार्ड बनाकर सीधे व्हाट्सएप स्टेटस या इंस्टाग्राम पर साझा करें।
-
-### 📚 २. ग्रंथ अनुक्रमणिका एवं वाचन प्रगति (Book Index & Reading Tracker)
-- **वाचन प्रगति (Reading Progress Counter)**:
-  - मुख्य स्क्रीन पर प्रगति बार जो दर्शाता है कि आपने ५१ में से कितनी कविताएँ पढ़ ली हैं (*जैसे: प्रगति: ५१ में से १२ कविताएँ पढ़ी गईं*)।
-- **पठित बैज (Read Badge)**:
-  - प्रत्येक पढ़ी हुई कविता पर स्वतः **"✓ पढ़ी गई"** बैज अंकित हो जाता है।
-- **त्वरित खोज एवं ४ प्रामाणिक खंड**:
-  - चारों खंडों के आधार पर फ़िल्टर चिप्स तथा शीर्षक या पंक्ति द्वारा त्वरित खोज।
+- **📚 ग्रंथ अनुक्रमणिका एवं वाचन प्रगति (Reading Progress Tracker)**:
+  - प्रगति बार जो दर्शाता है कि आपने ५१ में से कितनी कविताएँ पढ़ ली हैं।
+  - पढ़ी हुई कविताओं पर स्वतः **"✓ पढ़ी गई"** बैज।
 
 ---
 
@@ -116,10 +128,9 @@ Download and install directly on your Android phone:
 - **भाषा (Language):** Kotlin 1.9.24
 - **वास्तुकला (Architecture):** Android Jetpack & ViewBinding
 - **यूआई (UI):** Google Material Components 3 (`Theme.Material3.Dark.NoActionBar`)
-- **ऑडियो इंजन:** Android `TextToSpeech` (Hindi locale)
+- **ऑडियो इंजन:** Android `MediaPlayer` (AssetFileDescriptor & AudioAttributes) + `TextToSpeech` Custom Prosody Engine
 - **कार्ड रेंडरर:** Android Native Canvas & `FileProvider` High-Res PNG Generator
-- **डेटा भंडारण:** Bundled JSON (`assets/quotes.json`) + Android `SharedPreferences`
-- **अनुमतियाँ:** केवल सामान्य सूचना अनुमति (`POST_NOTIFICATIONS`), शून्य इंटरनेट अनुमति (100% Offline & Private)।
+- **डेटा भंडारण:** Bundled JSON (`assets/quotes.json`) + Bundled Audio Assets + Android `SharedPreferences`
 
 ---
 

@@ -74,7 +74,7 @@
 
         </LinearLayout>
 
-        <!-- Theme Selection Bar (Collapsible/Hidden by default, toggled via btnThemeToggle) -->
+        <!-- Theme Selection Bar -->
         <LinearLayout
             android:id="@+id/themeSelectorBar"
             android:layout_width="match_parent"
@@ -130,7 +130,7 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:fillViewport="true"
-        android:paddingBottom="100dp">
+        android:paddingBottom="130dp">
 
         <LinearLayout
             android:id="@+id/readingContainer"
@@ -141,7 +141,7 @@
             android:paddingStart="24dp"
             android:paddingEnd="24dp"
             android:paddingTop="16dp"
-            android:paddingBottom="80dp">
+            android:paddingBottom="90dp">
 
             <!-- Section Pill Badge -->
             <TextView
@@ -166,7 +166,24 @@
                 android:textStyle="bold"
                 android:textAlignment="center"
                 android:lineSpacingExtra="4dp"
-                android:layout_marginBottom="12dp" />
+                android:layout_marginBottom="10dp" />
+
+            <!-- Original Voice Badge (Visible if recording exists) -->
+            <TextView
+                android:id="@+id/tvOriginalVoiceBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_chip_selected"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:text="🎙️ अटल जी का मूल स्वर उपलब्ध"
+                android:textColor="@color/black"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp"
+                android:visibility="gone" />
 
             <!-- Ornamental Header Divider -->
             <TextView
@@ -183,7 +200,7 @@
                 android:id="@+id/tvDetailPoemText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="टूटे हुए तारों से फूटे बासंती स्वर,\nपत्थर की छाती में उग आया नव अंकुर,\nझरे सब पीले पात, कोयल की कुहू-कुहू,\nप्राची में अरुणिमा की रेख देख पाता हूँ।\nगीत नया गाता हूँ।"
+                android:text="टूटे हुए तारों से फूटे बासंती स्वर,\nपत्थर की छाती में उग आया नव अंकुर..."
                 android:textColor="@color/parchment_text"
                 android:textSize="18sp"
                 android:lineSpacingExtra="8dp"
@@ -215,90 +232,143 @@
 
     </androidx.core.widget.NestedScrollView>
 
-    <!-- Bottom Floating Reading Bar: Audio Recital & Font Size -->
+    <!-- Bottom Floating Reading & Audio Bar -->
     <androidx.cardview.widget.CardView
         android:id="@+id/bottomReadingBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        app:cardCornerRadius="26dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="14dp"
+        app:cardCornerRadius="24dp"
         app:cardElevation="8dp"
         app:cardBackgroundColor="@color/parchment_card">
 
         <LinearLayout
             android:id="@+id/readingBarLayout"
             android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
 
-            <!-- Font Size Decrease (A-) -->
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnFontDecrease"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:minWidth="0dp"
-                android:padding="0dp"
-                android:text="A-"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                android:textColor="@color/parchment_accent"
-                android:backgroundTint="@android:color/transparent"
-                app:elevation="0dp" />
-
-            <!-- Current Font Size Label -->
-            <TextView
-                android:id="@+id/tvFontSizeLabel"
-                android:layout_width="wrap_content"
+            <!-- Audio Progress Row (Visible when playing authentic audio) -->
+            <LinearLayout
+                android:id="@+id/audioProgressRow"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="18sp"
-                android:textColor="@color/parchment_text_sec"
-                android:textSize="11sp"
-                android:layout_marginStart="4dp"
-                android:layout_marginEnd="4dp" />
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="4dp"
+                android:visibility="gone">
 
-            <!-- Font Size Increase (A+) -->
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnFontIncrease"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:minWidth="0dp"
-                android:padding="0dp"
-                android:text="A+"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:textColor="@color/parchment_accent"
-                android:backgroundTint="@android:color/transparent"
-                app:elevation="0dp" />
+                <TextView
+                    android:id="@+id/tvAudioModeBadge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🎙️ अटल जी का मूल स्वर"
+                    android:textColor="@color/kavya_sindoor"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
 
-            <View
-                android:id="@+id/barDivider"
-                android:layout_width="1dp"
-                android:layout_height="24dp"
-                android:background="@color/parchment_divider"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="12dp" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
 
-            <!-- Play / Pause TTS Recital Button -->
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnRecitePoem"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:text="काव्य पाठ सुनें"
-                android:textSize="13sp"
-                android:textAllCaps="false"
-                android:textColor="@color/parchment_accent"
-                android:backgroundTint="@android:color/transparent"
-                app:icon="@drawable/ic_volume_up"
-                app:iconTint="@color/parchment_accent"
-                app:iconSize="18dp"
-                app:elevation="0dp" />
+                <TextView
+                    android:id="@+id/tvAudioTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00 / 00:00"
+                    android:textColor="@color/parchment_text_sec"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/seekBarAudio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progressTint="@color/parchment_accent"
+                android:thumbTint="@color/parchment_accent"
+                android:layout_marginBottom="4dp"
+                android:visibility="gone" />
+
+            <!-- Controls Row: Font Size & Recital Button -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Font Size Decrease (A-) -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnFontDecrease"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:minWidth="0dp"
+                    android:padding="0dp"
+                    android:text="A-"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/parchment_accent"
+                    android:backgroundTint="@android:color/transparent"
+                    app:elevation="0dp" />
+
+                <!-- Current Font Size Label -->
+                <TextView
+                    android:id="@+id/tvFontSizeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="18sp"
+                    android:textColor="@color/parchment_text_sec"
+                    android:textSize="11sp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp" />
+
+                <!-- Font Size Increase (A+) -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnFontIncrease"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:minWidth="0dp"
+                    android:padding="0dp"
+                    android:text="A+"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/parchment_accent"
+                    android:backgroundTint="@android:color/transparent"
+                    app:elevation="0dp" />
+
+                <View
+                    android:id="@+id/barDivider"
+                    android:layout_width="1dp"
+                    android:layout_height="22dp"
+                    android:background="@color/parchment_divider"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="8dp" />
+
+                <!-- Play / Pause Recital Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRecitePoem"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="अटल स्वर में सुनें"
+                    android:textSize="13sp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/parchment_accent"
+                    android:backgroundTint="@android:color/transparent"
+                    app:icon="@drawable/ic_volume_up"
+                    app:iconTint="@color/parchment_accent"
+                    app:iconSize="18dp"
+                    app:elevation="0dp" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
