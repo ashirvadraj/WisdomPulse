@@ -10,7 +10,9 @@
     "language": "hi",
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
-    "illustrationKey": "art_diya_lamp"
+    "illustrationKey": "art_diya_lamp",
+    "audioArtist": "अटल बिहारी वाजपेयी",
+    "audioSource": "अंतर्नाद"
   },
   {
     "id": 2,
@@ -36,7 +38,9 @@
     "language": "hi",
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
-    "illustrationKey": "art_diya_lamp"
+    "illustrationKey": "art_diya_lamp",
+    "audioArtist": "अटल बिहारी वाजपेयी",
+    "audioSource": "अंतर्नाद"
   },
   {
     "id": 4,
@@ -75,7 +79,9 @@
     "language": "hi",
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
-    "illustrationKey": "art_rising_sun"
+    "illustrationKey": "art_rising_sun",
+    "audioArtist": "अटल बिहारी वाजपेयी",
+    "audioSource": "अंतर्नाद"
   },
   {
     "id": 7,
@@ -153,7 +159,9 @@
     "language": "hi",
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
-    "illustrationKey": "art_dew_grass"
+    "illustrationKey": "art_dew_grass",
+    "audioArtist": "जगजीत सिंह",
+    "audioSource": "संवेदना (2002)"
   },
   {
     "id": 13,
@@ -166,7 +174,9 @@
     "language": "hi",
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
-    "illustrationKey": "art_diya_lamp"
+    "illustrationKey": "art_diya_lamp",
+    "audioArtist": "जगजीत सिंह",
+    "audioSource": "संवेदना (2002)"
   },
   {
     "id": 14,
@@ -257,7 +267,9 @@
     "language": "hi",
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
-    "illustrationKey": "art_dew_grass"
+    "illustrationKey": "art_dew_grass",
+    "audioArtist": "अटल बिहारी वाजपेयी",
+    "audioSource": "अंतर्नाद"
   },
   {
     "id": 21,
@@ -478,7 +490,9 @@
     "language": "hi",
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
-    "illustrationKey": "art_marching_forward"
+    "illustrationKey": "art_marching_forward",
+    "audioArtist": "जगजीत सिंह",
+    "audioSource": "संवेदना (2002)"
   },
   {
     "id": 38,
@@ -517,7 +531,9 @@
     "language": "hi",
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
-    "illustrationKey": "art_marching_forward"
+    "illustrationKey": "art_marching_forward",
+    "audioArtist": "जगजीत सिंह",
+    "audioSource": "संवेदना (2002)"
   },
   {
     "id": 41,
@@ -595,7 +611,9 @@
     "language": "hi",
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
-    "illustrationKey": "art_manali_valley"
+    "illustrationKey": "art_manali_valley",
+    "audioArtist": "जगजीत सिंह",
+    "audioSource": "संवेदना (2002)"
   },
   {
     "id": 47,
@@ -634,7 +652,9 @@
     "language": "hi",
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
-    "illustrationKey": "art_peace_dove"
+    "illustrationKey": "art_peace_dove",
+    "audioArtist": "अटल बिहारी वाजपेयी",
+    "audioSource": "अंतर्नाद"
   },
   {
     "id": 50,

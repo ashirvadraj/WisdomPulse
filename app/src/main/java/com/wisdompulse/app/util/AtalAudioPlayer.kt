@@ -20,6 +20,7 @@ class AtalAudioPlayer(
 
     enum class AudioMode {
         ORIGINAL_VOICE,
+        JAGJIT_SINGH_GHAZAL,
         ORATORICAL_RECITAL
     }
 
@@ -55,8 +56,17 @@ class AtalAudioPlayer(
         }
     }
 
+    fun isMusicalGhazal(quoteId: Int): Boolean {
+        return quoteId in listOf(12, 13, 37, 40, 46)
+    }
+
     fun getOnlineStreamUrl(quoteId: Int): String? {
         return when (quoteId) {
+            46 -> "https://archive.org/download/02-ek-baras-beet-gaya/Kya_Khoya_Kya_Paya.mp3"
+            40 -> "https://archive.org/download/02-ek-baras-beet-gaya/Kadam_Milakar_Chalna_Hoga.mp3"
+            12 -> "https://archive.org/download/02-ek-baras-beet-gaya/Door_Kahin_Koi_Rota_Hai.mp3"
+            13 -> "https://archive.org/download/02-ek-baras-beet-gaya/Jeevan_Beet_Chala.mp3"
+            37 -> "https://archive.org/download/02-ek-baras-beet-gaya/Ek_Baras_Beet_Gaya.mp3"
             49 -> "https://archive.org/download/01-aao-man-ki-gaanthe-khole/03%20jung%20na%20hone%20denge.mp3"
             20 -> "https://archive.org/download/01-aao-man-ki-gaanthe-khole/01%20aao%20man%20ki%20gaanthe%20khole.mp3"
             else -> null
@@ -66,17 +76,21 @@ class AtalAudioPlayer(
     fun start(quote: Quote, forceMode: AudioMode? = null) {
         stop()
 
-        val mode = forceMode ?: if (hasAuthenticRecording(quote.id)) AudioMode.ORIGINAL_VOICE else AudioMode.ORATORICAL_RECITAL
+        val mode = forceMode ?: when {
+            isMusicalGhazal(quote.id) -> AudioMode.JAGJIT_SINGH_GHAZAL
+            hasAuthenticRecording(quote.id) -> AudioMode.ORIGINAL_VOICE
+            else -> AudioMode.ORATORICAL_RECITAL
+        }
         currentMode = mode
 
-        if (mode == AudioMode.ORIGINAL_VOICE) {
-            startAuthenticPlayback(quote.id)
+        if (mode == AudioMode.ORIGINAL_VOICE || mode == AudioMode.JAGJIT_SINGH_GHAZAL) {
+            startAuthenticPlayback(quote.id, mode)
         } else {
             startOratoricalRecital(quote)
         }
     }
 
-    private fun startAuthenticPlayback(quoteId: Int) {
+    private fun startAuthenticPlayback(quoteId: Int, mode: AudioMode) {
         try {
             mediaPlayer = MediaPlayer().apply {
                 setAudioAttributes(
@@ -101,7 +115,7 @@ class AtalAudioPlayer(
                         setOnPreparedListener {
                             it.start()
                             this@AtalAudioPlayer.isPlaying = true
-                            onStateChanged(true, AudioMode.ORIGINAL_VOICE)
+                            onStateChanged(true, mode)
                             handler.post(progressRunnable)
                         }
                         return
@@ -122,7 +136,7 @@ class AtalAudioPlayer(
             }
 
             isPlaying = true
-            onStateChanged(true, AudioMode.ORIGINAL_VOICE)
+            onStateChanged(true, mode)
             handler.post(progressRunnable)
 
         } catch (e: Exception) {
@@ -147,7 +161,7 @@ class AtalAudioPlayer(
     }
 
     fun pause() {
-        if (currentMode == AudioMode.ORIGINAL_VOICE) {
+        if (currentMode == AudioMode.ORIGINAL_VOICE || currentMode == AudioMode.JAGJIT_SINGH_GHAZAL) {
             mediaPlayer?.let {
                 if (it.isPlaying) {
                     it.pause()
@@ -162,13 +176,13 @@ class AtalAudioPlayer(
     }
 
     fun resume(quote: Quote) {
-        if (currentMode == AudioMode.ORIGINAL_VOICE) {
+        if (currentMode == AudioMode.ORIGINAL_VOICE || currentMode == AudioMode.JAGJIT_SINGH_GHAZAL) {
             mediaPlayer?.let {
                 it.start()
                 isPlaying = true
                 handler.post(progressRunnable)
                 onStateChanged(true, currentMode)
-            } ?: start(quote, AudioMode.ORIGINAL_VOICE)
+            } ?: start(quote, currentMode)
         } else {
             start(quote, AudioMode.ORATORICAL_RECITAL)
         }

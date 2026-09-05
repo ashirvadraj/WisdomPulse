@@ -86,6 +86,22 @@
                     android:textSize="10sp"
                     android:visibility="gone" />
 
+                <TextView
+                    android:id="@+id/tvAudioBadge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:background="@drawable/bg_chip_unselected"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:text="🎵 जगजीत सिंह"
+                    android:textColor="#BA68C8"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
                 <View
                     android:layout_width="0dp"
                     android:layout_height="1dp"

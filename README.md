@@ -1,7 +1,7 @@
 # 🇮🇳 मेरी इक्यावन कविताएँ (Meri Ekyavan Kavitayen) — अटल बिहारी वाजपेयी
-### 🎨 सचित्र एवं सस्वर डिजिटल काव्य ग्रंथ (Illustrated & Voiced Poetry Edition)
+### 🎨 सचित्र, सस्वर एवं संगीतमय डिजिटल काव्य ग्रंथ (Illustrated & Musical Heritage Edition)
 
-[![Download APK](https://img.shields.io/badge/Download-APK_(28.0_MB)-2ECC71?style=for-the-badge&logo=android)](https://github.com/ashirvadraj/WisdomPulse/raw/main/WisdomPulse.apk)
+[![Download APK](https://img.shields.io/badge/Download-APK_(73.2_MB)-2ECC71?style=for-the-badge&logo=android)](https://github.com/ashirvadraj/WisdomPulse/raw/main/WisdomPulse.apk)
 [![Platform](https://img.shields.io/badge/Platform-Android-green.svg)](https://android.com)
 [![Kotlin](https://img.shields.io/badge/Kotlin-1.9.24-blue.svg)](https://kotlinlang.org)
 [![Material Design](https://img.shields.io/badge/Material-3-purple.svg)](https://m3.material.io)
@@ -12,18 +12,39 @@
 > क़दम मिलाकर चलना होगा।"**  
 > — *अटल बिहारी वाजपेयी*
 
-भारत रत्न पूर्व प्रधानमंत्री श्रद्धेय **अटल बिहारी वाजपेयी** जी के कालजयी काव्य संकलन **"मेरी इक्यावन कविताएँ"** का पूर्णतः समर्पित, निष्कलंक एवं सुरुचिपूर्ण डिजिटल काव्य ग्रंथ। इस नवीन संस्करण में **श्रद्धेय अटल जी का प्रामाणिक चित्र**, सभी ५१ कविताओं हेतु **सजीव साहित्यिक कलाकृतियाँ (Fine Art Illustrations)** तथा **अटल जी का वास्तविक मूल स्वर** सम्मिलित किया गया है।
+भारत रत्न पूर्व प्रधानमंत्री श्रद्धेय **अटल बिहारी वाजपेयी** जी के कालजयी काव्य संकलन **"मेरी इक्यावन कविताएँ"** का पूर्णतः समर्पित, निष्कलंक एवं सुरुचिपूर्ण डिजिटल काव्य ग्रंथ। इस विशेष संस्करण में **श्रद्धेय अटल जी का प्रामाणिक चित्र**, सभी ५१ कविताओं हेतु **सजीव साहित्यिक कलाकृतियाँ (Fine Art Illustrations)**, **ग़ज़ल सम्राट जगजीत सिंह द्वारा रचित व गायी गई कालजयी रचनाएँ (एल्बम: संवेदना)** तथा **अटल जी का वास्तविक मूल स्वर (एल्बम: अंतर्नाद)** शत-प्रतिशत ऑफलाइन सम्मिलित किया गया है।
 
 ---
 
 ## 📲 Direct APK Download
 
 Download and install directly on your Android phone:  
-👉 **[Download WisdomPulse.apk (Illustrated & Voiced Edition - 28.0 MB)](https://github.com/ashirvadraj/WisdomPulse/raw/main/WisdomPulse.apk)**
+👉 **[Download WisdomPulse.apk (Musical & Illustrated Edition - 73.2 MB)](https://github.com/ashirvadraj/WisdomPulse/raw/main/WisdomPulse.apk)**
 
 ---
 
-## 🎨 १. सचित्र काव्य दीर्घा (Fine Art Poetic Illustrations)
+## 🎵 १. संगीतमय एवं सस्वर काव्य पाठ (10 Historic & Musical Tracks)
+
+### 🎼 ग़ज़ल सम्राट जगजीत सिंह — एल्बम: संवेदना (2002) [100% Offline]
+1. 🎵 **४६. क्या खोया क्या पाया जग में** (*गायन व संगीत: जगजीत सिंह*)
+2. 🎵 **४०. कदम मिलाकर चलना होगा** (*गायन व संगीत: जगजीत सिंह*)
+3. 🎵 **१२. दूर कहीं कोई रोता है** (*गायन व संगीत: जगजीत सिंह*)
+4. 🎵 **१३. जीवन बीत चला** (*गायन व संगीत: जगजीत सिंह*)
+5. 🎵 **३७. एक बरस बीत गया** (*गायन व संगीत: जगजीत सिंह*)
+
+### 🎙️ श्रद्धेय अटल बिहारी वाजपेयी — मूल स्वर: अंतर्नाद [100% Offline]
+6. 🎙️ **१. आओ फिर से दिया जलाएँ** (*अटल जी का मूल स्वर*)
+7. 🎙️ **३. पहचान** (*अटल जी का मूल स्वर*)
+8. 🎙️ **६. गीत नया गाता हूँ** (*अटल जी का मूल स्वर*)
+9. 🎙️ **२०. आओ, मन की गांठें खोलें** (*अटल जी का मूल स्वर*)
+10. 🎙️ **४९. जंग न होने देंगे** (*अटल जी का मूल स्वर*)
+
+### 🏛️ अटल वाग्मिता शैली काव्य पाठ (Atal Oratorical Prosody for All 51 Poems)
+अन्य सभी कविताओं हेतु अटल जी की वाग्मिता शैली (मन्द्र स्वर 0.72x, विचारमग्न गति 0.70x, एवं नाटकीय काव्यात्मक विराम) में जीवंत काव्य पाठ उपलब्ध है।
+
+---
+
+## 🎨 २. सचित्र काव्य दीर्घा (Fine Art Poetic Illustrations)
 
 प्रत्येक कविता कार्ड और पठन पृष्ठ पर मनमोहक साहित्यिक चित्र जोड़े गए हैं:
 - 🪔 **माटी का दिया व गेंदे के पुष्प (`art_diya_lamp`)**: *आओ फिर से दिया जलाएँ*, *पहचान*, *दीप जलता रहे* आदि अनुभूति कविताओं हेतु।

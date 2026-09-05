@@ -15,5 +15,7 @@ data class Quote(
     @SerializedName("isPoem") val isPoem: Boolean = true,
     @SerializedName("avatarKey") val avatarKey: String = "avatar_vajpayee",
     @SerializedName("illustrationKey") val illustrationKey: String? = null,
-    @SerializedName("englishTranslation") val englishTranslation: String? = null
+    @SerializedName("englishTranslation") val englishTranslation: String? = null,
+    @SerializedName("audioArtist") val audioArtist: String? = null,
+    @SerializedName("audioSource") val audioSource: String? = null
 ) : Serializable

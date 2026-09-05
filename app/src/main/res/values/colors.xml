@@ -43,4 +43,5 @@
     <color name="slate_accent">#E0A96D</color>
     <color name="slate_card">#1E2028</color>
     <color name="slate_divider">#2E3342</color>
+    <color name="accent_purple">#BA68C8</color>
 </resources>

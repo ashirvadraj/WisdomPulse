@@ -68,9 +68,17 @@ class PoemDetailActivity : AppCompatActivity() {
             binding.ivDetailBanner.setImageResource(R.drawable.art_diya_lamp)
         }
 
-        // Check if authentic recording exists
-        if (audioPlayer?.hasAuthenticRecording(q.id) == true) {
+        // Check if authentic recording or musical rendition exists
+        val isGhazal = audioPlayer?.isMusicalGhazal(q.id) == true || q.audioArtist?.contains("जगजीत") == true
+        if (isGhazal) {
             binding.tvOriginalVoiceBadge.visibility = View.VISIBLE
+            binding.tvOriginalVoiceBadge.text = "🎵 संगीत: जगजीत सिंह (संवेदना)"
+            binding.tvOriginalVoiceBadge.backgroundTintList = ColorStateList.valueOf(0xFF4A148C.toInt())
+            binding.btnRecitePoem.text = "जगजीत सिंह के स्वर में सुनें"
+        } else if (audioPlayer?.hasAuthenticRecording(q.id) == true) {
+            binding.tvOriginalVoiceBadge.visibility = View.VISIBLE
+            binding.tvOriginalVoiceBadge.text = "🎙️ अटल जी का मूल स्वर"
+            binding.tvOriginalVoiceBadge.backgroundTintList = ColorStateList.valueOf(0xFFC0392B.toInt())
             binding.btnRecitePoem.text = "अटल जी के स्वर में सुनें"
         } else {
             binding.tvOriginalVoiceBadge.visibility = View.GONE
@@ -87,17 +95,26 @@ class PoemDetailActivity : AppCompatActivity() {
                         binding.btnRecitePoem.text = "विराम"
                         binding.btnRecitePoem.setIconResource(android.R.drawable.ic_media_pause)
                         binding.audioProgressRow.visibility = View.VISIBLE
-                        if (mode == AtalAudioPlayer.AudioMode.ORIGINAL_VOICE) {
-                            binding.tvAudioModeBadge.text = "🎙️ अटल जी का मूल स्वर"
-                            binding.seekBarAudio.visibility = View.VISIBLE
-                        } else {
-                            binding.tvAudioModeBadge.text = "🎙️ अटल वाग्मिता शैली (गंभीर स्वर व विराम)"
-                            binding.seekBarAudio.visibility = View.GONE
-                            binding.tvAudioTime.text = "काव्य पाठ जारी..."
+                        when (mode) {
+                            AtalAudioPlayer.AudioMode.JAGJIT_SINGH_GHAZAL -> {
+                                binding.tvAudioModeBadge.text = "🎵 संगीत व स्वर: जगजीत सिंह (एल्बम: संवेदना)"
+                                binding.seekBarAudio.visibility = View.VISIBLE
+                            }
+                            AtalAudioPlayer.AudioMode.ORIGINAL_VOICE -> {
+                                binding.tvAudioModeBadge.text = "🎙️ अटल जी का मूल स्वर (एल्बम: अंतर्नाद)"
+                                binding.seekBarAudio.visibility = View.VISIBLE
+                            }
+                            else -> {
+                                binding.tvAudioModeBadge.text = "🎙️ अटल वाग्मिता शैली (गंभीर स्वर व विराम)"
+                                binding.seekBarAudio.visibility = View.GONE
+                                binding.tvAudioTime.text = "काव्य पाठ जारी..."
+                            }
                         }
                     } else {
                         val q = quote
-                        if (q != null && audioPlayer?.hasAuthenticRecording(q.id) == true) {
+                        if (q != null && (audioPlayer?.isMusicalGhazal(q.id) == true || q.audioArtist?.contains("जगजीत") == true)) {
+                            binding.btnRecitePoem.text = "जगजीत सिंह के स्वर में सुनें"
+                        } else if (q != null && audioPlayer?.hasAuthenticRecording(q.id) == true) {
                             binding.btnRecitePoem.text = "अटल जी के स्वर में सुनें"
                         } else {
                             binding.btnRecitePoem.text = "अटल शैली काव्य पाठ"

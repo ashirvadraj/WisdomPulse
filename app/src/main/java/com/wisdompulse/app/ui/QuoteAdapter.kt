@@ -5,6 +5,7 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.wisdompulse.app.R
 import com.wisdompulse.app.databinding.ItemQuoteCardBinding
@@ -54,6 +55,19 @@ class QuoteAdapter(
 
             // Read badge
             binding.tvReadBadge.visibility = if (isRead(quote)) View.VISIBLE else View.GONE
+
+            // Audio badge
+            if (quote.audioArtist?.contains("जगजीत") == true) {
+                binding.tvAudioBadge.visibility = View.VISIBLE
+                binding.tvAudioBadge.text = "🎵 जगजीत सिंह"
+                binding.tvAudioBadge.setTextColor(ContextCompat.getColor(context, R.color.accent_purple))
+            } else if (quote.audioArtist?.contains("अटल") == true || quote.id in listOf(1, 3, 6, 20, 49)) {
+                binding.tvAudioBadge.visibility = View.VISIBLE
+                binding.tvAudioBadge.text = "🎙️ मूल स्वर"
+                binding.tvAudioBadge.setTextColor(ContextCompat.getColor(context, R.color.primary))
+            } else {
+                binding.tvAudioBadge.visibility = View.GONE
+            }
 
             // Favorite state
             val fav = isFavorite(quote)
