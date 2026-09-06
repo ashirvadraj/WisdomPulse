@@ -1,7 +1,7 @@
 # 🇮🇳 मेरी इक्यावन कविताएँ (Meri Ekyavan Kavitayen) — अटल बिहारी वाजपेयी
 ### 🎨 सचित्र, सस्वर एवं संगीतमय डिजिटल काव्य ग्रंथ (Illustrated & Musical Heritage Edition)
 
-[![Download APK](https://img.shields.io/badge/Download-APK_(76.8_MB)-2ECC71?style=for-the-badge&logo=android)](https://github.com/ashirvadraj/WisdomPulse/raw/main/WisdomPulse.apk)
+[![Download APK](https://img.shields.io/badge/Download-APK_(80.3_MB)-2ECC71?style=for-the-badge&logo=android)](https://github.com/ashirvadraj/WisdomPulse/raw/main/WisdomPulse.apk)
 [![Platform](https://img.shields.io/badge/Platform-Android-green.svg)](https://android.com)
 [![Kotlin](https://img.shields.io/badge/Kotlin-1.9.24-blue.svg)](https://kotlinlang.org)
 [![Material Design](https://img.shields.io/badge/Material-3-purple.svg)](https://m3.material.io)
@@ -12,14 +12,23 @@
 > क़दम मिलाकर चलना होगा।"**  
 > — *अटल बिहारी वाजपेयी*
 
-भारत रत्न पूर्व प्रधानमंत्री श्रद्धेय **अटल बिहारी वाजपेयी** जी के कालजयी काव्य संकलन **"मेरी इक्यावन कविताएँ"** का पूर्णतः समर्पित, निष्कलंक एवं सुरुचिपूर्ण डिजिटल काव्य ग्रंथ। इस विशेष संस्करण में **श्रद्धेय अटल जी का प्रामाणिक चित्र**, सभी ५१ कविताओं हेतु **सजीव साहित्यिक कलाकृतियाँ (Fine Art Illustrations)**, **१५ कालजयी मूल संगीत व सस्वर ऑडियो ट्रैक्स (१००% ऑफलाइन)** तथा **प्ले/पॉज/रीज़्यूम एवं सीकिंग नियंत्रण** सम्मिलित किया गया है।
+भारत रत्न पूर्व प्रधानमंत्री श्रद्धेय **अटल बिहारी वाजपेयी** जी के कालजयी काव्य संकलन **"मेरी इक्यावन कविताएँ"** का पूर्णतः समर्पित, निष्कलंक एवं सुरुचिपूर्ण डिजिटल काव्य ग्रंथ। इस विशेष संस्करण में **श्रद्धेय अटल जी की पावन छवि युक्त नया ऍप लोगो (App Launcher Icon)**, सभी ५१ कविताओं हेतु **सजीव साहित्यिक कलाकृतियाँ (Fine Art Illustrations)**, **१५ कालजयी मूल संगीत व सस्वर ऑडियो ट्रैक्स (१००% ऑफलाइन)** तथा **प्ले/पॉज/रीज़्यूम एवं सीकिंग नियंत्रण** सम्मिलित किया गया है।
 
 ---
 
 ## 📲 Direct APK Download
 
 Download and install directly on your Android phone:  
-👉 **[Download WisdomPulse.apk (Musical & Illustrated Heritage Edition - 76.8 MB)](https://github.com/ashirvadraj/WisdomPulse/raw/main/WisdomPulse.apk)**
+👉 **[Download WisdomPulse.apk (Atal Ji Logo & Musical Heritage Edition - 80.3 MB)](https://github.com/ashirvadraj/WisdomPulse/raw/main/WisdomPulse.apk)**
+
+---
+
+## 🏛️ नया ऍप लोगो: श्रद्धेय अटल बिहारी वाजपेयी जी का सजीव चित्र (New Official App Icon)
+
+ऍप के मुख्य लॉन्चर आइकन (Home Screen App Icon) पर अब श्रद्धेय अटल जी का सौम्य व ओजस्वी चित्र, स्वर्ण मंडित शाही चक्र (Golden Ornamental Medallion), "मेरी इक्यावन कविताएँ" देवनागरी उत्कीर्णन तथा ज्ञान व काव्य के प्रतीक अखंड दीपक का समावेश किया गया है:
+- **Square / Squircle Icon (`ic_launcher`)**: सभी मानक एंड्रॉइड लॉन्चरों हेतु।
+- **Circular Icon (`ic_launcher_round`)**: गोल आइकन का समर्थन करने वाले आधुनिक लॉन्चरों (Pixel, Samsung OneUI आदि) हेतु।
+- **सर्वोच्च रिज़ॉल्यूशन (`xxxhdpi` - 192x192 एवं 512x512)**: रेटिना एवं 4K डिस्प्ले पर भी पूर्णतः स्पष्ट व आकर्षक।
 
 ---
 
