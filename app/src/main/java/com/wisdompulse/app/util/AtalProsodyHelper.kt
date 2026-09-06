@@ -11,31 +11,46 @@ object AtalProsodyHelper {
     /**
      * Pre-processes poetic text to insert dramatic breath stops, caesuras,
      * and rhythmic pauses characteristic of Atal Bihari Vajpayee's speech style.
+     * Cleaned of all periods/dots/symbols so Android TTS never pronounces "डॉट".
      */
     fun formatTextForAtalRecital(title: String?, rawPoemText: String): String {
-        val intro = if (!title.isNullOrEmpty()) {
-            "$title... । ... रचयिता, अटल बिहारी वाजपेयी... । ... "
+        // Strip leading numbers like "4. " or "27. " so TTS does not say "चार डॉट"
+        val cleanTitle = title?.replace(Regex("""^\d+[\.\s\-]+\s*"""), "")?.trim() ?: ""
+
+        val intro = if (cleanTitle.isNotEmpty()) {
+            "$cleanTitle। रचयिता, अटल बिहारी वाजपेयी।\n\n"
         } else {
-            "रचयिता, अटल बिहारी वाजपेयी... । ... "
+            "रचयिता, अटल बिहारी वाजपेयी।\n\n"
         }
+
+        // Clean any dots, ellipsis, asterisks, dashes, etc. from raw text
+        val cleanedText = rawPoemText
+            .replace(Regex("""\.+"""), "।") // Replace single or multiple dots with purnaviram
+            .replace("…", "।")              // Unicode ellipsis
+            .replace("—", " , ")            // Em-dash to comma pause
+            .replace("–", " , ")            // En-dash to comma pause
+            .replace("-", " ")              // Hyphen to space
+            .replace(Regex("""[*#_~❖✦✤•]"""), " ") // Decorative glyphs
+            .replace(Regex("""[ \t]+"""), " ")
 
         // Split stanzas
-        val stanzas = rawPoemText.split("\n\n")
+        val stanzas = cleanedText.split(Regex("""\n\s*\n"""))
         val formattedStanzas = stanzas.map { stanza ->
-            val lines = stanza.split("\n")
-            lines.joinToString(" ... \n") { line ->
-                line.trim()
-                    .replace("?", "? ... ")
-                    .replace("!", "! ... ")
-                    .replace(";", "; ... ")
-                    .replace("—", " ... ")
-            }
+            val lines = stanza.lines().map { it.trim() }.filter { it.isNotEmpty() }
+            lines.map { line ->
+                var l = line
+                // If line doesn't end with sentence-ending punctuation, add comma for natural cadence pause
+                if (!l.endsWith("।") && !l.endsWith("?") && !l.endsWith("!") && !l.endsWith(",")) {
+                    l += " ,"
+                }
+                l
+            }.joinToString("\n")
         }
 
-        // Deliberate pause between stanzas
-        val body = formattedStanzas.joinToString("\n ... । ... \n")
+        // Deliberate pause between stanzas with purnaviram and double newline
+        val body = formattedStanzas.joinToString("\n।\n\n")
 
-        return intro + body + " ... । ... "
+        return intro + body + "\n।\n"
     }
 
     /**

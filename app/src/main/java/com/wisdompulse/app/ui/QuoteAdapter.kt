@@ -74,7 +74,7 @@ class QuoteAdapter(
                     binding.tvAudioBadge.text = "🇮🇳 अमर राष्ट्रगान"
                     binding.tvAudioBadge.setTextColor(ContextCompat.getColor(context, R.color.accent_gold))
                 }
-                artist.contains("अटल") || quote.id in listOf(1, 2, 3, 6, 7, 20, 49) -> {
+                artist.contains("अटल") || quote.id in listOf(1, 3, 4, 6, 7, 9, 11, 20, 24, 25, 26, 27, 29, 30, 36, 41, 49) -> {
                     binding.tvAudioBadge.visibility = View.VISIBLE
                     binding.tvAudioBadge.text = "🎙️ अटल जी का मूल स्वर"
                     binding.tvAudioBadge.setTextColor(ContextCompat.getColor(context, R.color.primary))

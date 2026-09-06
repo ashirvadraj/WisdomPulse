@@ -25,9 +25,7 @@
     "language": "hi",
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
-    "illustrationKey": "art_dew_grass",
-    "audioArtist": "अटल बिहारी वाजपेयी (मूल स्वर)",
-    "audioSource": "ऐतिहासिक काव्य पाठ"
+    "illustrationKey": "art_dew_grass"
   },
   {
     "id": 3,
@@ -55,7 +53,9 @@
     "language": "hi",
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
-    "illustrationKey": "art_dew_grass"
+    "illustrationKey": "art_dew_grass",
+    "audioArtist": "अटल बिहारी वाजपेयी (मूल स्वर)",
+    "audioSource": "कोलकाता कवि सम्मेलन 1994"
   },
   {
     "id": 5,
@@ -348,7 +348,9 @@
     "language": "hi",
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
-    "illustrationKey": "art_national_flag"
+    "illustrationKey": "art_national_flag",
+    "audioArtist": "अटल बिहारी वाजपेयी (मूल स्वर)",
+    "audioSource": "ऐतिहासिक काव्य पाठ"
   },
   {
     "id": 26,
@@ -501,7 +503,9 @@
     "language": "hi",
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
-    "illustrationKey": "art_marching_forward"
+    "illustrationKey": "art_marching_forward",
+    "audioArtist": "अटल बिहारी वाजपेयी (मूल स्वर)",
+    "audioSource": "कोलकाता कवि सम्मेलन 1994"
   },
   {
     "id": 37,

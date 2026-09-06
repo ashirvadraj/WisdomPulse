@@ -73,7 +73,7 @@ class AtalAudioPlayer(
     }
 
     fun isOriginalVoice(quoteId: Int): Boolean {
-        return quoteId in listOf(1, 2, 3, 6, 7, 9, 11, 20, 24, 26, 27, 29, 30, 41, 49)
+        return quoteId in listOf(1, 3, 4, 6, 7, 9, 11, 20, 24, 25, 26, 27, 29, 30, 36, 41, 49)
     }
 
     fun getOnlineStreamUrl(quoteId: Int): String? {
