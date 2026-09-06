@@ -124,7 +124,9 @@
     "language": "hi",
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
-    "illustrationKey": "art_diya_lamp"
+    "illustrationKey": "art_diya_lamp",
+    "audioArtist": "अटल बिहारी वाजपेयी (मूल स्वर)",
+    "audioSource": "कोलकाता कवि सम्मेलन"
   },
   {
     "id": 10,
@@ -150,7 +152,9 @@
     "language": "hi",
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
-    "illustrationKey": "art_diya_lamp"
+    "illustrationKey": "art_diya_lamp",
+    "audioArtist": "अटल बिहारी वाजपेयी (मूल स्वर)",
+    "audioSource": "ऐतिहासिक काव्य पाठ"
   },
   {
     "id": 12,
@@ -164,7 +168,7 @@
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
     "illustrationKey": "art_dew_grass",
-    "audioArtist": "जगजीत सिंह (गीत व संगीत)",
+    "audioArtist": "जगजीत सिंह (गायन व संगीत)",
     "audioSource": "संवेदना (2002)"
   },
   {
@@ -179,7 +183,7 @@
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
     "illustrationKey": "art_diya_lamp",
-    "audioArtist": "जगजीत सिंह (गीत व संगीत)",
+    "audioArtist": "जगजीत सिंह (गायन व संगीत)",
     "audioSource": "संवेदना (2002)"
   },
   {
@@ -208,7 +212,9 @@
     "language": "hi",
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
-    "illustrationKey": "art_diya_lamp"
+    "illustrationKey": "art_diya_lamp",
+    "audioArtist": "जगजीत सिंह व अटल बिहारी वाजपेयी",
+    "audioSource": "संवेदना (2002)"
   },
   {
     "id": 16,
@@ -327,7 +333,9 @@
     "language": "hi",
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
-    "illustrationKey": "art_national_flag"
+    "illustrationKey": "art_national_flag",
+    "audioArtist": "अटल बिहारी वाजपेयी (मूल स्वर)",
+    "audioSource": "ऐतिहासिक काव्य पाठ"
   },
   {
     "id": 25,
@@ -353,7 +361,9 @@
     "language": "hi",
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
-    "illustrationKey": "art_national_flag"
+    "illustrationKey": "art_national_flag",
+    "audioArtist": "अटल बिहारी वाजपेयी (मूल स्वर)",
+    "audioSource": "ऐतिहासिक काव्य पाठ (परिचय)"
   },
   {
     "id": 27,
@@ -366,7 +376,9 @@
     "language": "hi",
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
-    "illustrationKey": "art_national_flag"
+    "illustrationKey": "art_national_flag",
+    "audioArtist": "अटल बिहारी वाजपेयी (मूल स्वर)",
+    "audioSource": "ऐतिहासिक काव्य पाठ"
   },
   {
     "id": 28,
@@ -392,7 +404,9 @@
     "language": "hi",
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
-    "illustrationKey": "art_national_flag"
+    "illustrationKey": "art_national_flag",
+    "audioArtist": "अटल बिहारी वाजपेयी (मूल स्वर)",
+    "audioSource": "ऐतिहासिक काव्य पाठ"
   },
   {
     "id": 30,
@@ -405,7 +419,9 @@
     "language": "hi",
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
-    "illustrationKey": "art_national_flag"
+    "illustrationKey": "art_national_flag",
+    "audioArtist": "अटल बिहारी वाजपेयी (मूल स्वर)",
+    "audioSource": "ऐतिहासिक काव्य पाठ"
   },
   {
     "id": 31,
@@ -499,7 +515,7 @@
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
     "illustrationKey": "art_marching_forward",
-    "audioArtist": "जगजीत सिंह (गीत व संगीत)",
+    "audioArtist": "जगजीत सिंह (गायन व संगीत)",
     "audioSource": "संवेदना (2002)"
   },
   {
@@ -540,7 +556,7 @@
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
     "illustrationKey": "art_marching_forward",
-    "audioArtist": "जगजीत सिंह (गीत व संगीत)",
+    "audioArtist": "जगजीत सिंह (गायन व संगीत)",
     "audioSource": "संवेदना (2002)"
   },
   {
@@ -554,7 +570,9 @@
     "language": "hi",
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
-    "illustrationKey": "art_marching_forward"
+    "illustrationKey": "art_marching_forward",
+    "audioArtist": "अटल बिहारी वाजपेयी (मूल स्वर)",
+    "audioSource": "ऐतिहासिक काव्य पाठ"
   },
   {
     "id": 42,
@@ -620,7 +638,7 @@
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
     "illustrationKey": "art_manali_valley",
-    "audioArtist": "जगजीत सिंह (गीत व संगीत)",
+    "audioArtist": "जगजीत सिंह (गायन व संगीत)",
     "audioSource": "संवेदना (2002)"
   },
   {

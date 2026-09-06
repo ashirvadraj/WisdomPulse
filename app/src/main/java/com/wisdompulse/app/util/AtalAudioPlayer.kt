@@ -65,7 +65,7 @@ class AtalAudioPlayer(
     }
 
     fun isMusicalGhazal(quoteId: Int): Boolean {
-        return quoteId in listOf(12, 13, 37, 40, 46)
+        return quoteId in listOf(12, 13, 15, 37, 40, 46)
     }
 
     fun isMusicalRendition(quoteId: Int): Boolean {
@@ -73,7 +73,7 @@ class AtalAudioPlayer(
     }
 
     fun isOriginalVoice(quoteId: Int): Boolean {
-        return quoteId in listOf(1, 2, 3, 6, 7, 20, 49)
+        return quoteId in listOf(1, 2, 3, 6, 7, 9, 11, 20, 24, 26, 27, 29, 30, 41, 49)
     }
 
     fun getOnlineStreamUrl(quoteId: Int): String? {

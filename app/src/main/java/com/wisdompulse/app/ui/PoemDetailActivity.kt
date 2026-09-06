@@ -72,11 +72,12 @@ class PoemDetailActivity : AppCompatActivity() {
         val artist = q.audioArtist ?: ""
         val source = q.audioSource ?: ""
         when {
-            q.id in listOf(12, 13, 37, 40, 46) || artist.contains("जगजीत") -> {
+            q.id in listOf(12, 13, 15, 37, 40, 46) || artist.contains("जगजीत") -> {
                 binding.tvOriginalVoiceBadge.visibility = View.VISIBLE
-                binding.tvOriginalVoiceBadge.text = "🎵 गायन व संगीत: जगजीत सिंह (संवेदना)"
+                val label = if (q.id == 15) "🎵 जगजीत सिंह व अटल बिहारी वाजपेयी (संवेदना)" else "🎵 गायन व संगीत: जगजीत सिंह (संवेदना)"
+                binding.tvOriginalVoiceBadge.text = label
                 binding.tvOriginalVoiceBadge.backgroundTintList = ColorStateList.valueOf(0xFF4A148C.toInt())
-                binding.btnRecitePoem.text = "जगजीत सिंह के स्वर में सुनें"
+                binding.btnRecitePoem.text = if (q.id == 15) "जगजीत व अटल जी के स्वर में सुनें" else "जगजीत सिंह के स्वर में सुनें"
             }
             q.id == 14 -> {
                 binding.tvOriginalVoiceBadge.visibility = View.VISIBLE
@@ -96,7 +97,7 @@ class PoemDetailActivity : AppCompatActivity() {
                 binding.tvOriginalVoiceBadge.backgroundTintList = ColorStateList.valueOf(0xFF00695C.toInt())
                 binding.btnRecitePoem.text = "गायन व संगीत में सुनें"
             }
-            audioPlayer?.hasAuthenticRecording(q.id) == true || q.id in listOf(1, 2, 3, 6, 7, 20, 49) -> {
+            audioPlayer?.hasAuthenticRecording(q.id) == true || artist.contains("अटल") -> {
                 binding.tvOriginalVoiceBadge.visibility = View.VISIBLE
                 val srcLabel = if (source.isNotEmpty()) " ($source)" else ""
                 binding.tvOriginalVoiceBadge.text = "🎙️ अटल जी का मूल स्वर$srcLabel"
@@ -124,12 +125,12 @@ class PoemDetailActivity : AppCompatActivity() {
 
                             val q = quote
                             val badgeTitle = when {
-                                q?.id in listOf(12, 13, 37, 40, 46) || q?.audioArtist?.contains("जगजीत") == true ->
-                                    "🎵 जगजीत सिंह (संवेदना)"
+                                q?.id in listOf(12, 13, 15, 37, 40, 46) || q?.audioArtist?.contains("जगजीत") == true ->
+                                    if (q?.id == 15) "🎵 जगजीत सिंह व अटल जी (संवेदना)" else "🎵 जगजीत सिंह (संवेदना)"
                                 q?.id == 14 -> "🎵 शंकर महादेवन (नई दिशा)"
                                 q?.id == 31 -> "🇮🇳 देशभक्ति अमर गान"
                                 q?.id == 51 -> "🎵 अलका याज्ञिक व शंकर महादेवन"
-                                mode == AtalAudioPlayer.AudioMode.ORIGINAL_VOICE ->
+                                mode == AtalAudioPlayer.AudioMode.ORIGINAL_VOICE || q?.audioArtist?.contains("अटल") == true ->
                                     "🎙️ अटल जी का मूल स्वर"
                                 else -> "🎙️ अटल वाग्मिता शैली"
                             }
@@ -160,13 +161,13 @@ class PoemDetailActivity : AppCompatActivity() {
                         AtalAudioPlayer.PlayState.STOPPED -> {
                             val q = quote
                             when {
-                                q != null && (q.id in listOf(12, 13, 37, 40, 46) || q.audioArtist?.contains("जगजीत") == true) -> {
-                                    binding.btnRecitePoem.text = "जगजीत सिंह के स्वर में सुनें"
+                                q != null && (q.id in listOf(12, 13, 15, 37, 40, 46) || q.audioArtist?.contains("जगजीत") == true) -> {
+                                    binding.btnRecitePoem.text = if (q.id == 15) "जगजीत व अटल जी के स्वर में सुनें" else "जगजीत सिंह के स्वर में सुनें"
                                 }
                                 q?.id == 14 -> binding.btnRecitePoem.text = "शंकर महादेवन के स्वर में सुनें"
                                 q?.id == 31 -> binding.btnRecitePoem.text = "अमर गान सुनें (उनकी याद करें)"
                                 q?.id == 51 -> binding.btnRecitePoem.text = "गायन व संगीत में सुनें"
-                                q != null && (audioPlayer?.hasAuthenticRecording(q.id) == true || q.id in listOf(1, 2, 3, 6, 7, 20, 49)) -> {
+                                q != null && (audioPlayer?.hasAuthenticRecording(q.id) == true || q.audioArtist?.contains("अटल") == true) -> {
                                     binding.btnRecitePoem.text = "अटल जी के स्वर में सुनें"
                                 }
                                 else -> {
