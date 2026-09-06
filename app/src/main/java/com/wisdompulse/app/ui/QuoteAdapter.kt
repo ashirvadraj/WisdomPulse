@@ -57,16 +57,31 @@ class QuoteAdapter(
             binding.tvReadBadge.visibility = if (isRead(quote)) View.VISIBLE else View.GONE
 
             // Audio badge
-            if (quote.audioArtist?.contains("जगजीत") == true) {
-                binding.tvAudioBadge.visibility = View.VISIBLE
-                binding.tvAudioBadge.text = "🎵 जगजीत सिंह"
-                binding.tvAudioBadge.setTextColor(ContextCompat.getColor(context, R.color.accent_purple))
-            } else if (quote.audioArtist?.contains("अटल") == true || quote.id in listOf(1, 3, 6, 20, 49)) {
-                binding.tvAudioBadge.visibility = View.VISIBLE
-                binding.tvAudioBadge.text = "🎙️ मूल स्वर"
-                binding.tvAudioBadge.setTextColor(ContextCompat.getColor(context, R.color.primary))
-            } else {
-                binding.tvAudioBadge.visibility = View.GONE
+            val artist = quote.audioArtist ?: ""
+            when {
+                artist.contains("जगजीत") -> {
+                    binding.tvAudioBadge.visibility = View.VISIBLE
+                    binding.tvAudioBadge.text = "🎵 जगजीत सिंह"
+                    binding.tvAudioBadge.setTextColor(ContextCompat.getColor(context, R.color.accent_purple))
+                }
+                artist.contains("शंकर") || artist.contains("अलका") -> {
+                    binding.tvAudioBadge.visibility = View.VISIBLE
+                    binding.tvAudioBadge.text = if (artist.contains("शंकर")) "🎵 शंकर महादेवन" else "🎵 अलका याज्ञिक"
+                    binding.tvAudioBadge.setTextColor(ContextCompat.getColor(context, R.color.accent_purple))
+                }
+                artist.contains("देशभक्ति") || quote.id == 31 -> {
+                    binding.tvAudioBadge.visibility = View.VISIBLE
+                    binding.tvAudioBadge.text = "🇮🇳 अमर राष्ट्रगान"
+                    binding.tvAudioBadge.setTextColor(ContextCompat.getColor(context, R.color.accent_gold))
+                }
+                artist.contains("अटल") || quote.id in listOf(1, 2, 3, 6, 7, 20, 49) -> {
+                    binding.tvAudioBadge.visibility = View.VISIBLE
+                    binding.tvAudioBadge.text = "🎙️ अटल जी का मूल स्वर"
+                    binding.tvAudioBadge.setTextColor(ContextCompat.getColor(context, R.color.primary))
+                }
+                else -> {
+                    binding.tvAudioBadge.visibility = View.GONE
+                }
             }
 
             // Favorite state

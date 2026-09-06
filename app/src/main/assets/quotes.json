@@ -11,7 +11,7 @@
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
     "illustrationKey": "art_diya_lamp",
-    "audioArtist": "अटल बिहारी वाजपेयी",
+    "audioArtist": "अटल बिहारी वाजपेयी (मूल स्वर)",
     "audioSource": "अंतर्नाद"
   },
   {
@@ -25,7 +25,9 @@
     "language": "hi",
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
-    "illustrationKey": "art_dew_grass"
+    "illustrationKey": "art_dew_grass",
+    "audioArtist": "अटल बिहारी वाजपेयी (मूल स्वर)",
+    "audioSource": "ऐतिहासिक काव्य पाठ"
   },
   {
     "id": 3,
@@ -39,7 +41,7 @@
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
     "illustrationKey": "art_diya_lamp",
-    "audioArtist": "अटल बिहारी वाजपेयी",
+    "audioArtist": "अटल बिहारी वाजपेयी (मूल स्वर)",
     "audioSource": "अंतर्नाद"
   },
   {
@@ -80,7 +82,7 @@
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
     "illustrationKey": "art_rising_sun",
-    "audioArtist": "अटल बिहारी वाजपेयी",
+    "audioArtist": "अटल बिहारी वाजपेयी (मूल स्वर)",
     "audioSource": "अंतर्नाद"
   },
   {
@@ -94,7 +96,9 @@
     "language": "hi",
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
-    "illustrationKey": "art_rising_sun"
+    "illustrationKey": "art_rising_sun",
+    "audioArtist": "अटल बिहारी वाजपेयी (मूल स्वर)",
+    "audioSource": "ऐतिहासिक काव्य पाठ"
   },
   {
     "id": 8,
@@ -160,7 +164,7 @@
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
     "illustrationKey": "art_dew_grass",
-    "audioArtist": "जगजीत सिंह",
+    "audioArtist": "जगजीत सिंह (गीत व संगीत)",
     "audioSource": "संवेदना (2002)"
   },
   {
@@ -175,7 +179,7 @@
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
     "illustrationKey": "art_diya_lamp",
-    "audioArtist": "जगजीत सिंह",
+    "audioArtist": "जगजीत सिंह (गीत व संगीत)",
     "audioSource": "संवेदना (2002)"
   },
   {
@@ -189,7 +193,9 @@
     "language": "hi",
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
-    "illustrationKey": "art_marching_forward"
+    "illustrationKey": "art_marching_forward",
+    "audioArtist": "शंकर महादेवन (गायन)",
+    "audioSource": "नई दिशा (1999)"
   },
   {
     "id": 15,
@@ -268,7 +274,7 @@
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
     "illustrationKey": "art_dew_grass",
-    "audioArtist": "अटल बिहारी वाजपेयी",
+    "audioArtist": "अटल बिहारी वाजपेयी (मूल स्वर)",
     "audioSource": "अंतर्नाद"
   },
   {
@@ -412,7 +418,9 @@
     "language": "hi",
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
-    "illustrationKey": "art_national_flag"
+    "illustrationKey": "art_national_flag",
+    "audioArtist": "देशभक्ति अमर गान",
+    "audioSource": "राष्ट्रीय काव्य संकलन"
   },
   {
     "id": 32,
@@ -491,7 +499,7 @@
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
     "illustrationKey": "art_marching_forward",
-    "audioArtist": "जगजीत सिंह",
+    "audioArtist": "जगजीत सिंह (गीत व संगीत)",
     "audioSource": "संवेदना (2002)"
   },
   {
@@ -532,7 +540,7 @@
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
     "illustrationKey": "art_marching_forward",
-    "audioArtist": "जगजीत सिंह",
+    "audioArtist": "जगजीत सिंह (गीत व संगीत)",
     "audioSource": "संवेदना (2002)"
   },
   {
@@ -612,7 +620,7 @@
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
     "illustrationKey": "art_manali_valley",
-    "audioArtist": "जगजीत सिंह",
+    "audioArtist": "जगजीत सिंह (गीत व संगीत)",
     "audioSource": "संवेदना (2002)"
   },
   {
@@ -653,7 +661,7 @@
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
     "illustrationKey": "art_peace_dove",
-    "audioArtist": "अटल बिहारी वाजपेयी",
+    "audioArtist": "अटल बिहारी वाजपेयी (मूल स्वर)",
     "audioSource": "अंतर्नाद"
   },
   {
@@ -680,6 +688,8 @@
     "language": "hi",
     "isPoem": true,
     "avatarKey": "avatar_vajpayee",
-    "illustrationKey": "art_peace_dove"
+    "illustrationKey": "art_peace_dove",
+    "audioArtist": "अलका याज्ञिक व शंकर महादेवन",
+    "audioSource": "नई दिशा (1999)"
   }
 ]

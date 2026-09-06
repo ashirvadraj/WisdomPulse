@@ -69,59 +69,115 @@ class PoemDetailActivity : AppCompatActivity() {
         }
 
         // Check if authentic recording or musical rendition exists
-        val isGhazal = audioPlayer?.isMusicalGhazal(q.id) == true || q.audioArtist?.contains("जगजीत") == true
-        if (isGhazal) {
-            binding.tvOriginalVoiceBadge.visibility = View.VISIBLE
-            binding.tvOriginalVoiceBadge.text = "🎵 संगीत: जगजीत सिंह (संवेदना)"
-            binding.tvOriginalVoiceBadge.backgroundTintList = ColorStateList.valueOf(0xFF4A148C.toInt())
-            binding.btnRecitePoem.text = "जगजीत सिंह के स्वर में सुनें"
-        } else if (audioPlayer?.hasAuthenticRecording(q.id) == true) {
-            binding.tvOriginalVoiceBadge.visibility = View.VISIBLE
-            binding.tvOriginalVoiceBadge.text = "🎙️ अटल जी का मूल स्वर"
-            binding.tvOriginalVoiceBadge.backgroundTintList = ColorStateList.valueOf(0xFFC0392B.toInt())
-            binding.btnRecitePoem.text = "अटल जी के स्वर में सुनें"
-        } else {
-            binding.tvOriginalVoiceBadge.visibility = View.GONE
-            binding.btnRecitePoem.text = "अटल शैली काव्य पाठ"
+        val artist = q.audioArtist ?: ""
+        val source = q.audioSource ?: ""
+        when {
+            q.id in listOf(12, 13, 37, 40, 46) || artist.contains("जगजीत") -> {
+                binding.tvOriginalVoiceBadge.visibility = View.VISIBLE
+                binding.tvOriginalVoiceBadge.text = "🎵 गायन व संगीत: जगजीत सिंह (संवेदना)"
+                binding.tvOriginalVoiceBadge.backgroundTintList = ColorStateList.valueOf(0xFF4A148C.toInt())
+                binding.btnRecitePoem.text = "जगजीत सिंह के स्वर में सुनें"
+            }
+            q.id == 14 -> {
+                binding.tvOriginalVoiceBadge.visibility = View.VISIBLE
+                binding.tvOriginalVoiceBadge.text = "🎵 गायन: शंकर महादेवन (नई दिशा)"
+                binding.tvOriginalVoiceBadge.backgroundTintList = ColorStateList.valueOf(0xFF00695C.toInt())
+                binding.btnRecitePoem.text = "शंकर महादेवन के स्वर में सुनें"
+            }
+            q.id == 31 -> {
+                binding.tvOriginalVoiceBadge.visibility = View.VISIBLE
+                binding.tvOriginalVoiceBadge.text = "🇮🇳 अमर देशभक्ति राष्ट्रगान (उनकी याद करें)"
+                binding.tvOriginalVoiceBadge.backgroundTintList = ColorStateList.valueOf(0xFFE65100.toInt())
+                binding.btnRecitePoem.text = "अमर गान सुनें (उनकी याद करें)"
+            }
+            q.id == 51 -> {
+                binding.tvOriginalVoiceBadge.visibility = View.VISIBLE
+                binding.tvOriginalVoiceBadge.text = "🎵 गायन: अलका याज्ञिक व शंकर महादेवन"
+                binding.tvOriginalVoiceBadge.backgroundTintList = ColorStateList.valueOf(0xFF00695C.toInt())
+                binding.btnRecitePoem.text = "गायन व संगीत में सुनें"
+            }
+            audioPlayer?.hasAuthenticRecording(q.id) == true || q.id in listOf(1, 2, 3, 6, 7, 20, 49) -> {
+                binding.tvOriginalVoiceBadge.visibility = View.VISIBLE
+                val srcLabel = if (source.isNotEmpty()) " ($source)" else ""
+                binding.tvOriginalVoiceBadge.text = "🎙️ अटल जी का मूल स्वर$srcLabel"
+                binding.tvOriginalVoiceBadge.backgroundTintList = ColorStateList.valueOf(0xFFC0392B.toInt())
+                binding.btnRecitePoem.text = "अटल जी के स्वर में सुनें"
+            }
+            else -> {
+                binding.tvOriginalVoiceBadge.visibility = View.GONE
+                binding.btnRecitePoem.text = "अटल शैली काव्य पाठ"
+            }
         }
     }
 
     private fun setupAudioPlayer() {
         audioPlayer = AtalAudioPlayer(
             context = this,
-            onStateChanged = { isPlaying, mode ->
+            onStateChanged = { state, mode ->
                 runOnUiThread {
-                    if (isPlaying) {
-                        binding.btnRecitePoem.text = "विराम"
-                        binding.btnRecitePoem.setIconResource(android.R.drawable.ic_media_pause)
-                        binding.audioProgressRow.visibility = View.VISIBLE
-                        when (mode) {
-                            AtalAudioPlayer.AudioMode.JAGJIT_SINGH_GHAZAL -> {
-                                binding.tvAudioModeBadge.text = "🎵 संगीत व स्वर: जगजीत सिंह (एल्बम: संवेदना)"
-                                binding.seekBarAudio.visibility = View.VISIBLE
+                    when (state) {
+                        AtalAudioPlayer.PlayState.PLAYING -> {
+                            binding.btnRecitePoem.text = "विराम (Pause)"
+                            binding.btnRecitePoem.setIconResource(R.drawable.ic_pause)
+                            binding.btnStopAudio.visibility = View.VISIBLE
+                            binding.audioProgressRow.visibility = View.VISIBLE
+
+                            val q = quote
+                            val badgeTitle = when {
+                                q?.id in listOf(12, 13, 37, 40, 46) || q?.audioArtist?.contains("जगजीत") == true ->
+                                    "🎵 जगजीत सिंह (संवेदना)"
+                                q?.id == 14 -> "🎵 शंकर महादेवन (नई दिशा)"
+                                q?.id == 31 -> "🇮🇳 देशभक्ति अमर गान"
+                                q?.id == 51 -> "🎵 अलका याज्ञिक व शंकर महादेवन"
+                                mode == AtalAudioPlayer.AudioMode.ORIGINAL_VOICE ->
+                                    "🎙️ अटल जी का मूल स्वर"
+                                else -> "🎙️ अटल वाग्मिता शैली"
                             }
-                            AtalAudioPlayer.AudioMode.ORIGINAL_VOICE -> {
-                                binding.tvAudioModeBadge.text = "🎙️ अटल जी का मूल स्वर (एल्बम: अंतर्नाद)"
-                                binding.seekBarAudio.visibility = View.VISIBLE
-                            }
-                            else -> {
-                                binding.tvAudioModeBadge.text = "🎙️ अटल वाग्मिता शैली (गंभीर स्वर व विराम)"
+                            binding.tvAudioModeBadge.text = badgeTitle
+
+                            if (mode == AtalAudioPlayer.AudioMode.ORATORICAL_RECITAL) {
                                 binding.seekBarAudio.visibility = View.GONE
+                                binding.btnReplay10.visibility = View.GONE
+                                binding.btnForward10.visibility = View.GONE
                                 binding.tvAudioTime.text = "काव्य पाठ जारी..."
+                            } else {
+                                binding.seekBarAudio.visibility = View.VISIBLE
+                                binding.btnReplay10.visibility = View.VISIBLE
+                                binding.btnForward10.visibility = View.VISIBLE
                             }
                         }
-                    } else {
-                        val q = quote
-                        if (q != null && (audioPlayer?.isMusicalGhazal(q.id) == true || q.audioArtist?.contains("जगजीत") == true)) {
-                            binding.btnRecitePoem.text = "जगजीत सिंह के स्वर में सुनें"
-                        } else if (q != null && audioPlayer?.hasAuthenticRecording(q.id) == true) {
-                            binding.btnRecitePoem.text = "अटल जी के स्वर में सुनें"
-                        } else {
-                            binding.btnRecitePoem.text = "अटल शैली काव्य पाठ"
+                        AtalAudioPlayer.PlayState.PAUSED -> {
+                            binding.btnRecitePoem.text = "जारी रखें (Resume)"
+                            binding.btnRecitePoem.setIconResource(R.drawable.ic_play_arrow)
+                            binding.btnStopAudio.visibility = View.VISIBLE
+                            binding.audioProgressRow.visibility = View.VISIBLE
+                            if (mode != AtalAudioPlayer.AudioMode.ORATORICAL_RECITAL) {
+                                binding.seekBarAudio.visibility = View.VISIBLE
+                                binding.btnReplay10.visibility = View.VISIBLE
+                                binding.btnForward10.visibility = View.VISIBLE
+                            }
                         }
-                        binding.btnRecitePoem.setIconResource(R.drawable.ic_volume_up)
-                        binding.audioProgressRow.visibility = View.GONE
-                        binding.seekBarAudio.visibility = View.GONE
+                        AtalAudioPlayer.PlayState.STOPPED -> {
+                            val q = quote
+                            when {
+                                q != null && (q.id in listOf(12, 13, 37, 40, 46) || q.audioArtist?.contains("जगजीत") == true) -> {
+                                    binding.btnRecitePoem.text = "जगजीत सिंह के स्वर में सुनें"
+                                }
+                                q?.id == 14 -> binding.btnRecitePoem.text = "शंकर महादेवन के स्वर में सुनें"
+                                q?.id == 31 -> binding.btnRecitePoem.text = "अमर गान सुनें (उनकी याद करें)"
+                                q?.id == 51 -> binding.btnRecitePoem.text = "गायन व संगीत में सुनें"
+                                q != null && (audioPlayer?.hasAuthenticRecording(q.id) == true || q.id in listOf(1, 2, 3, 6, 7, 20, 49)) -> {
+                                    binding.btnRecitePoem.text = "अटल जी के स्वर में सुनें"
+                                }
+                                else -> {
+                                    binding.btnRecitePoem.text = "अटल शैली काव्य पाठ"
+                                }
+                            }
+                            binding.btnRecitePoem.setIconResource(R.drawable.ic_volume_up)
+                            binding.btnStopAudio.visibility = View.GONE
+                            binding.audioProgressRow.visibility = View.GONE
+                            binding.seekBarAudio.visibility = View.GONE
+                        }
                     }
                 }
             },
@@ -157,11 +213,19 @@ class PoemDetailActivity : AppCompatActivity() {
 
         binding.btnRecitePoem.setOnClickListener {
             val q = quote ?: return@setOnClickListener
-            if (audioPlayer?.isPlaying() == true) {
-                audioPlayer?.stop()
-            } else {
-                audioPlayer?.start(q)
-            }
+            audioPlayer?.togglePlayPause(q)
+        }
+
+        binding.btnStopAudio.setOnClickListener {
+            audioPlayer?.stop()
+        }
+
+        binding.btnReplay10.setOnClickListener {
+            audioPlayer?.seekBy(-10000)
+        }
+
+        binding.btnForward10.setOnClickListener {
+            audioPlayer?.seekBy(10000)
         }
     }
 
@@ -243,6 +307,9 @@ class PoemDetailActivity : AppCompatActivity() {
                 binding.btnRecitePoem.iconTint = ColorStateList.valueOf(accent)
                 binding.seekBarAudio.progressTintList = ColorStateList.valueOf(accent)
                 binding.seekBarAudio.thumbTintList = ColorStateList.valueOf(accent)
+                binding.btnStopAudio.iconTint = ColorStateList.valueOf(accent)
+                binding.btnReplay10.setTextColor(accent)
+                binding.btnForward10.setTextColor(accent)
             }
             "slate" -> {
                 val bg = ContextCompat.getColor(this, R.color.slate_bg)
@@ -274,6 +341,9 @@ class PoemDetailActivity : AppCompatActivity() {
                 binding.btnRecitePoem.iconTint = ColorStateList.valueOf(accent)
                 binding.seekBarAudio.progressTintList = ColorStateList.valueOf(accent)
                 binding.seekBarAudio.thumbTintList = ColorStateList.valueOf(accent)
+                binding.btnStopAudio.iconTint = ColorStateList.valueOf(accent)
+                binding.btnReplay10.setTextColor(accent)
+                binding.btnForward10.setTextColor(accent)
             }
             else -> { // parchment
                 val bg = ContextCompat.getColor(this, R.color.parchment_bg)
@@ -305,6 +375,9 @@ class PoemDetailActivity : AppCompatActivity() {
                 binding.btnRecitePoem.iconTint = ColorStateList.valueOf(accent)
                 binding.seekBarAudio.progressTintList = ColorStateList.valueOf(accent)
                 binding.seekBarAudio.thumbTintList = ColorStateList.valueOf(accent)
+                binding.btnStopAudio.iconTint = ColorStateList.valueOf(accent)
+                binding.btnReplay10.setTextColor(accent)
+                binding.btnForward10.setTextColor(accent)
             }
         }
     }
