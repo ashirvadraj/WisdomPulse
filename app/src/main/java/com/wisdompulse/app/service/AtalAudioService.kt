@@ -33,14 +33,18 @@ class AtalAudioService : Service() {
         const val EXTRA_QUOTE = "extra_quote"
 
         fun startPlayback(context: Context, quote: Quote) {
-            val intent = Intent(context, AtalAudioService::class.java).apply {
-                action = ACTION_START
-                putExtra(EXTRA_QUOTE, quote)
-            }
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                context.startForegroundService(intent)
-            } else {
-                context.startService(intent)
+            try {
+                val intent = Intent(context, AtalAudioService::class.java).apply {
+                    action = ACTION_START
+                    putExtra(EXTRA_QUOTE, quote)
+                }
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    context.startForegroundService(intent)
+                } else {
+                    context.startService(intent)
+                }
+            } catch (e: Exception) {
+                e.printStackTrace()
             }
         }
 
@@ -146,8 +150,11 @@ class AtalAudioService : Service() {
             }
         } catch (e: Exception) {
             e.printStackTrace()
-            // Fallback for edge cases
-            startForeground(NOTIFICATION_ID, notification)
+            try {
+                startForeground(NOTIFICATION_ID, notification)
+            } catch (e2: Exception) {
+                e2.printStackTrace()
+            }
         }
     }
 

@@ -17,6 +17,10 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    androidResources {
+        noCompress += listOf("mp3", "ogg", "wav")
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false

@@ -11,6 +11,8 @@ import android.speech.tts.TextToSpeech
 import android.speech.tts.UtteranceProgressListener
 import com.wisdompulse.app.model.Quote
 import com.wisdompulse.app.service.AtalAudioService
+import java.io.File
+import java.io.FileOutputStream
 import java.util.Locale
 
 class AtalAudioPlayer(
@@ -111,13 +113,12 @@ class AtalAudioPlayer(
         listener?.onError(message)
     }
 
+    private val authenticPoemIds = setOf(
+        1, 3, 4, 6, 7, 9, 11, 12, 13, 14, 15, 20, 24, 25, 26, 27, 29, 30, 31, 36, 37, 40, 41, 46, 49, 51
+    )
+
     fun hasAuthenticRecording(quoteId: Int): Boolean {
-        return try {
-            val list = context.assets.list("audio") ?: emptyArray()
-            list.contains("poem_$quoteId.mp3") || getOnlineStreamUrl(quoteId) != null
-        } catch (e: Exception) {
-            false
-        }
+        return quoteId in authenticPoemIds || getOnlineStreamUrl(quoteId) != null
     }
 
     fun isMusicalGhazal(quoteId: Int): Boolean {
@@ -145,8 +146,21 @@ class AtalAudioPlayer(
         }
     }
 
+    private fun cleanupMediaPlayer() {
+        handler.removeCallbacks(progressRunnable)
+        try {
+            mediaPlayer?.stop()
+            mediaPlayer?.release()
+        } catch (e: Exception) {}
+        mediaPlayer = null
+
+        try {
+            tts?.stop()
+        } catch (e: Exception) {}
+    }
+
     fun start(quote: Quote, forceMode: AudioMode? = null) {
-        stop()
+        cleanupMediaPlayer()
         currentQuote = quote
 
         val mode = forceMode ?: when {
@@ -164,71 +178,137 @@ class AtalAudioPlayer(
         }
     }
 
+    private fun prepareAndPlayAsset(mp: MediaPlayer, assetName: String) {
+        val assetPath = "audio/$assetName"
+        val cacheFile = File(context.cacheDir, assetName)
+
+        // 1. If previously cached and intact, play directly from local cache (fastest & most reliable)
+        if (cacheFile.exists() && cacheFile.length() > 5000L) {
+            try {
+                mp.reset()
+                mp.setDataSource(cacheFile.absolutePath)
+                mp.prepare()
+                mp.start()
+                return
+            } catch (e: Exception) {
+                e.printStackTrace()
+                cacheFile.delete()
+                mp.reset()
+            }
+        }
+
+        // 2. Try playing directly from asset via AssetFileDescriptor (for uncompressed APK assets)
+        try {
+            val afd: AssetFileDescriptor = context.assets.openFd(assetPath)
+            mp.reset()
+            mp.setDataSource(afd.fileDescriptor, afd.startOffset, afd.length)
+            mp.prepare()
+            mp.start()
+            try { afd.close() } catch (e: Exception) {}
+            return
+        } catch (e: Exception) {
+            e.printStackTrace()
+            mp.reset()
+        }
+
+        // 3. Infallible Fallback: Stream from assets InputStream into cacheFile and play
+        // context.assets.open() works on 100% of Android devices regardless of APK compression
+        context.assets.open(assetPath).use { input ->
+            FileOutputStream(cacheFile).use { output ->
+                input.copyTo(output)
+            }
+        }
+        mp.reset()
+        mp.setDataSource(cacheFile.absolutePath)
+        mp.prepare()
+        mp.start()
+    }
+
     private fun startAuthenticPlayback(quote: Quote, mode: AudioMode) {
         try {
-            mediaPlayer = MediaPlayer().apply {
+            cleanupMediaPlayer()
+
+            val mp = MediaPlayer().apply {
                 setAudioAttributes(
                     AudioAttributes.Builder()
                         .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
                         .setUsage(AudioAttributes.USAGE_MEDIA)
                         .build()
                 )
-                // Set wake mode so CPU stays awake during playback
                 try {
                     setWakeMode(context, PowerManager.PARTIAL_WAKE_LOCK)
                 } catch (e: Exception) {
                     e.printStackTrace()
                 }
 
-                val list = context.assets.list("audio") ?: emptyArray()
-                if (list.contains("poem_${quote.id}.mp3")) {
-                    val afd: AssetFileDescriptor = context.assets.openFd("audio/poem_${quote.id}.mp3")
-                    setDataSource(afd.fileDescriptor, afd.startOffset, afd.length)
-                    afd.close()
-                    prepare()
-                    start()
-                } else {
-                    val onlineUrl = getOnlineStreamUrl(quote.id)
-                    if (onlineUrl != null) {
-                        setDataSource(onlineUrl)
-                        prepareAsync()
-                        setOnPreparedListener {
-                            it.start()
-                            this@AtalAudioPlayer.isPlaying = true
-                            this@AtalAudioPlayer.isPaused = false
-                            notifyStateChanged(PlayState.PLAYING, mode)
-                            handler.post(progressRunnable)
-                            AtalAudioService.startPlayback(context, quote)
-                        }
-                        return
-                    } else {
-                        notifyError("ऑडियो फ़ाइल उपलब्ध नहीं है")
-                        return
-                    }
-                }
-
                 setOnCompletionListener {
                     this@AtalAudioPlayer.isPaused = false
                     stop()
                 }
-                setOnErrorListener { _, _, _ ->
+                setOnErrorListener { _, what, extra ->
                     stop()
-                    notifyError("ऑडियो चलाने में त्रुटि हुई")
+                    notifyError("प्लेबैक त्रुटि ($what, $extra)")
                     true
                 }
             }
 
-            isPlaying = true
-            isPaused = false
+            val assetName = "poem_${quote.id}.mp3"
+            var playSuccess = false
+
+            // Check if this quote has an offline asset
+            if (quote.id in authenticPoemIds) {
+                try {
+                    prepareAndPlayAsset(mp, assetName)
+                    playSuccess = true
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                    playSuccess = false
+                }
+            }
+
+            // If offline asset failed or not present, try online stream
+            if (!playSuccess) {
+                val onlineUrl = getOnlineStreamUrl(quote.id)
+                if (onlineUrl != null) {
+                    mp.setDataSource(onlineUrl)
+                    mp.prepareAsync()
+                    mp.setOnPreparedListener { preparedMp ->
+                        preparedMp.start()
+                        this@AtalAudioPlayer.mediaPlayer = preparedMp
+                        this@AtalAudioPlayer.isPlaying = true
+                        this@AtalAudioPlayer.isPaused = false
+                        notifyStateChanged(PlayState.PLAYING, mode)
+                        handler.post(progressRunnable)
+                        try {
+                            AtalAudioService.startPlayback(context, quote)
+                        } catch (e: Exception) {
+                            e.printStackTrace()
+                        }
+                    }
+                    return
+                } else {
+                    notifyError("ऑडियो फ़ाइल उपलब्ध नहीं है")
+                    stop()
+                    return
+                }
+            }
+
+            this.mediaPlayer = mp
+            this.isPlaying = true
+            this.isPaused = false
             notifyStateChanged(PlayState.PLAYING, mode)
             handler.post(progressRunnable)
 
-            // Start Foreground Media Playback Service with lockscreen controls
-            AtalAudioService.startPlayback(context, quote)
+            // Start foreground playback service safely (does not break playback if service encounters any delay)
+            try {
+                AtalAudioService.startPlayback(context, quote)
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
 
         } catch (e: Exception) {
             e.printStackTrace()
-            notifyError("ऑडियो शुरू नहीं हो सका")
+            notifyError("ऑडियो शुरू नहीं हो सका: ${e.localizedMessage ?: e.message}")
             stop()
         }
     }
