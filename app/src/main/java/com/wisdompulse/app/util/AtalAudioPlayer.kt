@@ -113,6 +113,7 @@ class AtalAudioPlayer(
         listener?.onError(message)
     }
 
+    // 26 Authentic Audio Poems in assets/audio/poem_<id>.mp3
     private val authenticPoemIds = setOf(
         1, 3, 4, 6, 7, 9, 11, 12, 13, 14, 15, 20, 24, 25, 26, 27, 29, 30, 31, 36, 37, 40, 41, 46, 49, 51
     )
@@ -178,117 +179,138 @@ class AtalAudioPlayer(
         }
     }
 
-    private fun prepareAndPlayAsset(mp: MediaPlayer, assetName: String) {
+    /**
+     * Safely extracts the poem MP3 to a dedicated cache file and begins playback.
+     * Uses atomic rename (.tmp -> final) to guarantee file integrity.
+     */
+    private fun playFromAsset(quote: Quote, assetName: String, mode: AudioMode) {
         val assetPath = "audio/$assetName"
         val cacheFile = File(context.cacheDir, assetName)
 
-        var needExtract = !cacheFile.exists() || cacheFile.length() < 1000L
-        if (!needExtract) {
-            try {
-                context.assets.open(assetPath).use { input ->
-                    if (input.available().toLong() != cacheFile.length()) {
-                        needExtract = true
-                    }
-                }
-            } catch (e: Exception) {
-                needExtract = true
-            }
-        }
+        val expectedSize: Long = try {
+            context.assets.openFd(assetPath).use { afd -> afd.length }
+        } catch (e: Exception) { -1L }
+
+        val needExtract = !cacheFile.exists()
+            || cacheFile.length() < 1000L
+            || (expectedSize > 0 && cacheFile.length() != expectedSize)
 
         if (needExtract) {
-            context.assets.open(assetPath).use { input ->
-                FileOutputStream(cacheFile).use { output ->
-                    input.copyTo(output)
+            val tempFile = File(context.cacheDir, "$assetName.tmp")
+            try {
+                context.assets.open(assetPath).use { input ->
+                    FileOutputStream(tempFile).use { output ->
+                        input.copyTo(output)
+                    }
                 }
+                if (tempFile.length() > 1000L) {
+                    if (cacheFile.exists()) cacheFile.delete()
+                    tempFile.renameTo(cacheFile)
+                }
+            } catch (e: Exception) {
+                tempFile.delete()
+                throw e
             }
         }
 
-        mp.reset()
+        if (!cacheFile.exists() || cacheFile.length() < 1000L) {
+            throw java.io.FileNotFoundException("Unable to prepare audio file: $assetName")
+        }
+
+        val mp = MediaPlayer()
+        try {
+            mp.setWakeMode(context, PowerManager.PARTIAL_WAKE_LOCK)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+        mp.setAudioAttributes(
+            AudioAttributes.Builder()
+                .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                .setUsage(AudioAttributes.USAGE_MEDIA)
+                .build()
+        )
+        mp.setOnCompletionListener {
+            this@AtalAudioPlayer.isPaused = false
+            stop()
+        }
+        mp.setOnErrorListener { _, what, extra ->
+            stop()
+            notifyError("प्लेबैक त्रुटि ($what, $extra)")
+            true
+        }
         mp.setDataSource(cacheFile.absolutePath)
         mp.prepare()
         mp.start()
+
+        this.mediaPlayer = mp
+        this.isPlaying = true
+        this.isPaused = false
+        notifyStateChanged(PlayState.PLAYING, mode)
+        handler.post(progressRunnable)
+
+        try {
+            AtalAudioService.startPlayback(context, quote)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
     }
 
     private fun startAuthenticPlayback(quote: Quote, mode: AudioMode) {
         try {
             cleanupMediaPlayer()
 
-            val mp = MediaPlayer().apply {
-                setAudioAttributes(
+            val assetName = "poem_${quote.id}.mp3"
+
+            // Try offline asset first
+            if (quote.id in authenticPoemIds) {
+                try {
+                    playFromAsset(quote, assetName, mode)
+                    return
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                }
+            }
+
+            // Fall back to online stream if available
+            val onlineUrl = getOnlineStreamUrl(quote.id)
+            if (onlineUrl != null) {
+                val mp = MediaPlayer()
+                try {
+                    mp.setWakeMode(context, PowerManager.PARTIAL_WAKE_LOCK)
+                } catch (e: Exception) { e.printStackTrace() }
+                mp.setAudioAttributes(
                     AudioAttributes.Builder()
                         .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
                         .setUsage(AudioAttributes.USAGE_MEDIA)
                         .build()
                 )
-                try {
-                    setWakeMode(context, PowerManager.PARTIAL_WAKE_LOCK)
-                } catch (e: Exception) {
-                    e.printStackTrace()
-                }
-
-                setOnCompletionListener {
+                mp.setOnCompletionListener {
                     this@AtalAudioPlayer.isPaused = false
                     stop()
                 }
-                setOnErrorListener { _, what, extra ->
+                mp.setOnErrorListener { _, what, extra ->
                     stop()
                     notifyError("प्लेबैक त्रुटि ($what, $extra)")
                     true
                 }
-            }
-
-            val assetName = "poem_${quote.id}.mp3"
-            var playSuccess = false
-
-            // Check if this quote has an offline asset
-            if (quote.id in authenticPoemIds) {
-                try {
-                    prepareAndPlayAsset(mp, assetName)
-                    playSuccess = true
-                } catch (e: Exception) {
-                    e.printStackTrace()
-                    playSuccess = false
-                }
-            }
-
-            // If offline asset failed or not present, try online stream
-            if (!playSuccess) {
-                val onlineUrl = getOnlineStreamUrl(quote.id)
-                if (onlineUrl != null) {
-                    mp.setDataSource(onlineUrl)
-                    mp.prepareAsync()
-                    mp.setOnPreparedListener { preparedMp ->
-                        preparedMp.start()
-                        this@AtalAudioPlayer.mediaPlayer = preparedMp
-                        this@AtalAudioPlayer.isPlaying = true
-                        this@AtalAudioPlayer.isPaused = false
-                        notifyStateChanged(PlayState.PLAYING, mode)
-                        handler.post(progressRunnable)
-                        try {
-                            AtalAudioService.startPlayback(context, quote)
-                        } catch (e: Exception) {
-                            e.printStackTrace()
-                        }
+                mp.setDataSource(onlineUrl)
+                mp.prepareAsync()
+                mp.setOnPreparedListener { preparedMp ->
+                    preparedMp.start()
+                    this@AtalAudioPlayer.mediaPlayer = preparedMp
+                    this@AtalAudioPlayer.isPlaying = true
+                    this@AtalAudioPlayer.isPaused = false
+                    notifyStateChanged(PlayState.PLAYING, mode)
+                    handler.post(progressRunnable)
+                    try {
+                        AtalAudioService.startPlayback(context, quote)
+                    } catch (e: Exception) {
+                        e.printStackTrace()
                     }
-                    return
-                } else {
-                    notifyError("ऑडियो फ़ाइल उपलब्ध नहीं है")
-                    stop()
-                    return
                 }
-            }
-
-            this.mediaPlayer = mp
-            this.isPlaying = true
-            this.isPaused = false
-            notifyStateChanged(PlayState.PLAYING, mode)
-            handler.post(progressRunnable)
-
-            // Start foreground playback service safely (does not break playback if service encounters any delay)
-            try {
-                AtalAudioService.startPlayback(context, quote)
-            } catch (e: Exception) {
-                e.printStackTrace()
+            } else {
+                notifyError("इस कविता के लिए अटल जी का मूल ऑडियो उपलब्ध नहीं है।")
+                stop()
             }
 
         } catch (e: Exception) {
@@ -300,14 +322,19 @@ class AtalAudioPlayer(
 
     private fun startOratoricalRecital(quote: Quote) {
         if (!isTtsReady || tts == null) {
-            notifyError("काव्य पाठ इंजन तैयार हो रहा है...")
+            notifyError("इस कविता का मूल ऑडियो उपलब्ध नहीं है। काव्य पाठ तैयार हो रहा है...")
             return
         }
 
         AtalProsodyHelper.configureAtalVoice(tts!!)
         val speechText = AtalProsodyHelper.formatTextForAtalRecital(quote.title, quote.text)
 
-        tts?.speak(speechText, TextToSpeech.QUEUE_FLUSH, null, "ATAL_RECITAL_${quote.id}")
+        val res = tts?.speak(speechText, TextToSpeech.QUEUE_FLUSH, null, "ATAL_RECITAL_${quote.id}")
+        if (res == TextToSpeech.ERROR) {
+            notifyError("इस कविता के लिए मूल ऑडियो उपलब्ध नहीं है एवं वॉइस पाठ असमर्थ है।")
+            stop()
+            return
+        }
         isPlaying = true
         isPaused = false
         notifyStateChanged(PlayState.PLAYING, AudioMode.ORATORICAL_RECITAL)
@@ -407,7 +434,10 @@ class AtalAudioPlayer(
     override fun onInit(status: Int) {
         if (status == TextToSpeech.SUCCESS) {
             isTtsReady = true
-            tts?.setLanguage(Locale("hi", "IN"))
+            val res = tts?.setLanguage(Locale("hi", "IN"))
+            if (res == TextToSpeech.LANG_MISSING_DATA || res == TextToSpeech.LANG_NOT_SUPPORTED) {
+                tts?.setLanguage(Locale("hi"))
+            }
             tts?.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
                 override fun onStart(utteranceId: String?) {}
                 override fun onDone(utteranceId: String?) {

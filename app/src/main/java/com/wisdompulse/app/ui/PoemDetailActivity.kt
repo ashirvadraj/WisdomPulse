@@ -41,12 +41,7 @@ class PoemDetailActivity : AppCompatActivity() {
         // Mark as read
         quote?.let { repository.markPoemAsRead(it.id) }
 
-        // If a different poem was playing when opening this screen, stop it so user doesn't hear old poem
         audioPlayer = AtalAudioPlayer.getInstance(this)
-        val activeQuote = audioPlayer?.getCurrentQuote()
-        if (activeQuote != null && activeQuote.id != quote?.id && audioPlayer?.isPlaying() == true) {
-            audioPlayer?.stop()
-        }
 
         setupAudioPlayer()
         setupPoemContent()
@@ -79,6 +74,8 @@ class PoemDetailActivity : AppCompatActivity() {
         // Check if authentic recording or musical rendition exists
         val artist = q.audioArtist ?: ""
         val source = q.audioSource ?: ""
+        val hasAudio = audioPlayer?.hasAuthenticRecording(q.id) == true
+
         when {
             q.id in listOf(12, 13, 15, 37, 40, 46) || artist.contains("जगजीत") -> {
                 binding.tvOriginalVoiceBadge.visibility = View.VISIBLE
@@ -86,35 +83,43 @@ class PoemDetailActivity : AppCompatActivity() {
                 binding.tvOriginalVoiceBadge.text = label
                 binding.tvOriginalVoiceBadge.backgroundTintList = ColorStateList.valueOf(0xFF4A148C.toInt())
                 binding.btnRecitePoem.text = if (q.id == 15) "जगजीत व अटल जी के स्वर में सुनें" else "जगजीत सिंह के स्वर में सुनें"
+                binding.btnRecitePoem.visibility = View.VISIBLE
             }
             q.id == 14 -> {
                 binding.tvOriginalVoiceBadge.visibility = View.VISIBLE
                 binding.tvOriginalVoiceBadge.text = "🎵 गायन: शंकर महादेवन (नई दिशा)"
                 binding.tvOriginalVoiceBadge.backgroundTintList = ColorStateList.valueOf(0xFF00695C.toInt())
                 binding.btnRecitePoem.text = "शंकर महादेवन के स्वर में सुनें"
+                binding.btnRecitePoem.visibility = View.VISIBLE
             }
             q.id == 31 -> {
                 binding.tvOriginalVoiceBadge.visibility = View.VISIBLE
                 binding.tvOriginalVoiceBadge.text = "🇮🇳 अमर देशभक्ति राष्ट्रगान (उनकी याद करें)"
                 binding.tvOriginalVoiceBadge.backgroundTintList = ColorStateList.valueOf(0xFFE65100.toInt())
                 binding.btnRecitePoem.text = "अमर गान सुनें (उनकी याद करें)"
+                binding.btnRecitePoem.visibility = View.VISIBLE
             }
             q.id == 51 -> {
                 binding.tvOriginalVoiceBadge.visibility = View.VISIBLE
                 binding.tvOriginalVoiceBadge.text = "🎵 गायन: अलका याज्ञिक व शंकर महादेवन"
                 binding.tvOriginalVoiceBadge.backgroundTintList = ColorStateList.valueOf(0xFF00695C.toInt())
                 binding.btnRecitePoem.text = "गायन व संगीत में सुनें"
+                binding.btnRecitePoem.visibility = View.VISIBLE
             }
-            audioPlayer?.hasAuthenticRecording(q.id) == true || artist.contains("अटल") -> {
+            hasAudio || artist.contains("अटल") -> {
                 binding.tvOriginalVoiceBadge.visibility = View.VISIBLE
                 val srcLabel = if (source.isNotEmpty()) " ($source)" else ""
                 binding.tvOriginalVoiceBadge.text = "🎙️ अटल जी का मूल स्वर$srcLabel"
                 binding.tvOriginalVoiceBadge.backgroundTintList = ColorStateList.valueOf(0xFFC0392B.toInt())
                 binding.btnRecitePoem.text = "अटल जी के स्वर में सुनें"
+                binding.btnRecitePoem.visibility = View.VISIBLE
             }
             else -> {
-                binding.tvOriginalVoiceBadge.visibility = View.GONE
+                binding.tvOriginalVoiceBadge.visibility = View.VISIBLE
+                binding.tvOriginalVoiceBadge.text = "📖 केवल पठन हेतु (मूल ऑडियो उपलब्ध नहीं)"
+                binding.tvOriginalVoiceBadge.backgroundTintList = ColorStateList.valueOf(0xFF5D6D7E.toInt())
                 binding.btnRecitePoem.text = "अटल शैली काव्य पाठ"
+                binding.btnRecitePoem.visibility = View.VISIBLE
             }
         }
     }
@@ -289,6 +294,7 @@ class PoemDetailActivity : AppCompatActivity() {
             updateAudioUiState(AtalAudioPlayer.PlayState.STOPPED, AtalAudioPlayer.AudioMode.ORATORICAL_RECITAL)
         }
     }
+
     private fun setupToolbarActions() {
         binding.btnBack.setOnClickListener { finish() }
 

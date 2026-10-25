@@ -28,7 +28,8 @@ class AtalAudioService : Service() {
         const val ACTION_PAUSE = "com.wisdompulse.app.action.AUDIO_PAUSE"
         const val ACTION_RESUME = "com.wisdompulse.app.action.AUDIO_RESUME"
         const val ACTION_TOGGLE = "com.wisdompulse.app.action.AUDIO_TOGGLE"
-        const val ACTION_STOP = "com.wisdompulse.app.action.AUDIO_STOP"
+        const val ACTION_STOP_FROM_NOTIFICATION = "com.wisdompulse.app.action.AUDIO_STOP_NOTIFICATION"
+        const val ACTION_STOP_SERVICE = "com.wisdompulse.app.action.AUDIO_STOP_SERVICE"
 
         const val EXTRA_QUOTE = "extra_quote"
 
@@ -66,7 +67,7 @@ class AtalAudioService : Service() {
 
         fun stopPlayback(context: Context) {
             val intent = Intent(context, AtalAudioService::class.java).apply {
-                action = ACTION_STOP
+                action = ACTION_STOP_SERVICE
             }
             try {
                 context.startService(intent)
@@ -98,6 +99,7 @@ class AtalAudioService : Service() {
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         val action = intent?.action
         val quote = intent?.getSerializableExtra(EXTRA_QUOTE) as? Quote
+
         if (quote != null) {
             currentQuote = quote
         }
@@ -121,10 +123,19 @@ class AtalAudioService : Service() {
                 val player = AtalAudioPlayer.getInstance(applicationContext)
                 currentQuote?.let { player.togglePlayPause(it) }
             }
-            ACTION_STOP -> {
+            ACTION_STOP_FROM_NOTIFICATION -> {
                 releaseWakeLock()
                 val player = AtalAudioPlayer.getInstance(applicationContext)
                 player.stop()
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                    stopForeground(STOP_FOREGROUND_REMOVE)
+                } else {
+                    stopForeground(true)
+                }
+                stopSelf()
+            }
+            ACTION_STOP_SERVICE -> {
+                releaseWakeLock()
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                     stopForeground(STOP_FOREGROUND_REMOVE)
                 } else {
@@ -222,7 +233,7 @@ class AtalAudioService : Service() {
         )
 
         val stopIntent = Intent(this, AtalAudioService::class.java).apply {
-            action = ACTION_STOP
+            action = ACTION_STOP_FROM_NOTIFICATION
         }
         val stopPendingIntent = PendingIntent.getService(
             this,
