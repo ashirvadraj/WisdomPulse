@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Permissions for Wallpaper, Notifications, and Vibrate -->
-    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <!-- Permissions for Notifications, Vibrate, and Background Audio -->
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_app_icon"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/ic_app_icon"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WisdomPulse">
 
@@ -27,9 +29,9 @@
         </activity>
 
         <activity
-            android:name=".ui.WallpaperActivity"
+            android:name=".ui.PoemDetailActivity"
             android:exported="false"
-            android:label="@string/wallpaper_studio"
+            android:label="@string/poem_reading_room"
             android:parentActivityName=".ui.MainActivity" />
 
         <receiver
@@ -40,6 +42,13 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
+
+        <!-- Background Media Playback Service with WakeLock and Notification controls -->
+        <service
+            android:name=".service.AtalAudioService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="mediaPlayback" />
 
         <!-- FileProvider for exporting & sharing wallpaper to WhatsApp -->
         <provider

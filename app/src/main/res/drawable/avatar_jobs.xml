@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="72dp"
+    android:height="72dp"
+    android:viewportWidth="72"
+    android:viewportHeight="72">
+    <!-- Circular Background -->
+    <path
+        android:fillColor="#1A1A1A"
+        android:pathData="M36,36m-36,0a36,36 0 1,1 72,0a36,36 0 1,1 -72,0"/>
+    <!-- Outer Glow / Ring -->
+    <path
+        android:strokeColor="#9E9E9E"
+        android:strokeWidth="2"
+        android:pathData="M36,36m-34,0a34,34 0 1,1 68,0a34,34 0 1,1 -68,0"/>
+    <!-- Body Silhouette -->
+    <path
+        android:fillColor="#E0E0E0"
+        android:pathData="M36,44c-11,0 -20,6.5 -22,16c2.5,4 12,8 22,8s19.5,-4 22,-8c-2,-9.5 -11,-16 -22,-16z"/>
+    <!-- Head / Face -->
+    <path
+        android:fillColor="#E0E0E0"
+        android:pathData="M36,16c-6.6,0 -12,5.4 -12,12s5.4,12 12,12s12,-5.4 12,-12s-5.4,-12 -12,-12z"/>
+    <!-- Distinguishing Feature -->
+    
+    <!-- Round Spectacles -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="1.5"
+        android:pathData="M31,27m-4,0a4,4 0 1,1 8,0a4,4 0 1,1 -8,0 M41,27m-4,0a4,4 0 1,1 8,0a4,4 0 1,1 -8,0 M35,27h2"/>
+
+</vector>

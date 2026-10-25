@@ -1,79 +1,198 @@
-﻿# ✨ WisdomPulse - Quotes of Legends & WhatsApp Wallpaper Studio
+# 🇮🇳 मेरी इक्यावन कविताएँ (Meri Ekyavan Kavitayen) — अटल बिहारी वाजपेयी
+### 🎨 सचित्र, सस्वर एवं संगीतमय डिजिटल काव्य ग्रंथ (Illustrated & Musical Heritage Edition)
 
-> **"Dream is not that which you see while sleeping, it is something that does not let you sleep."**  
-> — *Dr. A.P.J. Abdul Kalam*
+[![Download APK](https://img.shields.io/badge/Download-APK_(71.6_MB)-2ECC71?style=for-the-badge&logo=android)](https://github.com/ashirvadraj/WisdomPulse/raw/main/WisdomPulse.apk)
+[![Platform](https://img.shields.io/badge/Platform-Android-green.svg)](https://android.com)
+[![Kotlin](https://img.shields.io/badge/Kotlin-1.9.24-blue.svg)](https://kotlinlang.org)
+[![Material Design](https://img.shields.io/badge/Material-3-purple.svg)](https://m3.material.io)
 
-WisdomPulse is a modern, offline-first Android application featuring timeless quotes and poetry from iconic world leaders, philosophers, and visionaries, including **Dr. A.P.J. Abdul Kalam**, **Atal Bihari Vajpayee**, **Swami Vivekananda**, **Steve Jobs**, **Albert Einstein**, and more.
+> **"बाधाएँ आती हैं आएँ, घिरें प्रलय की घोर घटाएँ,  
+> पावों के नीचे अंगारे, सिर पर बरसें यदि ज्वालाएँ,  
+> निज हाथों में हँसते-हँसते, आग लगाकर जलना होगा।  
+> क़दम मिलाकर चलना होगा।"**  
+> — *अटल बिहारी वाजपेयी*
 
-Built with **Kotlin**, **Android Jetpack**, and **Material Design 3**.
-
----
-
-## 🚀 Key Features
-
-### 1. 📖 Curated Legends & Poetry Database
-- **Dr. A.P.J. Abdul Kalam**: Vision, youth empowerment, perseverance, and handling failure.
-- **Atal Bihari Vajpayee**: Dedicated bilingual corner featuring iconic poems:
-  - *गीत नया गाता हूँ* (Geet Naya Gata Hoon)
-  - *कदम मिलाकर चलना होगा* (Kadam Milakar Chalna Hoga)
-  - *हार नहीं मानूँगा, रार नहीं ठानूँगा* (Haar Nahi Manunga)
-  - *मौत से ठन गई!* (Maut Se Than Gayi)
-- **Swami Vivekananda**: Fearlessness, inner strength, and purpose.
-- **Global Visionaries**: Albert Einstein, Steve Jobs, Nelson Mandela, Mahatma Gandhi, Dr. B.R. Ambedkar, Chanakya, Bhagat Singh, Marcus Aurelius.
-- **Smart Filters & Instant Search**: Filter by author chip or search through quote text, category, or emotions in real-time.
-
-### 2. 🎨 9:16 Wallpaper Studio (Phone & WhatsApp Wallpaper)
-- **9:16 Aspect Ratio Canvas**: Perfectly proportioned for smartphone screens and WhatsApp chat backgrounds.
-- **8 Dynamic Aesthetic Themes**:
-  - `Midnight OLED` (Pure AMOLED black `#0B0C10` with golden typography)
-  - `Royal Gold` (Warm luxury palette)
-  - `Crimson Dusk` (Deep burgundy elegance)
-  - `Forest Zen` (Calming deep emerald)
-  - `Deep Indigo` (Midnight blue)
-  - `Sunset Ember` (Warm radiant gradient)
-  - `Vintage Parchment` (Classic reading paper aesthetic)
-- **1-Tap System Integrations**:
-  - **Set as Phone Wallpaper**: Uses native `WallpaperManager` to apply directly to device Home and Lock screen.
-  - **Save for WhatsApp Wallpaper**: Renders high-res 1080x1920 PNG to gallery (`Pictures/WisdomPulse`) and opens WhatsApp's wallpaper picker.
-
-### 3. ⏰ Offline Daily Notification Engine
-- **Scheduled Morning Reminder**: Fires daily at 7:00 AM using Android `AlarmManager` without requiring any cloud server or internet.
-- **"Inspire Me Now" Button**: Instant on-demand inspiration notification with 1-tap "Set Wallpaper" action.
-
-### 4. 🔊 Text-to-Speech (TTS) Voiceover
-- Native `android.speech.tts.TextToSpeech` integration.
-- Reads English quotes and Hindi poems with accurate regional accent.
-
-### 5. ❤️ Offline Bookmarks
-- Tap the heart icon to save favorite quotes locally with zero network latency.
+भारत रत्न पूर्व प्रधानमंत्री श्रद्धेय **अटल बिहारी वाजपेयी** जी के कालजयी काव्य संकलन **"मेरी इक्यावन कविताएँ"** का पूर्णतः समर्पित, निष्कलंक एवं सुरुचिपूर्ण डिजिटल काव्य ग्रंथ। इस विशेष संस्करण में **श्रद्धेय अटल जी की पावन छवि युक्त नया ऍप लोगो (App Launcher Icon)**, सभी ५१ कविताओं हेतु **सजीव साहित्यिक कलाकृतियाँ (Fine Art Illustrations)**, **२६ कालजयी मूल संगीत व सस्वर ऑडियो ट्रैक्स (१००% ऑफलाइन)** तथा **प्ले/पॉज/रीज़्यूम एवं सीकिंग नियंत्रण** सम्मिलित किया गया है।
 
 ---
 
-## 🛠️ Tech Stack & Architecture
+## 📲 Direct APK Download
 
-- **Language:** Kotlin 1.9.24
-- **Architecture:** Android Jetpack & ViewBinding
-- **UI Components:** Google Material Components 3 (`Theme.Material3.Dark.NoActionBar`)
-- **JSON Parsing:** Google Gson 2.10.1
-- **Notifications:** Android `NotificationManager` + `AlarmManager` + `BroadcastReceiver`
-- **Wallpaper API:** Android `WallpaperManager` + `MediaStore`
+Download and install directly on your Android phone:  
+👉 **[Download WisdomPulse.apk (26 Tracks Heritage Edition - 71.6 MB)](https://github.com/ashirvadraj/WisdomPulse/raw/main/WisdomPulse.apk)**
 
 ---
 
-## 📦 Building the APK from Source
+## 🏛️ नया ऍप लोगो: श्रद्धेय अटल बिहारी वाजपेयी जी का सजीव चित्र (New Official App Icon)
 
-```bash
-# Clone the repository
-git clone https://github.com/ashirvadraj/WisdomPulse.git
-cd WisdomPulse
+ऍप के मुख्य लॉन्चर आइकन (Home Screen App Icon) पर अब श्रद्धेय अटल जी का सौम्य व ओजस्वी चित्र, स्वर्ण मंडित शाही चक्र (Golden Ornamental Medallion), "मेरी इक्यावन कविताएँ" देवनागरी उत्कीर्णन तथा ज्ञान व काव्य के प्रतीक अखंड दीपक का समावेश किया गया है:
+- **Square / Squircle Icon (`ic_launcher`)**: सभी मानक एंड्रॉइड लॉन्चरों हेतु।
+- **Circular Icon (`ic_launcher_round`)**: गोल आइकन का समर्थन करने वाले आधुनिक लॉन्चरों (Pixel, Samsung OneUI आदि) हेतु।
+- **सर्वोच्च रिज़ॉल्यूशन (`xxxhdpi` - 192x192 एवं 512x512)**: रेटिना एवं 4K डिस्प्ले पर भी पूर्णतः स्पष्ट व आकर्षक।
 
-# Build Debug APK
-./gradlew assembleDebug
+---
+
+## 🎵 १. संगीतमय एवं सस्वर काव्य पाठ (26 Authentic Historic Tracks - 100% Offline)
+
+### 🎙️ श्रद्धेय अटल बिहारी वाजपेयी — १७ मूल स्वर व ऐतिहासिक काव्य पाठ [100% Offline]
+1. 🎙️ **४. गीत नहीं गाता हूँ** (*"बेनक़ाब चेहरे हैं, दाग बड़े गहरे हैं... टूटना तिलस्म आज सच से भय खाता हूँ" - ऐतिहासिक कोलकाता कवि सम्मेलन 1994 मूल स्वर*)
+2. 🎙️ **२५. अमर आग है** (*"कोटि-कोटि सुलग उठी है जो चिंगारी... उत्तर की प्रतिमा अटल विशाल है" - ऐतिहासिक मूल स्वर*)
+3. 🎙️ **२७. आज सिन्धु में ज्वार उठा है** (*"आज सिन्धु में ज्वार उठा है, कवि का हृदय अथाह हुआ है" - ऐतिहासिक मूल स्वर*)
+4. 🎙️ **३६. आए जिस-जिस की हिम्मत हो** (*"है कोई हिम्मत वाला... राष्ट्र भक्ति का द्वार न रुकता आए जिस-जिस की हिम्मत हो" - ऐतिहासिक कोलकाता कवि सम्मेलन 1994 मूल स्वर*)
+5. 🎙️ **२६. परिचय** (*"हिन्दू तन-मन, हिन्दू जीवन, रग-रग हिन्दू मेरा परिचय" - ऐतिहासिक ओजस्वी काव्य पाठ*)
+6. 🎙️ **९. दूध में दरार पड़ गई** (*ऐतिहासिक कोलकाता कवि सम्मेलन 1994 पाठ*)
+7. 🎙️ **११. झुक नहीं सकते / मस्तक नहीं झुकेगा** (*ऐतिहासिक काव्य पाठ*)
+8. 🎙️ **२४. स्वतंत्रता दिवस की पुकार** (*"पन्द्रह अगस्त का दिन कहता आज़ादी अभी अधूरी है" - मूल स्वर*)
+9. 🎙️ **२९. कोटि चरण बढ़ रहे ध्येय की ओर निरन्तर** (*ऐतिहासिक काव्य पाठ*)
+10. 🎙️ **३०. गगन में लहरता है भगवा हमारा** (*ऐतिहासिक मूल स्वर*)
+11. 🎙️ **४१. पड़ोसी से** (*ऐतिहासिक राष्ट्र संदेश काव्य पाठ*)
+12. 🎙️ **१. आओ फिर से दिया जलाएँ** (*अटल जी का मूल स्वर, एल्बम: अंतर्नाद*)
+13. 🎙️ **३. पहचान** (*अटल जी का मूल स्वर, एल्बम: अंतर्नाद*)
+14. 🎙️ **६. गीत नया गाता हूँ** (*अटल जी का मूल स्वर, एल्बम: अंतर्नाद*)
+15. 🎙️ **७. ऊँचाई** (*अटल जी का ऐतिहासिक ओजस्वी स्वर*)
+16. 🎙️ **२०. आओ, मन की गांठें खोलें** (*अटल जी का मूल स्वर, एल्बम: अंतर्नाद*)
+17. 🎙️ **४९. जंग न होने देंगे** (*अटल जी का मूल स्वर, एल्बम: अंतर्नाद*)
+
+*(नोट: कविता २ 'हरी हरी दूब पर' का गैर-प्रामाणिक ट्रैक हटा दिया गया है; अब इस पर शुद्ध अटल वाग्मिता काव्य पाठ सक्रिय है।)*
+
+### 🎼 ग़ज़ल सम्राट जगजीत सिंह — एल्बम: संवेदना (2002) [100% Offline]
+18. 🎵 **४६. क्या खोया क्या पाया जग में / अपने ही मन से कुछ बोलें** (*गायन व संगीत: जगजीत सिंह*)
+19. 🎵 **४०. कदम मिलाकर चलना होगा** (*गायन व संगीत: जगजीत सिंह*)
+20. 🎵 **१२. दूर कहीं कोई रोता है** (*गायन व संगीत: जगजीत सिंह*)
+21. 🎵 **१३. जीवन बीत चला** (*गायन व संगीत: जगजीत सिंह*)
+22. 🎵 **१५. राह कौन सी जाऊँ मैं / चौराहे पर** (*गायन: जगजीत सिंह व अटल बिहारी वाजपेयी*)
+23. 🎵 **३७. एक बरस बीत गया** (*गायन व संगीत: जगजीत सिंह*)
+
+### 🇮🇳 राष्ट्रीय अमर काव्य गान व संगीत — नई दिशा व संकलन [100% Offline]
+24. 🇮🇳 **३१. उनकी याद करें** (*अमर देशभक्ति राष्ट्रगान संकलन*)
+25. 🎵 **१४. मौत से ठन गई** (*गायन: शंकर महादेवन, एल्बम: नई दिशा*)
+26. 🎵 **५१. सपना टूट गया / टूटे हुए सपनों की** (*गायन: अलका याज्ञिक व शंकर महादेवन, एल्बम: नई दिशा*)
+
+### ⏯️ प्लेयर नियंत्रण: प्ले, पॉज़, रीज़्यूम, स्टॉप व १० सेकंड सीक
+- **प्ले / पॉज़ / रीज़्यूम (Play / Pause / Resume)**: ऑडियो को बीच में कभी भी विराम दें और वहीं से पुनः जारी रखें।
+- **१० सेकंड आगे / पीछे (Seek -10s / +10s)**: एक क्लिक में १० सेकंड पीछे या आगे बढ़ें।
+- **सीक बार (Scrubbing)**: स्लाइडर से किसी भी समय बिंदु पर तुरंत जाएँ।
+- **पूर्ण विराम (Stop)**: प्लेबैक को पूरी तरह रोकें।
+
+### 🏛️ अटल वाग्मिता शैली काव्य पाठ (TTS Recital Glitch Fixed)
+- **डॉट-मुक्त शुद्ध पाठ**: टेक्स्ट-टू-स्पीच द्वारा "डॉट डॉट डॉट" बोलने की समस्या पूर्णतः समाप्त; अब पंक्तियों के मध्य प्राकृतिक मूक विराम (Comma/Purnaviram) दिया गया है।
+- **क्रमांक रहित वाचन**: शीर्षक के पहले लगे अंकों (उदा. "4. ") को हटाकर केवल कविता का नाम पढ़ा जाता है।
+- **गंभीर मन्द्र स्वर**: Pitch 0.72x, Speech Rate 0.70x, व पुरुष वाक्-इंजन।
+
+---
+
+## 🎨 २. सचित्र काव्य दीर्घा (Fine Art Poetic Illustrations)
+
+प्रत्येक कविता कार्ड और पठन पृष्ठ पर मनमोहक साहित्यिक चित्र जोड़े गए हैं:
+- 🪔 **माटी का दिया व गेंदे के पुष्प (`art_diya_lamp`)**: *आओ फिर से दिया जलाएँ*, *पहचान*, *दीप जलता रहे* आदि अनुभूति कविताओं हेतु।
+- 🌄 **स्वर्णिम सूर्योदय व पर्वत शिखर (`art_rising_sun`)**: *गीत नया गाता हूँ*, *पुनः चमकेगा दिनकर*, *ऊँचाई* हेतु।
+- 🌿 **हरी दूब पर चमकती ओस की बूंदें (`art_dew_grass`)**: *हरी हरी दूब पर*, *सपना टूट गया* आदि प्रकृति कविताओं हेतु।
+- 🇮🇳 **हिमालय के शिखरों पर लहराता तिरंगा (`art_national_flag`)**: *स्वतंत्रता दिवस की पुकार*, *अमर आग है*, *अमर है गणतंत्र* आदि राष्ट्रगीतों हेतु।
+- 🏔️ **धुंध व तूफ़ान चीरता साहसी पथ (`art_marching_forward`)**: *कदम मिलाकर चलना होगा*, *मौत से ठन गई* आदि चुनौती कविताओं हेतु।
+- 🌲 **मनाली की बर्फीली घाटी व काष्ठ कुटीर (`art_manali_valley`)**: *बुलाती तुम्हें मनाली*, *मनाली मत जइयो* आदि हेतु।
+- 🕊️ **शांति की श्वेत कपोत (`art_peace_dove`)**: *हम जंग न होने देंगे* आदि विश्व शांति कविताओं हेतु।
+- 📸 **श्रद्धेय अटल जी का प्रामाणिक चित्र (`img_atal_vajpayee`)**: ऍप बार, प्रत्येक काव्य पठन पृष्ठ के हस्ताक्षर तथा शेयर कार्ड पर अटल जी का वास्तविक चित्र।
+
+---
+
+## 🎙️ २. अटल स्वर एवं काव्य पाठ प्रणाली (Hybrid Audio Experience)
+
+### 🌟 अटल जी का प्रामाणिक मूल स्वर (Authentic Historic Audio)
+- 🎵 **१. आओ फिर से दिया जलाएँ** (Offline Bundled MP3)
+- 🎵 **३. पहचान** (Offline Bundled MP3)
+- 🎵 **६. गीत नया गाता हूँ** (Offline Bundled MP3)
+- 🌐 **२०. आओ, मन की गांठें खोलें** (Streaming Audio)
+- 🌐 **४९. जंग न होने देंगे** (Streaming Audio)
+
+### 🏛️ अटल वाग्मिता शैली काव्य पाठ (Atal Oratorical Prosody for All 51 Poems)
+- **गंभीर मन्द्र स्वर (Deep Baritone Pitch - 0.72x)**
+- **विचारमग्न वाचन गति (Deliberate Tempo - 0.70x)**
+- **नाटकीय विराम (Dramatic Breath Pauses)**: पंक्तियों व अंतराओं के मध्य अटल जी की शैली में विराम।
+
+---
+
+## 📖 सभी 51 कविताओं की सम्पूर्ण सूची (All 51 Poems)
+
+### 🌿 खंड १: अनुभूति के स्वर (कविता १ - २३)
+- **1. आओ फिर से दिया जलाएँ**
+- **2. हरी हरी दूब पर**
+- **3. पहचान**
+- **4. गीत नहीं गाता हूँ**
+- **5. न मैं चुप हूँ न गाता हूँ**
+- **6. गीत नया गाता हूँ**
+- **7. ऊँचाई**
+- **8. कौरव कौन, कौन पांडव**
+- **9. दूध में दरार पड़ गई**
+- **10. मन का संतोष**
+- **11. झुक नहीं सकते**
+- **12. दूर कहीं कोई रोता है**
+- **13. जीवन बीत चला**
+- **14. मौत से ठन गई**
+- **15. राह कौन सी जाऊँ मैं?**
+- **16. मैं सोचने लगता हूँ**
+- **17. हिरोशिमा की पीड़ा**
+- **18. नए मील का पत्थर**
+- **19. मोड़ पर**
+- **20. आओ, मन की गांठें खोलें**
+- **21. नई गाँठ लगती**
+- **22. यक्ष प्रश्न**
+- **23. क्षमा याचना**
+
+### 🚩 खंड २: राष्ट्रीयता के स्वर (कविता २४ - ३३)
+- **24. स्वतंत्रता दिवस की पुकार**
+- **25. अमर आग है**
+- **26. परिचय**
+- **27. आज सिन्धु में ज्वार उठा है**
+- **28. जम्मू की पुकार**
+- **29. कोटि चरण बढ़ रहे ध्येय की ओर निरन्तर**
+- **30. गगन में लहरता है भगवा हमारा**
+- **31. उनकी याद करें**
+- **32. अमर है गणतंत्र**
+- **33. सत्ता**
+
+### ⚡ खंड ३: चुनौती के स्वर (कविता ३४ - ४१)
+- **34. मातृपूजा प्रतिबंधित**
+- **35. कण्ठ-कण्ठ में एक राग है**
+- **36. आए जिस-जिस की हिम्मत हो**
+- **37. एक बरस बीत गया**
+- **38. जीवन की ढलने लगी साँझ**
+- **39. पुनः चमकेगा दिनकर**
+- **40. कदम मिलाकर चलना होगा**
+- **41. पड़ोसी से**
+
+### 🌸 खंड ४: विविध के स्वर (कविता ४२ - ५१)
+- **42. रोते रोते रात सो गई**
+- **43. बुलाती तुम्हें मनाली**
+- **44. अंतरद्वंद्व**
+- **45. बबली की दिवाली**
+- **46. अपने ही मन से कुछ बोलें**
+- **47. मनाली मत जइयो**
+- **48. देखो हम बढ़ते ही जाते**
+- **49. जंग न होने देंगे**
+- **50. आओ! मर्दों नामर्द बनो**
+- **51. सपना टूट गया**
+
+---
+
+## 🛠️ तकनीकी ढाँचा (Tech Stack)
+
+- **भाषा:** Kotlin 1.9.24
+- **वास्तुकला:** Android Jetpack & ViewBinding
+- **यूआई:** Material Design 3 (`Theme.Material3.Dark.NoActionBar`)
+- **ऑडियो इंजन:** Android `MediaPlayer` + `TextToSpeech` Custom Prosody Engine
+- **चित्र दीर्घा:** 7 उच्च-गुणवत्ता साहित्यिक कलाकृतियाँ + अटल जी का प्रामाणिक चित्र
+
+---
+
+## 🔨 स्रोत कोड से निर्माण (Build from Source)
+
+```powershell
+# Android SDK का पथ सेट करें
+$env:ANDROID_HOME = "C:\Users\ASHIR\AppData\Local\Android\Sdk"
+$env:ANDROID_SDK_ROOT = "C:\Users\ASHIR\AppData\Local\Android\Sdk"
+
+# डीबग APK कम्पाइल करें
+.\gradlew.bat assembleDebug --no-daemon
 ```
-The compiled APK will be located at:
-`app/build/outputs/apk/debug/app-debug.apk`
 
----
-
-## 📄 License
-MIT License. Free to use, share, and modify!
+निर्मित APK फ़ाइल का स्थान: `app/build/outputs/apk/debug/app-debug.apk` या रूट डायरेक्टरी में `WisdomPulse.apk`।
