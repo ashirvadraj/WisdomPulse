@@ -41,6 +41,13 @@ class PoemDetailActivity : AppCompatActivity() {
         // Mark as read
         quote?.let { repository.markPoemAsRead(it.id) }
 
+        // If a different poem was playing when opening this screen, stop it so user doesn't hear old poem
+        audioPlayer = AtalAudioPlayer.getInstance(this)
+        val activeQuote = audioPlayer?.getCurrentQuote()
+        if (activeQuote != null && activeQuote.id != quote?.id && audioPlayer?.isPlaying() == true) {
+            audioPlayer?.stop()
+        }
+
         setupAudioPlayer()
         setupPoemContent()
         setupToolbarActions()

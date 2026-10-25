@@ -182,42 +182,27 @@ class AtalAudioPlayer(
         val assetPath = "audio/$assetName"
         val cacheFile = File(context.cacheDir, assetName)
 
-        // 1. If previously cached and intact, play directly from local cache (fastest & most reliable)
-        if (cacheFile.exists() && cacheFile.length() > 5000L) {
+        var needExtract = !cacheFile.exists() || cacheFile.length() < 1000L
+        if (!needExtract) {
             try {
-                mp.reset()
-                mp.setDataSource(cacheFile.absolutePath)
-                mp.prepare()
-                mp.start()
-                return
+                context.assets.open(assetPath).use { input ->
+                    if (input.available().toLong() != cacheFile.length()) {
+                        needExtract = true
+                    }
+                }
             } catch (e: Exception) {
-                e.printStackTrace()
-                cacheFile.delete()
-                mp.reset()
+                needExtract = true
             }
         }
 
-        // 2. Try playing directly from asset via AssetFileDescriptor (for uncompressed APK assets)
-        try {
-            val afd: AssetFileDescriptor = context.assets.openFd(assetPath)
-            mp.reset()
-            mp.setDataSource(afd.fileDescriptor, afd.startOffset, afd.length)
-            mp.prepare()
-            mp.start()
-            try { afd.close() } catch (e: Exception) {}
-            return
-        } catch (e: Exception) {
-            e.printStackTrace()
-            mp.reset()
-        }
-
-        // 3. Infallible Fallback: Stream from assets InputStream into cacheFile and play
-        // context.assets.open() works on 100% of Android devices regardless of APK compression
-        context.assets.open(assetPath).use { input ->
-            FileOutputStream(cacheFile).use { output ->
-                input.copyTo(output)
+        if (needExtract) {
+            context.assets.open(assetPath).use { input ->
+                FileOutputStream(cacheFile).use { output ->
+                    input.copyTo(output)
+                }
             }
         }
+
         mp.reset()
         mp.setDataSource(cacheFile.absolutePath)
         mp.prepare()
@@ -346,20 +331,25 @@ class AtalAudioPlayer(
     }
 
     fun resume(quote: Quote) {
-        if (isPaused && mediaPlayer != null) {
+        if (currentQuote?.id == quote.id && isPaused && mediaPlayer != null) {
             mediaPlayer?.start()
             isPlaying = true
             isPaused = false
             handler.post(progressRunnable)
             notifyStateChanged(PlayState.PLAYING, currentMode)
-            AtalAudioService.updatePlaybackState(context, currentQuote, isPlaying = true)
+            try {
+                AtalAudioService.updatePlaybackState(context, currentQuote, isPlaying = true)
+            } catch (e: Exception) {}
         } else {
             start(quote)
         }
     }
 
     fun togglePlayPause(quote: Quote) {
-        if (isPlaying) {
+        if (currentQuote == null || currentQuote?.id != quote.id) {
+            // A different poem was selected: immediately switch and start the new poem!
+            start(quote)
+        } else if (isPlaying) {
             pause()
         } else if (isPaused) {
             resume(quote)
