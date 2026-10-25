@@ -1,7 +1,7 @@
 # 🇮🇳 मेरी इक्यावन कविताएँ (Meri Ekyavan Kavitayen) — अटल बिहारी वाजपेयी
 ### 🎨 सचित्र, सस्वर एवं संगीतमय डिजिटल काव्य ग्रंथ (Illustrated & Musical Heritage Edition)
 
-[![Download APK](https://img.shields.io/badge/Download-APK_(71.6_MB)-2ECC71?style=for-the-badge&logo=android)](https://github.com/ashirvadraj/WisdomPulse/raw/main/WisdomPulse.apk)
+[![Download APK](https://img.shields.io/badge/Download-APK_(71.8_MB)-2ECC71?style=for-the-badge&logo=android)](https://github.com/ashirvadraj/WisdomPulse/releases/download/v2.5/WisdomPulse.apk)
 [![Platform](https://img.shields.io/badge/Platform-Android-green.svg)](https://android.com)
 [![Kotlin](https://img.shields.io/badge/Kotlin-1.9.24-blue.svg)](https://kotlinlang.org)
 [![Material Design](https://img.shields.io/badge/Material-3-purple.svg)](https://m3.material.io)
@@ -19,7 +19,7 @@
 ## 📲 Direct APK Download
 
 Download and install directly on your Android phone:  
-👉 **[Download WisdomPulse.apk (26 Tracks Heritage Edition - 71.6 MB)](https://github.com/ashirvadraj/WisdomPulse/raw/main/WisdomPulse.apk)**
+👉 **[Download WisdomPulse.apk (26 Tracks Heritage Edition - 71.8 MB)](https://github.com/ashirvadraj/WisdomPulse/releases/download/v2.5/WisdomPulse.apk)**
 
 ---
 

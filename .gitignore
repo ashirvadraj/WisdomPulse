@@ -4,7 +4,7 @@
 app/build/
 
 # Allow root APK for direct GitHub download
-!WisdomPulse.apk
+*.apk
 
 # Gradle & Build caches
 .gradle/
