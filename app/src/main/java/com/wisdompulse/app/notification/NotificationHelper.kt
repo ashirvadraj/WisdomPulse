@@ -8,6 +8,8 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import androidx.core.app.NotificationCompat
+import androidx.core.app.TaskStackBuilder
+import com.wisdompulse.app.R
 import com.wisdompulse.app.model.Quote
 import com.wisdompulse.app.ui.MainActivity
 import com.wisdompulse.app.ui.PoemDetailActivity
@@ -34,23 +36,20 @@ object NotificationHelper {
     fun showQuoteNotification(context: Context, quote: Quote) {
         createNotificationChannel(context)
 
-        val mainIntent = Intent(context, MainActivity::class.java).apply {
-            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-        }
-        val mainPendingIntent = PendingIntent.getActivity(
-            context,
-            0,
-            mainIntent,
-            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
-        )
-
+        // Tapping notification opens PoemDetailActivity directly with the specific poem,
+        // while TaskStackBuilder ensures back navigation returns to MainActivity.
         val detailIntent = Intent(context, PoemDetailActivity::class.java).apply {
             putExtra("extra_quote", quote)
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
         }
-        val detailPendingIntent = PendingIntent.getActivity(
-            context,
+
+        val stackBuilder = TaskStackBuilder.create(context).apply {
+            addParentStack(PoemDetailActivity::class.java)
+            addNextIntent(detailIntent)
+        }
+
+        val detailPendingIntent = stackBuilder.getPendingIntent(
             quote.id,
-            detailIntent,
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
 
@@ -59,14 +58,14 @@ object NotificationHelper {
             quote.text + "\n\n— " + quote.author + " (" + quote.authorRole + ")"
 
         val notification = NotificationCompat.Builder(context, CHANNEL_ID)
-            .setSmallIcon(android.R.drawable.ic_dialog_info)
+            .setSmallIcon(R.drawable.ic_volume_up)
             .setContentTitle(titleText)
             .setContentText(quote.text)
             .setStyle(NotificationCompat.BigTextStyle().bigText(bigTextContent))
             .setPriority(NotificationCompat.PRIORITY_HIGH)
-            .setContentIntent(mainPendingIntent)
+            .setContentIntent(detailPendingIntent) // Clicking notification opens that particular poem!
             .setAutoCancel(true)
-            .addAction(android.R.drawable.ic_menu_sort_by_size, "काव्य पढ़ें", detailPendingIntent)
+            .addAction(R.drawable.ic_volume_up, "काव्य पढ़ें व सुनें", detailPendingIntent)
             .build()
 
         val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager

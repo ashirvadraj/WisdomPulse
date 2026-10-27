@@ -41,7 +41,13 @@ class PoemDetailActivity : AppCompatActivity() {
         // Mark as read
         quote?.let { repository.markPoemAsRead(it.id) }
 
+        // If a different poem was playing when opening this screen, stop the old poem
+        // so user does not hear an unrelated poem playing on this screen!
         audioPlayer = AtalAudioPlayer.getInstance(this)
+        val activeQuote = audioPlayer?.getCurrentQuote()
+        if (activeQuote != null && activeQuote.id != quote?.id && audioPlayer?.isPlaying() == true) {
+            audioPlayer?.stop()
+        }
 
         setupAudioPlayer()
         setupPoemContent()
@@ -147,7 +153,7 @@ class PoemDetailActivity : AppCompatActivity() {
 
         override fun onError(message: String) {
             runOnUiThread {
-                Toast.makeText(this@PoemDetailActivity, message, Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@PoemDetailActivity, message, Toast.LENGTH_LONG).show()
             }
         }
     }

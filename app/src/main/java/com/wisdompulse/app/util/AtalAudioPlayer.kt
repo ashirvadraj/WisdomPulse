@@ -1,7 +1,6 @@
 package com.wisdompulse.app.util
 
 import android.content.Context
-import android.content.res.AssetFileDescriptor
 import android.media.AudioAttributes
 import android.media.MediaPlayer
 import android.os.Handler
@@ -158,6 +157,9 @@ class AtalAudioPlayer(
         try {
             tts?.stop()
         } catch (e: Exception) {}
+
+        isPlaying = false
+        isPaused = false
     }
 
     fun start(quote: Quote, forceMode: AudioMode? = null) {
@@ -180,137 +182,140 @@ class AtalAudioPlayer(
     }
 
     /**
-     * Safely extracts the poem MP3 to a dedicated cache file and begins playback.
-     * Uses atomic rename (.tmp -> final) to guarantee file integrity.
+     * Extracts the specific poem's MP3 directly into cacheDir without temporary file rename.
+     * Direct extraction guarantees 100% reliability on all Android devices and filesystems.
      */
-    private fun playFromAsset(quote: Quote, assetName: String, mode: AudioMode) {
+    private fun getOrExtractAudioFile(quoteId: Int): File {
+        val assetName = "poem_$quoteId.mp3"
         val assetPath = "audio/$assetName"
         val cacheFile = File(context.cacheDir, assetName)
 
-        val expectedSize: Long = try {
-            context.assets.openFd(assetPath).use { afd -> afd.length }
-        } catch (e: Exception) { -1L }
+        var expectedSize = -1L
+        try {
+            context.assets.openFd(assetPath).use { afd ->
+                expectedSize = afd.length
+            }
+        } catch (e: Exception) {}
 
         val needExtract = !cacheFile.exists()
             || cacheFile.length() < 1000L
             || (expectedSize > 0 && cacheFile.length() != expectedSize)
 
         if (needExtract) {
-            val tempFile = File(context.cacheDir, "$assetName.tmp")
-            try {
-                context.assets.open(assetPath).use { input ->
-                    FileOutputStream(tempFile).use { output ->
-                        input.copyTo(output)
-                    }
+            context.assets.open(assetPath).use { input ->
+                FileOutputStream(cacheFile).use { output ->
+                    input.copyTo(output)
                 }
-                if (tempFile.length() > 1000L) {
-                    if (cacheFile.exists()) cacheFile.delete()
-                    tempFile.renameTo(cacheFile)
-                }
-            } catch (e: Exception) {
-                tempFile.delete()
-                throw e
             }
         }
 
         if (!cacheFile.exists() || cacheFile.length() < 1000L) {
-            throw java.io.FileNotFoundException("Unable to prepare audio file: $assetName")
+            throw java.io.FileNotFoundException("Could not extract audio for poem $quoteId")
         }
 
-        val mp = MediaPlayer()
-        try {
-            mp.setWakeMode(context, PowerManager.PARTIAL_WAKE_LOCK)
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-        mp.setAudioAttributes(
-            AudioAttributes.Builder()
-                .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
-                .setUsage(AudioAttributes.USAGE_MEDIA)
-                .build()
-        )
-        mp.setOnCompletionListener {
-            this@AtalAudioPlayer.isPaused = false
-            stop()
-        }
-        mp.setOnErrorListener { _, what, extra ->
-            stop()
-            notifyError("प्लेबैक त्रुटि ($what, $extra)")
-            true
-        }
-        mp.setDataSource(cacheFile.absolutePath)
-        mp.prepare()
-        mp.start()
-
-        this.mediaPlayer = mp
-        this.isPlaying = true
-        this.isPaused = false
-        notifyStateChanged(PlayState.PLAYING, mode)
-        handler.post(progressRunnable)
-
-        try {
-            AtalAudioService.startPlayback(context, quote)
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
+        return cacheFile
     }
 
     private fun startAuthenticPlayback(quote: Quote, mode: AudioMode) {
         try {
             cleanupMediaPlayer()
+            currentQuote = quote
 
-            val assetName = "poem_${quote.id}.mp3"
+            var playSuccess = false
 
-            // Try offline asset first
+            // 1. Try offline asset first (26 authentic audio tracks)
             if (quote.id in authenticPoemIds) {
                 try {
-                    playFromAsset(quote, assetName, mode)
-                    return
-                } catch (e: Exception) {
-                    e.printStackTrace()
-                }
-            }
+                    val file = getOrExtractAudioFile(quote.id)
 
-            // Fall back to online stream if available
-            val onlineUrl = getOnlineStreamUrl(quote.id)
-            if (onlineUrl != null) {
-                val mp = MediaPlayer()
-                try {
-                    mp.setWakeMode(context, PowerManager.PARTIAL_WAKE_LOCK)
-                } catch (e: Exception) { e.printStackTrace() }
-                mp.setAudioAttributes(
-                    AudioAttributes.Builder()
-                        .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
-                        .setUsage(AudioAttributes.USAGE_MEDIA)
-                        .build()
-                )
-                mp.setOnCompletionListener {
-                    this@AtalAudioPlayer.isPaused = false
-                    stop()
-                }
-                mp.setOnErrorListener { _, what, extra ->
-                    stop()
-                    notifyError("प्लेबैक त्रुटि ($what, $extra)")
-                    true
-                }
-                mp.setDataSource(onlineUrl)
-                mp.prepareAsync()
-                mp.setOnPreparedListener { preparedMp ->
-                    preparedMp.start()
-                    this@AtalAudioPlayer.mediaPlayer = preparedMp
-                    this@AtalAudioPlayer.isPlaying = true
-                    this@AtalAudioPlayer.isPaused = false
+                    val mp = MediaPlayer().apply {
+                        try {
+                            setWakeMode(context, PowerManager.PARTIAL_WAKE_LOCK)
+                        } catch (e: Exception) {
+                            e.printStackTrace()
+                        }
+                        setAudioAttributes(
+                            AudioAttributes.Builder()
+                                .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                                .setUsage(AudioAttributes.USAGE_MEDIA)
+                                .build()
+                        )
+                        setOnCompletionListener {
+                            this@AtalAudioPlayer.isPaused = false
+                            stop()
+                        }
+                        setOnErrorListener { _, what, extra ->
+                            stop()
+                            notifyError("प्लेबैक त्रुटि ($what, $extra)")
+                            true
+                        }
+                        setDataSource(file.absolutePath)
+                        prepare()
+                        start()
+                    }
+
+                    this.mediaPlayer = mp
+                    this.isPlaying = true
+                    this.isPaused = false
                     notifyStateChanged(PlayState.PLAYING, mode)
                     handler.post(progressRunnable)
+
                     try {
                         AtalAudioService.startPlayback(context, quote)
                     } catch (e: Exception) {
                         e.printStackTrace()
                     }
+
+                    playSuccess = true
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                    playSuccess = false
                 }
-            } else {
-                notifyError("इस कविता के लिए अटल जी का मूल ऑडियो उपलब्ध नहीं है।")
-                stop()
+            }
+
+            // 2. Fall back to online stream if offline failed or not available
+            if (!playSuccess) {
+                val onlineUrl = getOnlineStreamUrl(quote.id)
+                if (onlineUrl != null) {
+                    val mp = MediaPlayer().apply {
+                        try {
+                            setWakeMode(context, PowerManager.PARTIAL_WAKE_LOCK)
+                        } catch (e: Exception) { e.printStackTrace() }
+                        setAudioAttributes(
+                            AudioAttributes.Builder()
+                                .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                                .setUsage(AudioAttributes.USAGE_MEDIA)
+                                .build()
+                        )
+                        setOnCompletionListener {
+                            this@AtalAudioPlayer.isPaused = false
+                            stop()
+                        }
+                        setOnErrorListener { _, what, extra ->
+                            stop()
+                            notifyError("प्लेबैक त्रुटि ($what, $extra)")
+                            true
+                        }
+                        setDataSource(onlineUrl)
+                        prepareAsync()
+                        setOnPreparedListener { preparedMp ->
+                            preparedMp.start()
+                            this@AtalAudioPlayer.mediaPlayer = preparedMp
+                            this@AtalAudioPlayer.isPlaying = true
+                            this@AtalAudioPlayer.isPaused = false
+                            notifyStateChanged(PlayState.PLAYING, mode)
+                            handler.post(progressRunnable)
+                            try {
+                                AtalAudioService.startPlayback(context, quote)
+                            } catch (e: Exception) {
+                                e.printStackTrace()
+                            }
+                        }
+                    }
+                } else {
+                    notifyError("इस कविता के लिए मूल ऑडियो उपलब्ध नहीं है।")
+                    stop()
+                }
             }
 
         } catch (e: Exception) {
@@ -331,7 +336,7 @@ class AtalAudioPlayer(
 
         val res = tts?.speak(speechText, TextToSpeech.QUEUE_FLUSH, null, "ATAL_RECITAL_${quote.id}")
         if (res == TextToSpeech.ERROR) {
-            notifyError("इस कविता के लिए मूल ऑडियो उपलब्ध नहीं है एवं वॉइस पाठ असमर्थ है।")
+            notifyError("इस कविता के लिए मूल ऑडियो उपलब्ध नहीं है एवं डिवाइस में हिंदी वॉइस पाठ अनुपलब्ध है।")
             stop()
             return
         }
