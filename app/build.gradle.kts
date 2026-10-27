@@ -11,8 +11,8 @@ android {
         applicationId = "com.wisdompulse.app"
         minSdk = 26
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0.0"
+        versionCode = 28
+        versionName = "2.8.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -21,6 +21,12 @@ android {
         noCompress += listOf("mp3", "ogg", "wav")
     }
 
+        signingConfigs {
+        named("debug") {
+            enableV1Signing = true
+            enableV2Signing = true
+        }
+    }
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -31,7 +37,7 @@ android {
             )
         }
         debug {
-            applicationIdSuffix = ".debug"
+            // applicationIdSuffix removed
         }
     }
     compileOptions {
